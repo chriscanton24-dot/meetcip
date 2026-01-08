@@ -1,0 +1,148 @@
+/* Industry Selector Styles */
+
+.industry-selector {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.selector-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.selector-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.selector-header .subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.industry-card {
+  position: relative;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.industry-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+  transform: translateY(-2px);
+}
+
+.industry-card.selected {
+  border-color: #10b981;
+  background: #f0fdf4;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.industry-card.popular {
+  border-color: #3b82f6;
+}
+
+.industry-card.popular.selected {
+  border-color: #10b981;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.industry-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.industry-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.industry-info p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.industry-checkbox {
+  margin-top: 1rem;
+  min-height: 24px;
+}
+
+.selection-summary {
+  background: #f0fdf4;
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.summary-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-content span {
+  font-size: 1rem;
+  color: #065f46;
+}
+
+.summary-content strong {
+  font-weight: 700;
+}
+
+.summary-note {
+  font-size: 0.875rem;
+  color: #047857;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .selector-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .selector-header .subtitle {
+    font-size: 1rem;
+  }
+}
