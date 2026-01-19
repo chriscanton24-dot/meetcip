@@ -123,3 +123,58 @@
   pointer-events: auto !important;
   cursor: pointer !important;
 }
+/* src/index.css - ADD THESE FIXES TO YOUR EXISTING FILE */
+
+/* FIX: Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* FIX: Ensure main content doesn't cause horizontal scroll */
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* FIX: Prevent any container from overflowing */
+* {
+  max-width: 100%;
+}
+
+/* FIX: Ensure all sections stay within viewport */
+.container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* FIX: Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FIX: Mobile landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Reduce header padding in landscape mode */
+  header nav {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Make mobile menu scrollable in landscape */
+  header nav > div:last-child {
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+}
+
+/* FIX: Ensure touch targets are large enough on mobile */
+@media (max-width: 1023px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
