@@ -1,64 +1,70 @@
+
+import { useTranslation } from 'react-i18next'
+import React from 'react'
+
 export default function FeatureComparison() {
+  const { t } = useTranslation()
+
   const features = [
     {
-      category: 'Core Features',
+      category: t('featureComparison.categories.core'),
       items: [
-        { name: 'AI Phone Answering 24/7', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Call Logging & Transcripts', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Email Notifications', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Response Time: 2-4 seconds', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Basic Knowledge Base', starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.aiAnswering247'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.callLogging'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.emailNotifications'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.responseTime'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.basicKnowledgeBase'), starter: true, professional: true, business: true, enterprise: true, industry: true },
       ]
     },
     {
-      category: 'Advanced AI Features',
+      category: t('featureComparison.categories.advancedAI'),
       items: [
-        { name: 'Advanced RAG Knowledge Base', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Custom AI Prompts', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Bilingual Support (EN/ES)', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Industry-Specific Templates', starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: 'Industry Dashboard (Coming Soon)', starter: false, professional: false, business: false, enterprise: false, industry: true },
+        { name: t('featureComparison.features.advancedRAG'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.customPrompts'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.bilingualSupport'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.industryTemplates'), starter: false, professional: false, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.industryDashboard'), starter: false, professional: false, business: false, enterprise: false, industry: true },
       ]
     },
     {
-      category: 'Phone Management',
+      category: t('featureComparison.categories.phoneManagement'),
       items: [
-        { name: 'Phone Numbers Included', starter: '1', professional: '1', business: '3', enterprise: 'Unlimited', industry: '1' },
-        { name: 'Call Recording', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Call Transfer (Coming Soon)', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Voicemail Transcription', starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.phoneNumbers'), starter: '1', professional: '1', business: '3', enterprise: t('featureComparison.unlimited'), industry: '1' },
+        { name: t('featureComparison.features.callRecording'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.callTransfer'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.voicemailTranscription'), starter: true, professional: true, business: true, enterprise: true, industry: true },
       ]
     },
     {
-      category: 'Integrations',
+      category: t('featureComparison.categories.integrations'),
       items: [
-        { name: 'Email Integration', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'SMS Notifications (Coming Soon)', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Calendar Sync', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'CRM Integration', starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: 'API Access', starter: false, professional: false, business: true, enterprise: true, industry: false },
-        { name: 'Webhooks', starter: false, professional: false, business: true, enterprise: true, industry: false },
+        { name: t('featureComparison.features.emailIntegration'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.smsNotifications'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.calendarSync'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.crmIntegration'), starter: false, professional: false, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.apiAccess'), starter: false, professional: false, business: true, enterprise: true, industry: false },
+        { name: t('featureComparison.features.webhooks'), starter: false, professional: false, business: true, enterprise: true, industry: false },
       ]
     },
     {
-      category: 'Support',
+      category: t('featureComparison.categories.support'),
       items: [
-        { name: 'Email Support', starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Priority Support', starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: 'Phone Support', starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: 'Dedicated Account Manager', starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: 'Onboarding Assistance', starter: false, professional: false, business: false, enterprise: true, industry: true },
+        { name: t('featureComparison.features.emailSupport'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.prioritySupport'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.phoneSupport'), starter: false, professional: false, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.dedicatedManager'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.onboardingAssistance'), starter: false, professional: false, business: false, enterprise: true, industry: true },
       ]
     },
     {
-      category: 'Enterprise Features',
+      category: t('featureComparison.categories.enterprise'),
       items: [
-        { name: 'Multi-User Accounts', starter: false, professional: false, business: true, enterprise: true, industry: false },
-        { name: 'Multi-Location Support', starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: 'White-Label Options', starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: 'Custom Branding', starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: '99.9% SLA Guarantee', starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: 'Custom Integrations', starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.multiUserAccounts'), starter: false, professional: false, business: true, enterprise: true, industry: false },
+        { name: t('featureComparison.features.multiLocation'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.whiteLabel'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.customBranding'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.slaGuarantee'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.customIntegrations'), starter: false, professional: false, business: false, enterprise: true, industry: false },
       ]
     }
   ]
@@ -83,10 +89,10 @@ export default function FeatureComparison() {
       <div className="gradient-mesh noise-overlay">
         <div className="section-container text-center">
           <h1 className="heading-xl text-primary mb-6">
-            Feature Comparison
+            {t('featureComparison.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Compare plans to find the perfect fit for your business
+            {t('featureComparison.subtitle')}
           </p>
         </div>
       </div>
@@ -99,42 +105,42 @@ export default function FeatureComparison() {
                 <thead className="bg-surface">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-bold text-primary uppercase tracking-wider sticky left-0 bg-surface z-10">
-                      Feature
+                      {t('featureComparison.featureColumn')}
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
-                      <div>Starter</div>
+                      <div>{t('pricing.tiers.starter.name')}</div>
                       <div className="text-2xl font-display text-accent mt-1">$49</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">100 calls/mo</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">100 {t('pricing.callsPerMonth')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider bg-accent/10">
                       <div className="flex items-center justify-center gap-2">
-                        <span>Professional</span>
-                        <span className="bg-accent text-white text-xs px-2 py-0.5 rounded-full">POPULAR</span>
+                        <span>{t('pricing.tiers.professional.name')}</span>
+                        <span className="bg-accent text-white text-xs px-2 py-0.5 rounded-full">{t('pricing.popular')}</span>
                       </div>
                       <div className="text-2xl font-display text-accent mt-1">$149</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">300 calls/mo</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">300 {t('pricing.callsPerMonth')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
-                      <div>Business</div>
+                      <div>{t('pricing.tiers.business.name')}</div>
                       <div className="text-2xl font-display text-accent mt-1">$249</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">500 calls/mo</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">500 {t('pricing.callsPerMonth')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
-                      <div>Enterprise</div>
-                      <div className="text-2xl font-display text-accent mt-1">Custom</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">Unlimited</div>
+                      <div>{t('pricing.tiers.enterprise.name')}</div>
+                      <div className="text-2xl font-display text-accent mt-1">{t('pricing.custom')}</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">{t('featureComparison.unlimited')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider bg-green-50">
-                      <div>Industry Packages</div>
+                      <div>{t('featureComparison.industryPackages')}</div>
                       <div className="text-2xl font-display text-accent mt-1">$149-189</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">300 calls/mo</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">300 {t('pricing.callsPerMonth')}</div>
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {features.map((category, categoryIndex) => (
-                    <>
-                      <tr key={`category-${categoryIndex}`} className="bg-gray-50">
+                    <React.Fragment key={`category-${categoryIndex}`}>
+                      <tr className="bg-gray-50">
                         <td colSpan={6} className="px-6 py-3 text-left text-sm font-bold text-primary">
                           {category.category}
                         </td>
@@ -161,7 +167,7 @@ export default function FeatureComparison() {
                           </td>
                         </tr>
                       ))}
-                    </>
+                    </React.Fragment>
                   ))}
                 </tbody>
               </table>
@@ -173,34 +179,34 @@ export default function FeatureComparison() {
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="bg-surface rounded-2xl p-6 border-2 border-gray-200">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-display font-bold text-primary mb-3">Lightning Fast</h3>
-            <p className="text-gray-600">2-4 second response time across all plans. Industry-leading speed that beats competitors by 3-5 seconds.</p>
+            <h3 className="text-xl font-display font-bold text-primary mb-3">{t('featureComparison.keyFeatures.lightningFast.title')}</h3>
+            <p className="text-gray-600">{t('featureComparison.keyFeatures.lightningFast.description')}</p>
           </div>
           <div className="bg-surface rounded-2xl p-6 border-2 border-gray-200">
             <div className="text-4xl mb-4">🌍</div>
-            <h3 className="text-xl font-display font-bold text-primary mb-3">Bilingual Support</h3>
-            <p className="text-gray-600">Seamless English/Spanish support on Professional tier and above. Critical for home services markets.</p>
+            <h3 className="text-xl font-display font-bold text-primary mb-3">{t('featureComparison.keyFeatures.bilingualSupport.title')}</h3>
+            <p className="text-gray-600">{t('featureComparison.keyFeatures.bilingualSupport.description')}</p>
           </div>
           <div className="bg-surface rounded-2xl p-6 border-2 border-gray-200">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-display font-bold text-primary mb-3">Industry Templates</h3>
-            <p className="text-gray-600">Pre-configured for 11 industries with specialized dashboards, lead qualification, and routing logic.</p>
+            <h3 className="text-xl font-display font-bold text-primary mb-3">{t('featureComparison.keyFeatures.industryTemplates.title')}</h3>
+            <p className="text-gray-600">{t('featureComparison.keyFeatures.industryTemplates.description')}</p>
           </div>
         </div>
 
         {/* Enterprise-Grade Infrastructure */}
         <div className="mt-16">
-          <h2 className="heading-md text-primary mb-8 text-center">Enterprise-Grade Infrastructure</h2>
+          <h2 className="heading-md text-primary mb-8 text-center">{t('featureComparison.infrastructureTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '🔒', name: 'Bank-Level Security', description: 'Enterprise encryption' },
-              { icon: '⚡', name: 'Lightning-Fast', description: 'Sub-2-second responses' },
-              { icon: '🌐', name: 'Global Scale', description: '99.9% uptime SLA' },
-              { icon: '🔄', name: 'Auto-Scaling', description: 'Handles any call volume' },
-              { icon: '📊', name: 'Real-Time Analytics', description: 'Instant insights' },
-              { icon: '🛡️', name: 'HIPAA Ready', description: 'Healthcare compliant' },
-              { icon: '☁️', name: 'Cloud-Native', description: 'Always available' },
-              { icon: '🎯', name: 'Multi-Tenant', description: 'Isolated & secure' }
+              { icon: '🔒', name: t('featureComparison.infrastructure.security.name'), description: t('featureComparison.infrastructure.security.description') },
+              { icon: '⚡', name: t('featureComparison.infrastructure.fast.name'), description: t('featureComparison.infrastructure.fast.description') },
+              { icon: '🌐', name: t('featureComparison.infrastructure.global.name'), description: t('featureComparison.infrastructure.global.description') },
+              { icon: '🔄', name: t('featureComparison.infrastructure.scaling.name'), description: t('featureComparison.infrastructure.scaling.description') },
+              { icon: '📊', name: t('featureComparison.infrastructure.analytics.name'), description: t('featureComparison.infrastructure.analytics.description') },
+              { icon: '🛡️', name: t('featureComparison.infrastructure.hipaa.name'), description: t('featureComparison.infrastructure.hipaa.description') },
+              { icon: '☁️', name: t('featureComparison.infrastructure.cloud.name'), description: t('featureComparison.infrastructure.cloud.description') },
+              { icon: '🎯', name: t('featureComparison.infrastructure.multiTenant.name'), description: t('featureComparison.infrastructure.multiTenant.description') }
             ].map((tech, index) => (
               <div key={index} className="bg-white rounded-xl p-4 border border-gray-200 text-center">
                 <div className="text-3xl mb-2">{tech.icon}</div>
@@ -213,32 +219,32 @@ export default function FeatureComparison() {
 
         {/* FAQ Section */}
         <div className="mt-16 max-w-4xl mx-auto">
-          <h2 className="heading-md text-primary mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="heading-md text-primary mb-8 text-center">{t('featureComparison.faqTitle')}</h2>
           <div className="space-y-6">
             {[
               {
-                q: 'Can I upgrade or downgrade my plan?',
-                a: 'Yes! You can change plans at any time. Upgrades take effect immediately, downgrades at the next billing cycle.'
+                q: t('featureComparison.faq.q1'),
+                a: t('featureComparison.faq.a1')
               },
               {
-                q: 'What happens if I exceed my call limit?',
-                a: 'Overage charges apply: $0.50/call (Starter), $0.40/call (Professional), $0.35/call (Business). You\'ll receive alerts at 80% and 100% of your limit.'
+                q: t('featureComparison.faq.q2'),
+                a: t('featureComparison.faq.a2')
               },
               {
-                q: 'Do industry packages include all Professional features?',
-                a: 'Yes! Industry packages include all Professional tier features PLUS industry-specific templates, dashboards, and specialized AI prompts.'
+                q: t('featureComparison.faq.q3'),
+                a: t('featureComparison.faq.a3')
               },
               {
-                q: 'Is there a setup fee?',
-                a: 'No setup fees. No hidden costs. Just simple, transparent monthly pricing with a 30-day money-back guarantee.'
+                q: t('featureComparison.faq.q4'),
+                a: t('featureComparison.faq.a4')
               },
               {
-                q: 'What\'s the difference between Business and Industry packages?',
-                a: 'Business tier is flexible for any industry. Industry packages are pre-configured with specialized templates, lead qualification, and dashboards for specific trades.'
+                q: t('featureComparison.faq.q5'),
+                a: t('featureComparison.faq.a5')
               },
               {
-                q: 'Can I cancel anytime?',
-                a: 'Yes, cancel anytime with no penalties. Your service continues until the end of your current billing period.'
+                q: t('featureComparison.faq.q6'),
+                a: t('featureComparison.faq.a6')
               }
             ].map((faq, index) => (
               <details key={index} className="bg-surface rounded-xl p-6 border border-gray-200">

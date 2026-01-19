@@ -1,0 +1,418 @@
+{
+  "header": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "features": "Features",
+    "industries": "Industries",
+    "about": "About",
+    "contact": "Contact",
+    "requestDemo": "Request Demo",
+    "getStarted": "Get Started Now",
+    "emergencyServices": "Emergency Services",
+    "homeServices": "Home Services",
+    "propertyServices": "Property Services",
+    "realEstate": "Real Estate"
+  },
+  "hero": {
+    "badge": "Friendly • Professional • Available 24/7 • Bilingual",
+    "title": "Never Miss a Business Call Again",
+    "subtitle": "AI-powered phone answering that sounds human, speaks English & Spanish, and works round the clock — for a fraction of the cost of hiring staff.",
+    "benefit1": "Instant Response",
+    "benefit2": "Bilingual Support",
+    "benefit3": "Call Logs & Transcripts",
+    "ctaPrimary": "Get Started Now",
+    "ctaSecondary": "Hear MeetCIP Live",
+    "trustNoContracts": "No contracts",
+    "trustCancelAnytime": "Cancel anytime"
+  },
+  "features": {
+    "title": "Everything You Need to Never Miss a Call",
+    "subtitle": "Professional AI phone answering with all the features your business needs",
+    "feature1Title": "AI-Powered Answering",
+    "feature1Desc": "Natural conversations that sound human, available instantly 24/7/365",
+    "feature2Title": "Bilingual Support",
+    "feature2Desc": "Fluent in English and Spanish, automatically detects caller language",
+    "feature3Title": "Call Logging & Transcripts",
+    "feature3Desc": "Every call recorded, transcribed, and searchable in your dashboard",
+    "feature4Title": "Lead Qualification",
+    "feature4Desc": "Smart questions to prioritize high-value opportunities automatically",
+    "feature5Title": "Instant Notifications",
+    "feature5Desc": "SMS and email alerts when important calls require your attention",
+    "feature6Title": "Appointment Scheduling",
+    "feature6Desc": "Calendar integration to book consultations directly during calls",
+    "feature7Title": "Industry Templates",
+    "feature7Desc": "Pre-configured AI prompts for 11+ industries, ready to deploy",
+    "feature8Title": "Analytics Dashboard",
+    "feature8Desc": "Track call volume, response times, and conversion metrics",
+    "feature9Title": "CRM Integration",
+    "feature9Desc": "Connect with your existing tools for seamless workflow",
+    "feature10Title": "Custom Training",
+    "feature10Desc": "Train the AI with your business details, FAQs, and procedures",
+    "feature11Title": "Emergency Routing",
+    "feature11Desc": "Detect urgency and prioritize critical calls automatically",
+    "feature12Title": "Multi-Channel Support",
+    "feature12Desc": "Phone, voicemail, and SMS handling in one unified platform",
+    "scaleTitle": "Built for Scale, Priced for Growth",
+    "scaleSubtitle": "From solo entrepreneurs to enterprise teams, MeetCIP scales with your business using advanced AI infrastructure trusted by thousands of companies",
+    "uptime": "Uptime Guarantee",
+    "responseTime": "Average Response Time",
+    "availability": "Always Available"
+  },
+  "pricing": {
+    "previewTitle": "Simple, Transparent Pricing",
+    "previewSubtitle": "Choose from 4 standard tiers or 11 industry-specific packages",
+    "heroTitle": "Simple, Transparent Pricing",
+    "heroSubtitle": "Choose from 4 standard tiers or 11 industry-specific packages",
+    "standardTiersTitle": "Standard Pricing Tiers",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "callsPerMonth": "calls/month",
+    "calls": "calls",
+    "callsIncluded": "calls included",
+    "mostPopular": "MOST POPULAR",
+    "popular": "POPULAR",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "contactSales": "Contact Sales",
+    "custom": "Custom",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save20": "Save 20%",
+    "learnMore": "Learn More",
+    "viewDetails": "View Details",
+    "promo": "Promotional Pricing!",
+    "industryPackagesTitle": "Industry-Specific Packages",
+    "industryPackagesSubtitle": "Pre-configured AI trained for your industry with specialized workflows",
+    "industryPackagesDesc": "Pre-configured for Water/Fire Restoration, Foundation Repair, HVAC, Plumbing, Electricians, Roofing, and more",
+    "viewAllPricing": "View All Pricing Options",
+    "moneyBackGuarantee": "30-Day Money-Back Guarantee",
+    "categoryEmergency": "Emergency Services",
+    "categoryHome": "Home Services",
+    "categoryProperty": "Property Services",
+    "categoryRealEstate": "Real Estate",
+    "ctaTitle": "Ready to Never Miss Another Call?",
+    "ctaSubtitle": "Join hundreds of businesses already using MeetCIP to grow faster and serve customers better.",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for new businesses testing AI answering",
+        "features": {
+          "0": "100 calls/month",
+          "1": "Bilingual (English/Spanish)",
+          "2": "Call recording & transcripts",
+          "3": "Email notifications",
+          "4": "Basic analytics",
+          "5": "SMS notifications",
+          "6": "Standard support",
+          "7": "99.9% uptime guarantee"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Most popular for growing businesses",
+        "features": {
+          "0": "300 calls/month",
+          "1": "Everything in Starter",
+          "2": "Priority support",
+          "3": "Custom greetings",
+          "4": "Advanced analytics",
+          "5": "CRM integration",
+          "6": "Calendar sync",
+          "7": "Lead scoring",
+          "8": "Custom workflows"
+        }
+      },
+      "business": {
+        "name": "Business",
+        "description": "For established businesses with high call volume",
+        "features": {
+          "0": "500 calls/month",
+          "1": "Everything in Professional",
+          "2": "Dedicated account manager",
+          "3": "Custom AI training",
+          "4": "API access",
+          "5": "White-label option",
+          "6": "Custom integrations",
+          "7": "Advanced reporting",
+          "8": "Multi-user access",
+          "9": "Priority onboarding"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solution for large organizations",
+        "callsUnlimited": "Unlimited",
+        "features": {
+          "0": "Unlimited calls",
+          "1": "Everything in Business",
+          "2": "Custom integrations",
+          "3": "SLA guarantees",
+          "4": "On-premise deployment option",
+          "5": "Dedicated infrastructure",
+          "6": "White-glove onboarding",
+          "7": "24/7 priority support",
+          "8": "Custom contract terms",
+          "9": "Volume discounts",
+          "10": "Dedicated success team"
+        }
+      }
+    },
+    "industries": {
+      "waterFire": {
+        "name": "Water/Fire Restoration",
+        "description": "24/7 emergency response for restoration contractors",
+        "valueProposition": "Prioritize emergency calls, capture insurance details, coordinate dispatch instantly",
+        "features": {
+          "0": "24/7 emergency prioritization",
+          "1": "Insurance claim capture",
+          "2": "Damage severity assessment",
+          "3": "Instant dispatch coordination",
+          "4": "Photo upload instructions",
+          "5": "Service area verification",
+          "6": "Emergency contact routing",
+          "7": "Follow-up scheduling"
+        }
+      },
+      "foundation": {
+        "name": "Foundation Repair",
+        "description": "Qualify high-value foundation projects automatically",
+        "valueProposition": "Screen for serious foundation issues, capture home details, schedule inspections",
+        "features": {
+          "0": "Crack severity classification",
+          "1": "Home age & type capture",
+          "2": "Inspection scheduling",
+          "3": "Warranty information",
+          "4": "Soil type questions",
+          "5": "Budget range qualification",
+          "6": "Before/after photo requests",
+          "7": "Structural engineer referrals"
+        }
+      },
+      "hvac": {
+        "name": "HVAC",
+        "description": "Route emergency repairs vs. maintenance calls intelligently",
+        "valueProposition": "Detect AC failures, route maintenance, capture equipment details for accurate quotes"
+      },
+      "plumbing": {
+        "name": "Plumbing",
+        "description": "Prioritize emergency leaks, capture service details",
+        "valueProposition": "Emergency leak detection, water heater replacement qualification, service type routing"
+      },
+      "electricians": {
+        "name": "Electricians",
+        "description": "Safety-first emergency routing for electrical issues",
+        "valueProposition": "Electrical emergency detection, panel upgrade qualification, safety guidance"
+      },
+      "garageDoor": {
+        "name": "Garage Door Repair",
+        "description": "Fast response for broken garage doors",
+        "valueProposition": "Emergency door routing, issue diagnosis (spring, opener, track), brand tracking"
+      },
+      "roofing": {
+        "name": "Roofing",
+        "description": "Storm damage prioritization and insurance claims",
+        "valueProposition": "Storm damage priority, roof type identification, insurance claim questions, free inspection scheduling"
+      },
+      "concrete": {
+        "name": "Concrete Leveling",
+        "description": "Qualify concrete repair and leveling projects",
+        "valueProposition": "Surface type identification, severity assessment, method education (mudjacking vs. foam)"
+      },
+      "fencing": {
+        "name": "Fencing",
+        "description": "Capture fencing project details and requirements",
+        "valueProposition": "Material type questions, property measurements, HOA compliance checking, estimate scheduling"
+      },
+      "landscaping": {
+        "name": "Landscaping",
+        "description": "Route landscaping services and recurring maintenance",
+        "valueProposition": "Service type routing, seasonal scheduling, property size capture, recurring service setup"
+      },
+      "realEstate": {
+        "name": "Real Estate",
+        "description": "Property inquiry routing and showing scheduling",
+        "valueProposition": "Property inquiry routing, showing scheduler, buyer qualification, neighborhood information"
+      }
+    }
+  },
+  "faq": {
+    "title": "Common Questions",
+    "subtitle": "Everything you need to know about MeetCIP for your industry",
+    "q1": "Which industries does MeetCIP work best for?",
+    "a1": "MeetCIP is pre-configured for 11 industries including Water/Fire Restoration, Foundation Repair, HVAC, Plumbing, Electricians, Roofing, Concrete Leveling, Fencing, Landscaping, Garage Door Repair, and Real Estate. Each package includes industry-specific AI prompts and workflows tailored to your business needs.",
+    "q2": "How does MeetCIP handle emergency calls vs. regular inquiries?",
+    "a2": "MeetCIP automatically detects urgency in customer calls. For emergency services like plumbing leaks or HVAC failures, our AI prioritizes the call, gathers critical information quickly, and can instantly notify your on-call team via SMS or email. Regular inquiries are scheduled appropriately based on your availability.",
+    "q3": "Can MeetCIP qualify leads for high-ticket services?",
+    "a3": "Yes! For industries like Foundation Repair, Roofing, and Concrete Leveling, MeetCIP asks qualification questions about project scope, property details, budget range, and timeline. This helps you prioritize $15k-$50k+ opportunities and show up to appointments with complete information.",
+    "q4": "Does MeetCIP really sound human? Will customers know it's AI?",
+    "a4": "MeetCIP uses advanced voice AI that sounds natural and conversational. Most customers don't realize they're speaking with AI. The system is trained to handle interruptions, ask clarifying questions, and maintain a professional, friendly tone in both English and Spanish.",
+    "q5": "How quickly can I get set up?",
+    "a5": "Most businesses are live within 24-48 hours. Setup includes: (1) Choosing your industry package, (2) Connecting your phone number, (3) Training the AI on your business details, (4) Testing calls. Our team handles the technical work - you just provide information about your services.",
+    "q6": "What happens if MeetCIP can't answer a question?",
+    "a6": "If a caller asks something outside MeetCIP's knowledge, it will politely explain that it needs to connect them with your team, take their contact information, and immediately notify you. You maintain full control and can always jump into any conversation.",
+    "stillHaveQuestions": "Still have questions?",
+    "contactSupport": "Contact our support team →"
+  },
+  "featureComparison": {
+    "title": "Compare Features Across Plans",
+    "subtitle": "See which plan matches your business needs",
+    "featureColumn": "Feature",
+    "industryPackages": "Industry Packages",
+    "unlimited": "Unlimited",
+    "categories": {
+      "core": "Core Features",
+      "advancedAI": "Advanced AI",
+      "phoneManagement": "Phone Management",
+      "integrations": "Integrations",
+      "support": "Support & Training",
+      "enterprise": "Enterprise Features"
+    },
+    "features": {
+      "aiAnswering247": "AI Answering 24/7",
+      "callLogging": "Call Logging & Transcripts",
+      "emailNotifications": "Email Notifications",
+      "responseTime": "< 3 Second Response Time",
+      "basicKnowledgeBase": "Basic Knowledge Base",
+      "advancedRAG": "Advanced RAG Knowledge Base",
+      "customPrompts": "Custom AI Prompts",
+      "bilingualSupport": "Bilingual Support (EN/ES)",
+      "industryTemplates": "Industry-Specific Templates",
+      "industryDashboard": "Industry-Optimized Dashboard",
+      "phoneNumbers": "Phone Numbers",
+      "callRecording": "Call Recording",
+      "callTransfer": "Call Transfer",
+      "voicemailTranscription": "Voicemail Transcription",
+      "emailIntegration": "Email Integration",
+      "smsNotifications": "SMS Notifications",
+      "calendarSync": "Calendar Sync (Google/Outlook)",
+      "crmIntegration": "CRM Integration (Zapier)",
+      "apiAccess": "API Access",
+      "webhooks": "Webhooks",
+      "emailSupport": "Email Support",
+      "prioritySupport": "Priority Support",
+      "phoneSupport": "Phone Support",
+      "dedicatedManager": "Dedicated Account Manager",
+      "onboardingAssistance": "Onboarding Assistance",
+      "multiUserAccounts": "Multi-User Accounts",
+      "multiLocation": "Multi-Location Support",
+      "whiteLabel": "White-Label Option",
+      "customBranding": "Custom Branding",
+      "slaGuarantee": "SLA Guarantee",
+      "customIntegrations": "Custom Integrations"
+    },
+    "keyFeatures": {
+      "lightningFast": {
+        "title": "Lightning Fast",
+        "description": "2-4 second average response time with global infrastructure"
+      },
+      "bilingualSupport": {
+        "title": "Truly Bilingual",
+        "description": "Seamlessly switches between English and Spanish mid-conversation"
+      },
+      "industryTemplates": {
+        "title": "Industry Expertise",
+        "description": "Pre-trained on 11+ industries with specialized workflows"
+      }
+    },
+    "infrastructureTitle": "Built on Enterprise-Grade Infrastructure",
+    "infrastructure": {
+      "security": {
+        "name": "Bank-Level Security",
+        "description": "End-to-end encryption, SOC 2 compliant"
+      },
+      "fast": {
+        "name": "Lightning Fast",
+        "description": "2-4 second response time guaranteed"
+      },
+      "global": {
+        "name": "Global Coverage",
+        "description": "99.9% uptime with redundant systems"
+      },
+      "scaling": {
+        "name": "Auto-Scaling",
+        "description": "Handles call spikes automatically"
+      },
+      "analytics": {
+        "name": "Real-Time Analytics",
+        "description": "Live dashboard with instant insights"
+      },
+      "hipaa": {
+        "name": "HIPAA Ready",
+        "description": "Healthcare-grade data protection"
+      },
+      "cloud": {
+        "name": "Cloud Native",
+        "description": "Zero maintenance, always updated"
+      },
+      "multiTenant": {
+        "name": "Multi-Tenant Security",
+        "description": "Complete data isolation per business"
+      }
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faq": {
+      "q1": "Can I upgrade or downgrade my plan?",
+      "a1": "Yes! You can change plans anytime. Upgrades take effect immediately, and downgrades apply at your next billing cycle.",
+      "q2": "What happens if I exceed my call limit?",
+      "a2": "We'll notify you at 80% and 100% usage. Additional calls are billed at $0.50-$0.99 per call depending on your plan, or you can upgrade anytime.",
+      "q3": "Do unused calls roll over?",
+      "a3": "No, calls reset each billing cycle. However, if you consistently use fewer calls than your plan includes, we'll recommend a more cost-effective plan.",
+      "q4": "Are there setup fees?",
+      "a4": "No setup fees for any plan. We believe in transparent pricing with no hidden costs.",
+      "q5": "What payment methods do you accept?",
+      "a5": "We accept all major credit cards (Visa, MasterCard, Amex, Discover) and ACH transfers for annual plans.",
+      "q6": "Is there a contract?",
+      "a6": "No long-term contracts required. All plans are month-to-month except Enterprise, which offers flexible annual agreements with volume discounts."
+    }
+  },
+  "footer": {
+    "tagline": "Your friendly 24/7 virtual receptionist. Never miss another customer call.",
+    "product": "Product",
+    "pricing": "Pricing",
+    "requestDemo": "Request Demo",
+    "features": "Features",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "dpa": "Data Processing Addendum",
+    "copyright": "© 2025 MeetCIP — Call Intelligence Platform. All rights reserved.",
+    "contactEmail": "Contact: demomeetcip@gmail.com"
+  },
+  "about": {
+    "title": "Empowering Small Businesses",
+    "subtitle": "We believe every business deserves enterprise-grade customer service technology.",
+    "missionTitle": "Our Mission",
+    "missionPara1": "MeetCIP was founded on a simple observation: small businesses lose thousands of dollars every year from missed calls. Whether it's after hours, during busy periods, or when staff is unavailable, every missed call is a lost opportunity.",
+    "missionPara2": "We created MeetCIP to help small businesses provide excellent customer service without hiring additional staff. Now any business can answer every call, 24/7—without the overhead costs or complexity.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "Advanced technology made simple and affordable for businesses of all sizes."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Always-on service you can trust, with 99.9% uptime guaranteed."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuous improvement through cutting-edge AI and customer feedback."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear pricing, honest communication, no hidden fees or surprises."
+      },
+      "customerFirst": {
+        "title": "Customer-First",
+        "description": "Your success is our success. We grow when you grow."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "Your data is yours. Enterprise-grade security and HIPAA compliance."
+      }
+    }
+  }
+}

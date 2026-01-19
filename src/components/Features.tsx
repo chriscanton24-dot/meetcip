@@ -1,64 +1,69 @@
+
+import { useTranslation } from 'react-i18next'
+
 export default function Features() {
+  const { t } = useTranslation()
+
   const features = [
     {
       icon: '🤖',
-      title: 'AI-Powered Answering',
-      description: 'Natural conversations that sound human, available instantly 24/7/365'
+      titleKey: 'features.feature1Title',
+      descKey: 'features.feature1Desc'
     },
     {
       icon: '🌍',
-      title: 'Bilingual Support',
-      description: 'Fluent in English and Spanish, automatically detects caller language'
+      titleKey: 'features.feature2Title',
+      descKey: 'features.feature2Desc'
     },
     {
       icon: '📝',
-      title: 'Call Logging & Transcripts',
-      description: 'Every call recorded, transcribed, and searchable in your dashboard'
+      titleKey: 'features.feature3Title',
+      descKey: 'features.feature3Desc'
     },
     {
       icon: '🎯',
-      title: 'Lead Qualification',
-      description: 'Smart questions to prioritize high-value opportunities automatically'
+      titleKey: 'features.feature4Title',
+      descKey: 'features.feature4Desc'
     },
     {
-      icon: '📧',
-      title: 'Instant Notifications',
-      description: 'SMS and email alerts when important calls require your attention'
+      icon: '🔔',
+      titleKey: 'features.feature5Title',
+      descKey: 'features.feature5Desc'
     },
     {
       icon: '📅',
-      title: 'Appointment Scheduling',
-      description: 'Calendar integration to book consultations directly during calls'
+      titleKey: 'features.feature6Title',
+      descKey: 'features.feature6Desc'
     },
     {
       icon: '🏭',
-      title: 'Industry Templates',
-      description: 'Pre-configured AI prompts for 11+ industries, ready to deploy'
+      titleKey: 'features.feature7Title',
+      descKey: 'features.feature7Desc'
     },
     {
       icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Track call volume, response times, and conversion metrics'
+      titleKey: 'features.feature8Title',
+      descKey: 'features.feature8Desc'
     },
     {
       icon: '🔗',
-      title: 'CRM Integration',
-      description: 'Connect with your existing tools for seamless workflow'
+      titleKey: 'features.feature9Title',
+      descKey: 'features.feature9Desc'
     },
     {
       icon: '🎨',
-      title: 'Custom Training',
-      description: 'Train the AI with your business details, FAQs, and procedures'
+      titleKey: 'features.feature10Title',
+      descKey: 'features.feature10Desc'
     },
     {
       icon: '🚨',
-      title: 'Emergency Routing',
-      description: 'Detect urgency and prioritize critical calls automatically'
+      titleKey: 'features.feature11Title',
+      descKey: 'features.feature11Desc'
     },
     {
       icon: '💬',
-      title: 'Multi-Channel Support',
-      description: 'Phone, voicemail, and SMS handling in one unified platform'
+      titleKey: 'features.feature12Title',
+      descKey: 'features.feature12Desc'
     }
   ]
 
@@ -67,10 +72,10 @@ export default function Features() {
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="heading-lg text-primary mb-4">
-            Everything You Need to Never Miss a Call
+            {t('features.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional AI phone answering with all the features your business needs
+            {t('features.subtitle')}
           </p>
         </div>
 
@@ -82,9 +87,9 @@ export default function Features() {
             >
               <div className="text-5xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-display font-bold text-primary mb-2">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-600">{t(feature.descKey)}</p>
             </div>
           ))}
         </div>
@@ -92,23 +97,23 @@ export default function Features() {
         {/* Built for Scale Section */}
         <div className="mt-20 bg-gradient-to-br from-accent to-accent-dark rounded-3xl p-12 text-white text-center">
           <h3 className="text-3xl font-display font-bold mb-4">
-            Built for Scale, Priced for Growth
+            {t('features.scaleTitle')}
           </h3>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            From solo entrepreneurs to enterprise teams, MeetCIP scales with your business using advanced AI infrastructure trusted by thousands of companies
+            {t('features.scaleSubtitle')}
           </p>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div>
               <div className="text-4xl font-display font-bold mb-2">99.9%</div>
-              <div className="text-white/80">Uptime Guarantee</div>
+              <div className="text-white/80">{t('features.uptime')}</div>
             </div>
             <div>
               <div className="text-4xl font-display font-bold mb-2">&lt;2s</div>
-              <div className="text-white/80">Average Response Time</div>
+              <div className="text-white/80">{t('features.responseTime')}</div>
             </div>
             <div>
               <div className="text-4xl font-display font-bold mb-2">24/7</div>
-              <div className="text-white/80">Always Available</div>
+              <div className="text-white/80">{t('features.availability')}</div>
             </div>
           </div>
         </div>

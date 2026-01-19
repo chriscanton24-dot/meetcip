@@ -33,7 +33,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-primary mb-1">Email</h3>
-                  <p className="text-gray-600">support@meetcip.com</p>
+                  <p className="text-gray-600">demomeetcip@gmail.com</p>
                   <p className="text-sm text-gray-500 mt-1">Response time: Within 24 hours</p>
                 </div>
               </div>
@@ -46,8 +46,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-primary mb-1">Phone</h3>
-                  <p className="text-gray-600">1-800-CIP-CALL</p>
-                  <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9 AM - 6 PM ET</p>
+                  <p className="text-gray-600">210-756-3650</p>
+                  <p className="text-sm text-gray-500 mt-1">24/7 (using MeetCIP Power)</p>
                 </div>
               </div>
 

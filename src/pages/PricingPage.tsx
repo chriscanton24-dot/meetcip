@@ -1,87 +1,90 @@
+
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function PricingPage() {
+  const { t } = useTranslation()
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
 
   const standardTiers = [
     {
-      name: 'Starter',
+      name: t('pricing.tiers.starter.name'),
       monthlyPrice: 49,
       annualPrice: 470,
       calls: 100,
       overage: 0.50,
-      description: 'Perfect for solo entrepreneurs',
+      description: t('pricing.tiers.starter.description'),
       features: [
-        'AI Phone Answering 24/7',
-        'Up to 100 calls/month',
-        'Call logging & transcripts',
-        'Email notifications',
-        'Basic knowledge base',
-        '1 phone number included',
-        'Email support',
-        '2-4 second response time'
+        t('pricing.tiers.starter.features.0'),
+        t('pricing.tiers.starter.features.1'),
+        t('pricing.tiers.starter.features.2'),
+        t('pricing.tiers.starter.features.3'),
+        t('pricing.tiers.starter.features.4'),
+        t('pricing.tiers.starter.features.5'),
+        t('pricing.tiers.starter.features.6'),
+        t('pricing.tiers.starter.features.7')
       ]
     },
     {
-      name: 'Professional',
+      name: t('pricing.tiers.professional.name'),
       monthlyPrice: 149,
       annualPrice: 1430,
       calls: 300,
       overage: 0.40,
-      description: 'Ideal for growing businesses',
+      description: t('pricing.tiers.professional.description'),
       features: [
-        'Everything in Starter, plus:',
-        'Up to 300 calls/month',
-        'Advanced RAG knowledge base',
-        'Custom AI prompts',
-        'Bilingual support (EN/ES)',
-        'Priority support',
-        'Call analytics dashboard',
-        'SMS notifications (coming soon)',
-        'CRM integration ready'
+        t('pricing.tiers.professional.features.0'),
+        t('pricing.tiers.professional.features.1'),
+        t('pricing.tiers.professional.features.2'),
+        t('pricing.tiers.professional.features.3'),
+        t('pricing.tiers.professional.features.4'),
+        t('pricing.tiers.professional.features.5'),
+        t('pricing.tiers.professional.features.6'),
+        t('pricing.tiers.professional.features.7'),
+        t('pricing.tiers.professional.features.8')
       ],
       highlighted: true
     },
     {
-      name: 'Business',
+      name: t('pricing.tiers.business.name'),
       monthlyPrice: 249,
       annualPrice: 2390,
       calls: 500,
       overage: 0.35,
-      description: 'For high-volume operations',
+      description: t('pricing.tiers.business.description'),
       features: [
-        'Everything in Professional, plus:',
-        'Up to 500 calls/month',
-        'Industry templates included',
-        '3 phone numbers included',
-        'API access',
-        'Webhooks',
-        'Multi-user accounts',
-        'Phone support',
-        'Advanced analytics',
-        'Custom reporting'
+        t('pricing.tiers.business.features.0'),
+        t('pricing.tiers.business.features.1'),
+        t('pricing.tiers.business.features.2'),
+        t('pricing.tiers.business.features.3'),
+        t('pricing.tiers.business.features.4'),
+        t('pricing.tiers.business.features.5'),
+        t('pricing.tiers.business.features.6'),
+        t('pricing.tiers.business.features.7'),
+        t('pricing.tiers.business.features.8'),
+        t('pricing.tiers.business.features.9')
       ]
     },
     {
-      name: 'Enterprise',
+      name: t('pricing.tiers.enterprise.name'),
       monthlyPrice: null,
       annualPrice: null,
-      calls: 'Unlimited',
+      calls: t('pricing.tiers.enterprise.callsUnlimited'),
       overage: null,
-      description: 'Custom solutions at scale',
+      description: t('pricing.tiers.enterprise.description'),
       features: [
-        'Everything in Business, plus:',
-        'Unlimited calls',
-        'Multi-location support',
-        'Custom AI training',
-        'Dedicated account manager',
-        'White-label options',
-        'Custom branding',
-        '99.9% SLA guarantee',
-        'Advanced integrations',
-        'Priority phone support',
-        'Onboarding assistance'
+        t('pricing.tiers.enterprise.features.0'),
+        t('pricing.tiers.enterprise.features.1'),
+        t('pricing.tiers.enterprise.features.2'),
+        t('pricing.tiers.enterprise.features.3'),
+        t('pricing.tiers.enterprise.features.4'),
+        t('pricing.tiers.enterprise.features.5'),
+        t('pricing.tiers.enterprise.features.6'),
+        t('pricing.tiers.enterprise.features.7'),
+        t('pricing.tiers.enterprise.features.8'),
+        t('pricing.tiers.enterprise.features.9'),
+        t('pricing.tiers.enterprise.features.10')
       ]
     }
   ]
@@ -90,380 +93,262 @@ export default function PricingPage() {
     emergency: [
       {
         icon: '🔥',
-        name: 'Water/Fire Restoration',
+        name: t('pricing.industries.waterFire.name'),
         price: 189,
         calls: 300,
-        description: 'Fire restoration, water damage, mold remediation, disaster recovery',
+        description: t('pricing.industries.waterFire.description'),
         features: [
-          '24/7 emergency call prioritization',
-          'Job tracker dashboard',
-          'Damage type classification',
-          'Insurance claim assistance',
-          'Multi-language support (EN/ES)',
-          'Direct dispatcher routing',
-          'Response time metrics',
-          'Service area verification'
+          t('pricing.industries.waterFire.features.0'),
+          t('pricing.industries.waterFire.features.1'),
+          t('pricing.industries.waterFire.features.2'),
+          t('pricing.industries.waterFire.features.3'),
+          t('pricing.industries.waterFire.features.4'),
+          t('pricing.industries.waterFire.features.5'),
+          t('pricing.industries.waterFire.features.6'),
+          t('pricing.industries.waterFire.features.7')
         ],
-        valueProposition: 'Handle 24/7 emergencies without 24/7 staff',
+        valueProposition: t('pricing.industries.waterFire.valueProposition'),
         slug: 'water-fire-restoration'
       },
       {
         icon: '🏗️',
-        name: 'Foundation Repair',
+        name: t('pricing.industries.foundation.name'),
         price: 189,
         calls: 300,
-        description: 'Foundation repair, structural specialists, basement waterproofing',
+        description: t('pricing.industries.foundation.description'),
         features: [
-          'Foundation-specific AI prompts',
-          'Damage assessment questions',
-          'Foundation type identification',
-          'Advanced lead qualification',
-          'Inspection tracker dashboard',
-          'Free inspection scheduling',
-          'Financing options info',
-          'Warranty information delivery'
+          t('pricing.industries.foundation.features.0'),
+          t('pricing.industries.foundation.features.1'),
+          t('pricing.industries.foundation.features.2'),
+          t('pricing.industries.foundation.features.3'),
+          t('pricing.industries.foundation.features.4'),
+          t('pricing.industries.foundation.features.5'),
+          t('pricing.industries.foundation.features.6'),
+          t('pricing.industries.foundation.features.7')
         ],
-        valueProposition: 'Qualify $20k+ foundation repair leads automatically',
+        valueProposition: t('pricing.industries.foundation.valueProposition'),
         slug: 'foundation-repair'
       }
     ],
     home: [
       {
         icon: '❄️',
-        name: 'HVAC',
+        name: t('pricing.industries.hvac.name'),
         price: 169,
         calls: 300,
-        description: 'HVAC contractors, heating & cooling companies',
-        features: [
-          'HVAC-specific AI prompts',
-          'Emergency vs. scheduled routing',
-          'Equipment type identification',
-          'Age and brand detection',
-          'Seasonal service prompts',
-          'Maintenance scheduling',
-          'Warranty status checking',
-          'Financing questions handling'
-        ],
-        valueProposition: 'Handle summer and winter rushes without seasonal staff',
-        slug: 'hvac'
+        description: t('pricing.industries.hvac.description'),
+        slug: 'hvac',
+        valueProposition: t('pricing.industries.hvac.valueProposition')
       },
       {
         icon: '🚰',
-        name: 'Plumbing',
+        name: t('pricing.industries.plumbing.name'),
         price: 169,
         calls: 300,
-        description: 'Plumbers, drain cleaning, water heater specialists',
-        features: [
-          'Plumbing-specific AI prompts',
-          'Emergency leak detection',
-          'Shut-off valve guidance',
-          'Service type routing',
-          'Job tracker dashboard',
-          'Appointment scheduling',
-          'Water heater diagnostics',
-          'Residential vs. commercial routing'
-        ],
-        valueProposition: 'Prioritize emergency leaks, capture maintenance calls',
-        slug: 'plumbing'
+        description: t('pricing.industries.plumbing.description'),
+        slug: 'plumbing',
+        valueProposition: t('pricing.industries.plumbing.valueProposition')
       },
       {
         icon: '⚡',
-        name: 'Electricians',
+        name: t('pricing.industries.electricians.name'),
         price: 169,
         calls: 300,
-        description: 'Electricians, electrical contractors, panel upgrades',
-        features: [
-          'Electrical-specific AI prompts',
-          'Safety-first emergency protocols',
-          'Service classification',
-          'Project tracker',
-          'Code compliance questions',
-          'Permit requirement guidance',
-          'Lead qualification',
-          'EV charger installation tracking'
-        ],
-        valueProposition: 'Handle electrical emergencies safely, qualify upgrades',
-        slug: 'electricians'
+        description: t('pricing.industries.electricians.description'),
+        slug: 'electricians',
+        valueProposition: t('pricing.industries.electricians.valueProposition')
       },
       {
         icon: '🚪',
-        name: 'Garage Door Repair',
+        name: t('pricing.industries.garageDoor.name'),
         price: 149,
         calls: 300,
-        description: 'Garage door repair & installation specialists',
-        features: [
-          'Garage door-specific prompts',
-          'Emergency vs. standard routing',
-          'Issue diagnosis (spring, opener, track)',
-          'Service type routing',
-          'Door type identification',
-          'Project dashboard',
-          'Safety inspection questions',
-          'Opener brand identification'
-        ],
-        valueProposition: 'Handle stuck door emergencies, capture installations',
-        promotional: true,
-        slug: 'garage-door-repair'
+        description: t('pricing.industries.garageDoor.description'),
+        slug: 'garage-door-repair',
+        valueProposition: t('pricing.industries.garageDoor.valueProposition'),
+        promotional: true
       }
     ],
     property: [
       {
         icon: '🏠',
-        name: 'Roofing',
+        name: t('pricing.industries.roofing.name'),
         price: 169,
         calls: 300,
-        description: 'Roofing contractors, storm damage, roof inspection',
-        features: [
-          'Roofing-specific AI prompts',
-          'Storm damage prioritization',
-          'Roof type identification',
-          'Insurance claim questions',
-          'Lead tracker dashboard',
-          'Free inspection scheduling',
-          'Material type questions',
-          'Warranty information'
-        ],
-        valueProposition: 'Never miss a $15k+ insurance claim opportunity',
-        slug: 'roofing'
+        description: t('pricing.industries.roofing.description'),
+        slug: 'roofing',
+        valueProposition: t('pricing.industries.roofing.valueProposition')
       },
       {
         icon: '🛣️',
-        name: 'Concrete Leveling',
+        name: t('pricing.industries.concrete.name'),
         price: 179,
         calls: 300,
-        description: 'Concrete leveling, mudjacking, polyfoam injection',
-        features: [
-          'Concrete-specific AI prompts',
-          'Surface type identification',
-          'Severity assessment',
-          'Method education (mudjacking vs. poly)',
-          'Project tracker',
-          'Estimate scheduling',
-          'Safety hazard detection',
-          'Warranty questions'
-        ],
-        valueProposition: 'Qualify high-ticket concrete leveling projects',
-        slug: 'concrete-leveling'
+        description: t('pricing.industries.concrete.description'),
+        slug: 'concrete-leveling',
+        valueProposition: t('pricing.industries.concrete.valueProposition')
       },
       {
         icon: '🪵',
-        name: 'Fencing',
+        name: t('pricing.industries.fencing.name'),
         price: 159,
         calls: 300,
-        description: 'Fence installation & repair contractors',
-        features: [
-          'Fencing-specific AI prompts',
-          'Material type questions',
-          'Property measurement questions',
-          'Permit requirement guidance',
-          'Project tracker',
-          'Estimate scheduling',
-          'HOA compliance questions',
-          'Installation timeline info'
-        ],
-        valueProposition: 'Qualify fence projects, schedule estimates efficiently',
-        slug: 'fencing'
+        description: t('pricing.industries.fencing.description'),
+        slug: 'fencing',
+        valueProposition: t('pricing.industries.fencing.valueProposition')
       },
       {
         icon: '🌳',
-        name: 'Landscaping',
+        name: t('pricing.industries.landscaping.name'),
         price: 149,
         calls: 300,
-        description: 'Landscaping, lawn care, irrigation specialists',
-        features: [
-          'Landscaping-specific prompts',
-          'Service type routing',
-          'Seasonal service scheduling',
-          'Property size questions',
-          'Job tracker dashboard',
-          'Recurring service setup',
-          'Irrigation system questions',
-          'Budget qualification'
-        ],
-        valueProposition: 'Capture seasonal rushes, book recurring services',
-        promotional: true,
-        slug: 'landscaping'
+        description: t('pricing.industries.landscaping.description'),
+        slug: 'landscaping',
+        valueProposition: t('pricing.industries.landscaping.valueProposition'),
+        promotional: true
       }
     ],
     realestate: [
       {
         icon: '🏡',
-        name: 'Real Estate',
+        name: t('pricing.industries.realEstate.name'),
         price: 169,
         calls: 300,
-        description: 'Real estate agents, brokerages, property management',
-        features: [
-          'Real estate-specific prompts',
-          'Property inquiry routing',
-          'Showing scheduler',
-          'Buyer qualification questions',
-          'Lead tracker dashboard',
-          'Property details capture',
-          'Neighborhood questions',
-          'Financing pre-qualification'
-        ],
-        valueProposition: 'Never miss a buyer call, respond instantly',
-        slug: 'real-estate'
+        description: t('pricing.industries.realEstate.description'),
+        slug: 'real-estate',
+        valueProposition: t('pricing.industries.realEstate.valueProposition')
       }
     ]
   }
 
-  const getPrice = (tier: typeof standardTiers[0]) => {
-    if (!tier.monthlyPrice) return 'Custom'
-    return billingPeriod === 'monthly' 
-      ? `$${tier.monthlyPrice}` 
-      : `$${Math.round(tier.annualPrice / 12)}`
-  }
-
-  const getPeriod = () => {
-    return billingPeriod === 'monthly' ? '/month' : '/month*'
-  }
-
   return (
     <div>
+      {/* Hero Section */}
       <div className="gradient-mesh noise-overlay">
         <div className="section-container text-center">
-          <h1 className="heading-xl text-primary mb-6">
-            Simple, Transparent Pricing
-          </h1>
+          <h1 className="heading-xl text-primary mb-6">{t('pricing.heroTitle')}</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Choose a standard tier or industry-specific package designed for your business
+            {t('pricing.heroSubtitle')}
           </p>
-
+          
           {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <span className={`text-lg font-semibold ${billingPeriod === 'monthly' ? 'text-primary' : 'text-gray-500'}`}>
-              Monthly
-            </span>
+          <div className="inline-flex items-center bg-white rounded-full p-1 shadow-lg mb-12">
             <button
-              onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'annual' : 'monthly')}
-              className={`relative w-16 h-8 rounded-full transition-colors ${
-                billingPeriod === 'annual' ? 'bg-accent' : 'bg-gray-300'
+              onClick={() => setBillingPeriod('monthly')}
+              className={`px-6 py-3 rounded-full font-semibold transition-colors ${
+                billingPeriod === 'monthly' 
+                  ? 'bg-accent text-white' 
+                  : 'text-gray-600 hover:text-accent'
               }`}
             >
-              <div
-                className={`absolute top-1 left-1 w-6 h-6 bg-white rounded-full transition-transform ${
-                  billingPeriod === 'annual' ? 'translate-x-8' : 'translate-x-0'
-                }`}
-              />
+              {t('pricing.monthly')}
             </button>
-            <span className={`text-lg font-semibold ${billingPeriod === 'annual' ? 'text-primary' : 'text-gray-500'}`}>
-              Annual
-            </span>
-            {billingPeriod === 'annual' && (
-              <span className="bg-accent text-white text-sm font-bold px-3 py-1 rounded-full">
-                Save 20%
-              </span>
-            )}
+            <button
+              onClick={() => setBillingPeriod('annual')}
+              className={`px-6 py-3 rounded-full font-semibold transition-colors ${
+                billingPeriod === 'annual' 
+                  ? 'bg-accent text-white' 
+                  : 'text-gray-600 hover:text-accent'
+              }`}
+            >
+              {t('pricing.annual')} 
+              <span className="ml-2 text-sm">({t('pricing.save20')})</span>
+            </button>
           </div>
-          {billingPeriod === 'annual' && (
-            <p className="text-sm text-gray-600">* Billed annually</p>
-          )}
         </div>
       </div>
 
       {/* Standard Tiers */}
-      <div className="section-container bg-white">
-        <h2 className="heading-md text-center text-primary mb-12">Standard Plans</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {standardTiers.map((tier, index) => (
-            <div
-              key={index}
-              className={`rounded-3xl p-8 transition-all duration-300 ${
-                tier.highlighted
-                  ? 'bg-gradient-to-br from-accent to-accent-dark text-white shadow-2xl transform scale-105 border-4 border-accent'
-                  : 'bg-white border-2 border-gray-200 hover:border-accent hover:shadow-xl'
-              }`}
-            >
-              {tier.highlighted && (
-                <div className="text-center mb-4">
-                  <span className="bg-white text-accent text-sm font-bold px-4 py-1 rounded-full">
-                    MOST POPULAR
-                  </span>
-                </div>
-              )}
-              <h3 className={`text-2xl font-display font-bold mb-2 ${tier.highlighted ? 'text-white' : 'text-primary'}`}>
-                {tier.name}
-              </h3>
-              <div className="mb-4">
-                <span className={`text-5xl font-display font-bold ${tier.highlighted ? 'text-white' : 'text-primary'}`}>
-                  {getPrice(tier)}
-                </span>
-                {tier.monthlyPrice && (
-                  <span className={`text-lg ${tier.highlighted ? 'text-white/80' : 'text-gray-600'}`}>
-                    {getPeriod()}
-                  </span>
-                )}
-              </div>
-              <p className={`mb-6 text-sm ${tier.highlighted ? 'text-white/90' : 'text-gray-600'}`}>
-                {tier.description}
-              </p>
-              <div className={`mb-6 pb-6 border-b ${tier.highlighted ? 'border-white/20' : 'border-gray-200'}`}>
-                <p className={`text-sm font-semibold mb-2 ${tier.highlighted ? 'text-white' : 'text-primary'}`}>
-                  {typeof tier.calls === 'number' ? `${tier.calls} calls/month` : tier.calls}
-                </p>
-                {tier.overage && (
-                  <p className={`text-xs ${tier.highlighted ? 'text-white/70' : 'text-gray-500'}`}>
-                    ${tier.overage}/call overage
-                  </p>
-                )}
-              </div>
-              <Link
-                to="/onboarding"
-                className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-200 mb-6 ${
-                  tier.highlighted
-                    ? 'bg-white text-accent hover:bg-gray-100'
-                    : 'bg-accent text-white hover:bg-accent-dark'
+      <div className="bg-surface">
+        <div className="section-container">
+          <h2 className="heading-md text-primary mb-12 text-center">{t('pricing.standardTiersTitle')}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {standardTiers.map((tier, index) => (
+              <div 
+                key={index} 
+                className={`bg-white rounded-2xl p-8 border-2 transition-all duration-300 hover:shadow-xl ${
+                  tier.highlighted 
+                    ? 'border-accent shadow-xl scale-105' 
+                    : 'border-gray-100 hover:border-accent'
                 }`}
               >
-                Get Started
-              </Link>
-              <ul className="space-y-3">
-                {tier.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start space-x-2 text-sm">
-                    <svg
-                      className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                        tier.highlighted ? 'text-white' : 'text-accent'
-                      }`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className={tier.highlighted ? 'text-white/90' : 'text-gray-600'}>
-                      {feature}
+                {tier.highlighted && (
+                  <div className="text-center mb-4">
+                    <span className="bg-accent text-white text-sm font-bold px-4 py-1 rounded-full">
+                      {t('pricing.mostPopular')}
                     </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  </div>
+                )}
+                
+                <h3 className="text-2xl font-display font-bold text-primary mb-2">{tier.name}</h3>
+                <p className="text-gray-600 mb-6">{tier.description}</p>
+                
+                <div className="mb-6">
+                  {tier.monthlyPrice ? (
+                    <>
+                      <div className="flex items-baseline mb-2">
+                        <span className="text-5xl font-display font-bold text-accent">
+                          ${billingPeriod === 'monthly' ? tier.monthlyPrice : tier.annualPrice}
+                        </span>
+                        <span className="text-lg text-gray-600">
+                          {billingPeriod === 'monthly' ? t('pricing.perMonth') : t('pricing.perYear')}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600">{tier.calls} {t('pricing.callsPerMonth')}</p>
+                    </>
+                  ) : (
+                    <div className="text-3xl font-display font-bold text-accent mb-2">
+                      {t('pricing.contactUs')}
+                    </div>
+                  )}
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-2 text-sm">
+                      <svg className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-gray-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link 
+                  to={tier.monthlyPrice ? "/onboarding" : "/demo"} 
+                  className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-colors ${
+                    tier.highlighted
+                      ? 'bg-accent text-white hover:bg-accent-dark'
+                      : 'bg-gray-100 text-primary hover:bg-accent hover:text-white'
+                  }`}
+                >
+                  {tier.monthlyPrice ? t('pricing.getStarted') : t('pricing.contactSales')}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Industry-Specific Packages */}
-      <div className="bg-surface">
-        <div className="section-container">
-          <div className="text-center mb-12">
-            <h2 className="heading-md text-primary mb-4">Industry-Specific Packages</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Pre-configured AI templates designed for your industry. All include 300 calls/month.
-            </p>
-          </div>
+      {/* Industry Packages */}
+      <div className="section-container bg-white">
+        <div className="text-center mb-12">
+          <h2 className="heading-md text-primary mb-4">{t('pricing.industryPackagesTitle')}</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {t('pricing.industryPackagesSubtitle')}
+          </p>
+        </div>
 
-          {/* Real Estate - MOVED TO TOP */}
+        <div className="max-w-7xl mx-auto">
+          {/* Real Estate */}
           <div className="mb-16">
             <h3 className="text-3xl font-display font-bold text-primary mb-8 flex items-center justify-center">
               <span className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center mr-4">
                 🏡
               </span>
-              Real Estate
+              {t('pricing.categoryRealEstate')}
             </h3>
-            <div className="grid md:grid-cols-1 max-w-2xl mx-auto">
+            <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
               {industryPackages.realestate.map((pkg, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-accent transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-start justify-between mb-4">
@@ -478,25 +363,15 @@ export default function PricingPage() {
                   <div className="mb-6">
                     <div className="flex items-baseline mb-2">
                       <span className="text-5xl font-display font-bold text-accent">${pkg.price}</span>
-                      <span className="text-lg text-gray-600">/month</span>
+                      <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
                     </div>
-                    <p className="text-sm text-gray-600">{pkg.calls} calls included</p>
+                    <p className="text-sm text-gray-600">{pkg.calls} {t('pricing.callsIncluded')}</p>
                   </div>
                   <div className="bg-accent/10 rounded-xl p-4 mb-6">
                     <p className="text-sm font-semibold text-accent">{pkg.valueProposition}</p>
                   </div>
-                  <ul className="grid md:grid-cols-2 gap-2 mb-6">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2 text-sm">
-                        <svg className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
                   <Link to={`/industries/${pkg.slug}`} className="block w-full text-center py-3 px-6 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors">
-                    Learn More
+                    {t('pricing.learnMore')}
                   </Link>
                 </div>
               ))}
@@ -509,7 +384,7 @@ export default function PricingPage() {
               <span className="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center mr-4">
                 🚨
               </span>
-              Emergency Services
+              {t('pricing.categoryEmergency')}
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {industryPackages.emergency.map((pkg, index) => (
@@ -526,9 +401,9 @@ export default function PricingPage() {
                   <div className="mb-6">
                     <div className="flex items-baseline mb-2">
                       <span className="text-5xl font-display font-bold text-accent">${pkg.price}</span>
-                      <span className="text-lg text-gray-600">/month</span>
+                      <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
                     </div>
-                    <p className="text-sm text-gray-600">{pkg.calls} calls included</p>
+                    <p className="text-sm text-gray-600">{pkg.calls} {t('pricing.callsIncluded')}</p>
                   </div>
                   <div className="bg-accent/10 rounded-xl p-4 mb-6">
                     <p className="text-sm font-semibold text-accent">{pkg.valueProposition}</p>
@@ -544,7 +419,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <Link to={`/industries/${pkg.slug}`} className="block w-full text-center py-3 px-6 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors">
-                    Learn More
+                    {t('pricing.learnMore')}
                   </Link>
                 </div>
               ))}
@@ -557,14 +432,14 @@ export default function PricingPage() {
               <span className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mr-4">
                 🏠
               </span>
-              Home Services
+              {t('pricing.categoryHome')}
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {industryPackages.home.map((pkg, index) => (
                 <div key={index} className="bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-accent transition-all duration-300 hover:shadow-xl relative">
                   {pkg.promotional && (
                     <div className="absolute -top-3 -right-3 bg-yellow-400 text-primary text-xs font-bold px-3 py-1 rounded-full rotate-12 shadow-lg">
-                      PROMO!
+                      {t('pricing.promo')}
                     </div>
                   )}
                   <div className="text-center mb-4">
@@ -576,13 +451,13 @@ export default function PricingPage() {
                       <span className="text-4xl font-display font-bold text-accent">${pkg.price}</span>
                       <span className="text-sm text-gray-600">/mo</span>
                     </div>
-                    <p className="text-xs text-gray-600">{pkg.calls} calls</p>
+                    <p className="text-xs text-gray-600">{pkg.calls} {t('pricing.calls')}</p>
                   </div>
                   <div className="bg-accent/10 rounded-lg p-3 mb-4">
                     <p className="text-xs font-semibold text-accent text-center">{pkg.valueProposition}</p>
                   </div>
                   <Link to={`/industries/${pkg.slug}`} className="block w-full text-center py-2 px-4 bg-accent text-white rounded-lg text-sm font-bold hover:bg-accent-dark transition-colors">
-                    View Details
+                    {t('pricing.viewDetails')}
                   </Link>
                 </div>
               ))}
@@ -595,14 +470,14 @@ export default function PricingPage() {
               <span className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mr-4">
                 🏗️
               </span>
-              Property Services
+              {t('pricing.categoryProperty')}
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {industryPackages.property.map((pkg, index) => (
                 <div key={index} className="bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-accent transition-all duration-300 hover:shadow-xl relative">
                   {pkg.promotional && (
                     <div className="absolute -top-3 -right-3 bg-yellow-400 text-primary text-xs font-bold px-3 py-1 rounded-full rotate-12 shadow-lg">
-                      PROMO!
+                      {t('pricing.promo')}
                     </div>
                   )}
                   <div className="text-center mb-4">
@@ -614,13 +489,13 @@ export default function PricingPage() {
                       <span className="text-4xl font-display font-bold text-accent">${pkg.price}</span>
                       <span className="text-sm text-gray-600">/mo</span>
                     </div>
-                    <p className="text-xs text-gray-600">{pkg.calls} calls</p>
+                    <p className="text-xs text-gray-600">{pkg.calls} {t('pricing.calls')}</p>
                   </div>
                   <div className="bg-accent/10 rounded-lg p-3 mb-4">
                     <p className="text-xs font-semibold text-accent text-center">{pkg.valueProposition}</p>
                   </div>
                   <Link to={`/industries/${pkg.slug}`} className="block w-full text-center py-2 px-4 bg-accent text-white rounded-lg text-sm font-bold hover:bg-accent-dark transition-colors">
-                    View Details
+                    {t('pricing.viewDetails')}
                   </Link>
                 </div>
               ))}
@@ -632,16 +507,16 @@ export default function PricingPage() {
       {/* CTA Section */}
       <div className="bg-gradient-to-br from-accent to-accent-dark text-white">
         <div className="section-container text-center">
-          <h2 className="heading-md text-white mb-4">Ready to Get Started?</h2>
+          <h2 className="heading-md text-white mb-4">{t('pricing.ctaTitle')}</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-            All plans include a 30-day money-back guarantee. Cancel anytime.
+            {t('pricing.ctaSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/demo" className="btn-secondary inline-block bg-white text-accent hover:bg-gray-100">
-              Request Demo
+              {t('header.requestDemo')}
             </Link>
             <Link to="/onboarding" className="btn-primary inline-block border-2 border-white hover:bg-white hover:text-accent">
-              Get Started Now
+              {t('header.getStarted')}
             </Link>
           </div>
         </div>

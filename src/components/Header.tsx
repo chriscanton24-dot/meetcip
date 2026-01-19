@@ -1,207 +1,171 @@
+// HEADER.TSX - FIXED VERSION WITH BETTER SPACING
+
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [industriesOpen, setIndustriesOpen] = useState(false)
-  let hoverTimeout: ReturnType<typeof setTimeout>
+  const { t } = useTranslation()
+  const [showIndustries, setShowIndustries] = useState(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const handleMouseEnter = () => {
-    clearTimeout(hoverTimeout)
-    setIndustriesOpen(true)
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+    setShowIndustries(true)
   }
 
   const handleMouseLeave = () => {
-    hoverTimeout = setTimeout(() => {
-      setIndustriesOpen(false)
+    timeoutRef.current = setTimeout(() => {
+      setShowIndustries(false)
     }, 300) // 300ms delay before closing
   }
 
+  const handleLinkClick = () => {
+    setShowIndustries(false)
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
+  }
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
+            <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center mr-3">
+              <span className="text-white font-bold text-xl">CIP</span>
+            </div>
             <span className="text-2xl font-display font-bold text-primary">MeetCIP</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-accent transition-colors">
-              Home
+          {/* Navigation - FIXED SPACING */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.home')}
+            </Link>
+            <Link to="/pricing" className="text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.pricing')}
+            </Link>
+            <Link to="/features" className="text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.features')}
             </Link>
             
-            <Link to="/pricing" className="text-gray-700 hover:text-accent transition-colors">
-              Pricing
-            </Link>
-            
-            <Link to="/features" className="text-gray-700 hover:text-accent transition-colors">
-              Features
-            </Link>
-            
-            {/* Industries Dropdown - FIXED HOVER */}
-            <div 
-              className="relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button className="text-gray-700 hover:text-accent transition-colors flex items-center">
-                Industries
+            {/* Industries Dropdown - FIXED SPACING */}
+            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <button className="text-gray-700 hover:text-accent font-medium transition-colors flex items-center">
+                {t('header.industries')}
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
-              {industriesOpen && (
-                <div 
-                  className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border-2 border-gray-100 py-2"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase">Emergency Services</div>
-                  <Link to="/industries/water-fire-restoration" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🔥 Water/Fire Restoration
-                  </Link>
-                  <Link to="/industries/foundation-repair" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🏗️ Foundation Repair
-                  </Link>
-                  
-                  <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase mt-2">Home Services</div>
-                  <Link to="/industries/hvac" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    ❄️ HVAC
-                  </Link>
-                  <Link to="/industries/plumbing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🚰 Plumbing
-                  </Link>
-                  <Link to="/industries/electricians" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    ⚡ Electricians
-                  </Link>
-                  <Link to="/industries/garage-door-repair" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🚪 Garage Door Repair
-                  </Link>
-                  
-                  <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase mt-2">Property Services</div>
-                  <Link to="/industries/roofing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🏠 Roofing
-                  </Link>
-                  <Link to="/industries/concrete-leveling" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🛣️ Concrete Leveling
-                  </Link>
-                  <Link to="/industries/fencing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🪵 Fencing
-                  </Link>
-                  <Link to="/industries/landscaping" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🌳 Landscaping
-                  </Link>
-                  
-                  <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase mt-2">Real Estate</div>
-                  <Link to="/industries/real-estate" className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent/10 hover:text-accent">
-                    🏡 Real Estate
-                  </Link>
+              {showIndustries && (
+                <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4">
+                  {/* EMERGENCY SERVICES */}
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('header.emergencyServices')}
+                    </div>
+                    <Link to="/industries/water-fire-restoration" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🔥</span>
+                      <span className="text-gray-700">Water/Fire Restoration</span>
+                    </Link>
+                    <Link to="/industries/foundation-repair" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🏗️</span>
+                      <span className="text-gray-700">Foundation Repair</span>
+                    </Link>
+                  </div>
+
+                  <div className="border-t border-gray-200 my-2"></div>
+
+                  {/* HOME SERVICES */}
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('header.homeServices')}
+                    </div>
+                    <Link to="/industries/hvac" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">❄️</span>
+                      <span className="text-gray-700">HVAC</span>
+                    </Link>
+                    <Link to="/industries/plumbing" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🚰</span>
+                      <span className="text-gray-700">Plumbing</span>
+                    </Link>
+                    <Link to="/industries/electricians" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">⚡</span>
+                      <span className="text-gray-700">Electricians</span>
+                    </Link>
+                    <Link to="/industries/garage-door-repair" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🚪</span>
+                      <span className="text-gray-700">Garage Door Repair</span>
+                    </Link>
+                  </div>
+
+                  <div className="border-t border-gray-200 my-2"></div>
+
+                  {/* PROPERTY SERVICES */}
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('header.propertyServices')}
+                    </div>
+                    <Link to="/industries/roofing" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🏠</span>
+                      <span className="text-gray-700">Roofing</span>
+                    </Link>
+                    <Link to="/industries/concrete-leveling" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🏗️</span>
+                      <span className="text-gray-700">Concrete Leveling</span>
+                    </Link>
+                    <Link to="/industries/fencing" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🪵</span>
+                      <span className="text-gray-700">Fencing</span>
+                    </Link>
+                    <Link to="/industries/landscaping" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🌳</span>
+                      <span className="text-gray-700">Landscaping</span>
+                    </Link>
+                  </div>
+
+                  <div className="border-t border-gray-200 my-2"></div>
+
+                  {/* REAL ESTATE */}
+                  <div className="px-4 py-2">
+                    <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                      {t('header.realEstate')}
+                    </div>
+                    <Link to="/industries/real-estate" onClick={handleLinkClick} className="flex items-center py-2 hover:bg-gray-50 rounded -mx-2 px-2">
+                      <span className="text-xl mr-3">🏡</span>
+                      <span className="text-gray-700">Real Estate</span>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
-            
-            <Link to="/about" className="text-gray-700 hover:text-accent transition-colors">
-              About
-            </Link>
-            
-            <Link to="/contact" className="text-gray-700 hover:text-accent transition-colors">
-              Contact
-            </Link>
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/demo" className="btn-secondary">
-              Request Demo
+            <Link to="/about" className="text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.about')}
             </Link>
-            <Link to="/onboarding" className="btn-primary">
-              Get Started Now
+            <Link to="/contact" className="text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.contact')}
             </Link>
-          </div>
+          </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* CTA Buttons + Language Switcher - FIXED SPACING */}
+          <div className="flex items-center space-x-4">
+            <Link to="/demo" className="hidden md:inline-block px-5 py-2.5 text-gray-700 hover:text-accent font-medium transition-colors">
+              {t('header.requestDemo')}
+            </Link>
+            <Link to="/onboarding" className="hidden md:inline-block px-5 py-2.5 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors">
+              {t('header.getStarted')}
+            </Link>
+            <LanguageSwitcher />
+          </div>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <Link to="/" className="block py-2 text-gray-700 hover:text-accent" onClick={() => setMobileMenuOpen(false)}>
-              Home
-            </Link>
-            <Link to="/pricing" className="block py-2 text-gray-700 hover:text-accent" onClick={() => setMobileMenuOpen(false)}>
-              Pricing
-            </Link>
-            <Link to="/features" className="block py-2 text-gray-700 hover:text-accent" onClick={() => setMobileMenuOpen(false)}>
-              Features
-            </Link>
-            <div className="py-2">
-              <div className="font-bold text-gray-900 mb-2">Industries</div>
-              <Link to="/industries/water-fire-restoration" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🔥 Water/Fire Restoration
-              </Link>
-              <Link to="/industries/foundation-repair" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🏗️ Foundation Repair
-              </Link>
-              <Link to="/industries/hvac" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                ❄️ HVAC
-              </Link>
-              <Link to="/industries/plumbing" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🚰 Plumbing
-              </Link>
-              <Link to="/industries/electricians" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                ⚡ Electricians
-              </Link>
-              <Link to="/industries/garage-door-repair" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🚪 Garage Door
-              </Link>
-              <Link to="/industries/roofing" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🏠 Roofing
-              </Link>
-              <Link to="/industries/concrete-leveling" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🛣️ Concrete
-              </Link>
-              <Link to="/industries/fencing" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🪵 Fencing
-              </Link>
-              <Link to="/industries/landscaping" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🌳 Landscaping
-              </Link>
-              <Link to="/industries/real-estate" className="block py-1 pl-4 text-sm text-gray-700" onClick={() => setMobileMenuOpen(false)}>
-                🏡 Real Estate
-              </Link>
-            </div>
-            <Link to="/about" className="block py-2 text-gray-700 hover:text-accent" onClick={() => setMobileMenuOpen(false)}>
-              About
-            </Link>
-            <Link to="/contact" className="block py-2 text-gray-700 hover:text-accent" onClick={() => setMobileMenuOpen(false)}>
-              Contact
-            </Link>
-            <div className="mt-4 space-y-2">
-              <Link to="/demo" className="block w-full text-center py-2 px-4 btn-secondary" onClick={() => setMobileMenuOpen(false)}>
-                Request Demo
-              </Link>
-              <Link to="/onboarding" className="block w-full text-center py-2 px-4 btn-primary" onClick={() => setMobileMenuOpen(false)}>
-                Get Started Now
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+      </div>
     </header>
   )
 }

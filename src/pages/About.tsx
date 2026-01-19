@@ -1,62 +1,66 @@
+import { useTranslation } from 'react-i18next'
+
 export default function About() {
+  const { t } = useTranslation()
+
   return (
     <div>
       <div className="gradient-mesh noise-overlay">
         <div className="section-container text-center">
           <h1 className="heading-xl text-primary mb-6">
-            Empowering Small Businesses
+            {t('about.title')}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We believe every business deserves enterprise-grade customer service technology.
+            {t('about.subtitle')}
           </p>
         </div>
       </div>
 
       <div className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="heading-md text-primary mb-6">Our Mission</h2>
+          <h2 className="heading-md text-primary mb-6">{t('about.missionTitle')}</h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            MeetCIP was founded on a simple observation: small businesses lose thousands of dollars every year from missed calls. Whether it's after hours, during busy periods, or when staff is unavailable, every missed call is a lost opportunity.
+            {t('about.missionPara1')}
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
-            We created MeetCIP to help small businesses provide excellent customer service without hiring additional staff. Now any business can answer every call, 24/7—without the overhead costs or complexity.
+            {t('about.missionPara2')}
           </p>
         </div>
       </div>
 
       <div className="bg-surface">
         <div className="section-container">
-          <h2 className="heading-md text-center text-primary mb-12">Our Values</h2>
+          <h2 className="heading-md text-center text-primary mb-12">{t('about.valuesTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Accessibility',
-                description: 'Advanced technology made simple and affordable for businesses of all sizes.',
+                title: t('about.values.accessibility.title'),
+                description: t('about.values.accessibility.description'),
                 icon: '🌐'
               },
               {
-                title: 'Reliability',
-                description: 'Always-on service you can trust, with 99.9% uptime guaranteed.',
+                title: t('about.values.reliability.title'),
+                description: t('about.values.reliability.description'),
                 icon: '✅'
               },
               {
-                title: 'Innovation',
-                description: 'Continuous improvement through cutting-edge AI and customer feedback.',
+                title: t('about.values.innovation.title'),
+                description: t('about.values.innovation.description'),
                 icon: '🚀'
               },
               {
-                title: 'Transparency',
-                description: 'Clear pricing, honest communication, no hidden fees or surprises.',
+                title: t('about.values.transparency.title'),
+                description: t('about.values.transparency.description'),
                 icon: '💎'
               },
               {
-                title: 'Customer-First',
-                description: 'Your success is our success. We grow when you grow.',
+                title: t('about.values.customerFirst.title'),
+                description: t('about.values.customerFirst.description'),
                 icon: '🤝'
               },
               {
-                title: 'Privacy',
-                description: 'Your data is yours. Enterprise-grade security and HIPAA compliance.',
+                title: t('about.values.privacy.title'),
+                description: t('about.values.privacy.description'),
                 icon: '🔒'
               }
             ].map((value, index) => (
