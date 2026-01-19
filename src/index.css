@@ -125,7 +125,7 @@
 }
 
 /* ========================================
-   MOBILE RESPONSIVE FIXES - AGGRESSIVE
+   TABLE SCROLLING FIX - OPTION 1 + MOBILE FIX
    ======================================== */
 
 /* Prevent horizontal scroll on body */
@@ -160,6 +160,26 @@ div:has(table) {
 table {
   min-width: 800px !important;
   width: max-content !important;
+}
+
+/* CRITICAL: Prevent sticky columns on mobile */
+@media (max-width: 1023px) {
+  /* Make sure NO table cells are sticky/fixed */
+  table th,
+  table td,
+  table thead th,
+  table tbody td,
+  table tr th:first-child,
+  table tr td:first-child {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+  }
+  
+  /* Ensure entire table scrolls as one unit */
+  table {
+    position: relative !important;
+  }
 }
 
 /* Desktop: allow tables to be full width */
