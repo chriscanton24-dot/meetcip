@@ -102,7 +102,7 @@
   right: 0;
   bottom: 0;
   opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulance type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Fix gradient-mesh blocking clicks */
@@ -125,7 +125,7 @@
 }
 
 /* ========================================
-   MOBILE RESPONSIVE FIXES - CORRECTED
+   MOBILE RESPONSIVE FIXES - WORKING VERSION
    ======================================== */
 
 /* Prevent horizontal scroll on body */
@@ -147,16 +147,31 @@ body {
   box-sizing: border-box;
 }
 
-/* EXCEPTION: Allow tables and scrollable containers to overflow */
+/* CRITICAL: Table containers must be scrollable */
 .overflow-x-auto,
-[class*="overflow-x-auto"],
-.table-container {
-  max-width: none !important;
+[class*="overflow-x-auto"] {
   overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  max-width: 100% !important;
 }
 
-/* DO NOT force display: block on tables - breaks layout! */
-/* Instead, ensure their containers are scrollable */
+/* Tables inside scrollable containers */
+.overflow-x-auto > table,
+div[class*="overflow-x"] > table {
+  min-width: 100% !important;
+  width: max-content !important;
+}
+
+/* Force table to be wide enough to need scrolling on mobile */
+@media (max-width: 1023px) {
+  .overflow-x-auto > table,
+  div[class*="overflow-x"] > table,
+  div[class*="feature"] table,
+  section[class*="comparison"] table {
+    min-width: 800px !important;
+    width: max-content !important;
+  }
+}
 
 /* Responsive images */
 img {
@@ -183,12 +198,6 @@ img {
   a {
     min-height: 44px;
     min-width: 44px;
-  }
-  
-  /* Make scrollable containers smooth on mobile */
-  .overflow-x-auto {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
   }
 }
 
