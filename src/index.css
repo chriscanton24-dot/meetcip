@@ -125,7 +125,7 @@
 }
 
 /* ========================================
-   TABLE SCROLLING FIX - UNIVERSAL
+   MOBILE RESPONSIVE FIXES - AGGRESSIVE
    ======================================== */
 
 /* Prevent horizontal scroll on body */
@@ -147,33 +147,32 @@ body {
   box-sizing: border-box;
 }
 
-/* NUCLEAR OPTION: Make ALL tables scrollable by wrapping them */
+/* CRITICAL: Find ANY element containing a table and make it scrollable */
+div:has(> table),
+section:has(> table),
+div:has(table) {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  max-width: 100% !important;
+}
+
+/* Force ALL tables to be wide enough */
 table {
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
-  min-width: 100%;
+  min-width: 800px !important;
   width: max-content !important;
 }
 
-/* Ensure table contents don't wrap */
-table th,
-table td {
-  white-space: nowrap;
-}
-
-/* Mobile: force tables to be wide enough */
-@media (max-width: 1023px) {
-  table {
-    min-width: 800px !important;
-  }
-}
-
-/* Desktop: allow full width */
+/* Desktop: allow tables to be full width */
 @media (min-width: 1024px) {
   table {
     min-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* But still allow container to scroll if needed */
+  div:has(> table),
+  section:has(> table) {
+    overflow-x: auto !important;
   }
 }
 
