@@ -125,7 +125,7 @@
 }
 
 /* ========================================
-   MOBILE RESPONSIVE FIXES - WORKING VERSION
+   MOBILE RESPONSIVE FIXES - AGGRESSIVE
    ======================================== */
 
 /* Prevent horizontal scroll on body */
@@ -147,29 +147,32 @@ body {
   box-sizing: border-box;
 }
 
-/* CRITICAL: Table containers must be scrollable */
-.overflow-x-auto,
-[class*="overflow-x-auto"] {
+/* CRITICAL: Find ANY element containing a table and make it scrollable */
+div:has(> table),
+section:has(> table),
+div:has(table) {
   overflow-x: auto !important;
   -webkit-overflow-scrolling: touch !important;
   max-width: 100% !important;
 }
 
-/* Tables inside scrollable containers */
-.overflow-x-auto > table,
-div[class*="overflow-x"] > table {
-  min-width: 100% !important;
+/* Force ALL tables to be wide enough */
+table {
+  min-width: 800px !important;
   width: max-content !important;
 }
 
-/* Force table to be wide enough to need scrolling on mobile */
-@media (max-width: 1023px) {
-  .overflow-x-auto > table,
-  div[class*="overflow-x"] > table,
-  div[class*="feature"] table,
-  section[class*="comparison"] table {
-    min-width: 800px !important;
-    width: max-content !important;
+/* Desktop: allow tables to be full width */
+@media (min-width: 1024px) {
+  table {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* But still allow container to scroll if needed */
+  div:has(> table),
+  section:has(> table) {
+    overflow-x: auto !important;
   }
 }
 
