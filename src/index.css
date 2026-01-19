@@ -123,13 +123,6 @@
   pointer-events: auto !important;
   cursor: pointer !important;
 }
-/* src/index.css - ADD THESE FIXES TO YOUR EXISTING FILE */
-
-/* FIX: Prevent horizontal scroll on mobile */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
 
 /* ========================================
    MOBILE RESPONSIVE FIXES - CLEAN VERSION
