@@ -5,3 +5,9 @@
 .env
 .env.local
 .env.production
+
+# Environment variables - NEVER commit
+.env
+.env.local
+.env.production
+*.env
