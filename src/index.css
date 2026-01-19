@@ -130,141 +130,79 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-}
 
-/* FIX: Ensure main content doesn't cause horizontal scroll */
-#root {
-  overflow-x: hidden;
-  width: 100%;
-}
+/* ========================================
+   MOBILE RESPONSIVE FIXES - CLEAN VERSION
+   ======================================== */
 
-/* FIX: Prevent any container from overflowing */
-* {
-  max-width: 100%;
-}
-
-/* FIX: Ensure all sections stay within viewport */
-.container {
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* FIX: Responsive images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* FIX: Mobile landscape orientation */
-@media (max-height: 500px) and (orientation: landscape) {
-  /* Reduce header padding in landscape mode */
-  header nav {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-  
-  /* Make mobile menu scrollable in landscape */
-  header nav > div:last-child {
-    max-height: calc(100vh - 60px);
-    overflow-y: auto;
-  }
-}
-
-/* FIX: Ensure touch targets are large enough on mobile */
-@media (max-width: 1023px) {
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-/* Mobile Responsive Fixes - Jan 18 2026 - UPDATED */
-
-/* FIX: Prevent horizontal scroll on mobile (but allow specific elements to scroll) */
-html {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-}
-
+/* Prevent horizontal scroll on body */
+html,
 body {
   overflow-x: hidden;
   width: 100%;
-  position: relative;
 }
 
-/* FIX: Ensure main content doesn't cause horizontal scroll */
+/* Prevent root from causing scroll */
 #root {
   overflow-x: hidden;
   width: 100%;
 }
 
-/* FIX: Prevent most containers from overflowing */
+/* Default: prevent most elements from overflowing */
 * {
   max-width: 100%;
 }
 
-/* EXCEPTION: Allow Feature Comparison table to scroll horizontally */
+/* EXCEPTION: Allow tables and scrollable containers to overflow */
+table,
 .overflow-x-auto,
-[class*="overflow-x-auto"] {
+[class*="overflow-x-auto"],
+.table-container {
   max-width: none !important;
   overflow-x: auto !important;
 }
 
-/* FIX: Feature Comparison table specific fixes */
-table {
-  max-width: none !important;
-}
-
-/* FIX: Ensure tables in scrollable containers work */
+/* Ensure tables inside scrollable containers work */
 .overflow-x-auto table,
 div[style*="overflow-x"] table {
   max-width: none !important;
   min-width: 100%;
 }
 
-/* FIX: Ensure all sections stay within viewport */
-.container {
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* FIX: Responsive images */
+/* Responsive images */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* FIX: Mobile landscape orientation */
+/* Mobile landscape fixes */
 @media (max-height: 500px) and (orientation: landscape) {
-  /* Reduce header padding in landscape mode */
   header nav {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
   }
   
-  /* Make mobile menu scrollable in landscape */
   header nav > div:last-child {
     max-height: calc(100vh - 60px);
     overflow-y: auto;
   }
 }
 
-/* FIX: Ensure touch targets are large enough on mobile */
+/* Mobile touch targets */
 @media (max-width: 1023px) {
-  button, a {
+  button,
+  a {
     min-height: 44px;
     min-width: 44px;
   }
   
-  /* Make Feature Comparison table scrollable on mobile */
+  /* Make scrollable tables smooth on mobile */
   .overflow-x-auto {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
   
-  /* Add visual indicator for scrollable content */
+  /* Scroll indicator for tables */
   .overflow-x-auto::after {
     content: '';
     position: absolute;
@@ -272,14 +210,13 @@ img {
     top: 0;
     bottom: 0;
     width: 30px;
-    background: linear-gradient(to left, rgba(255,255,255,0.8), transparent);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.8), transparent);
     pointer-events: none;
   }
 }
 
-/* FIX: Pricing cards mobile layout */
+/* Pricing cards mobile scrolling */
 @media (max-width: 640px) {
-  /* Allow pricing cards to scroll horizontally on mobile */
   .pricing-cards-container {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
