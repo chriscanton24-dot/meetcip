@@ -26,15 +26,15 @@
     }
   },
   "hero": {
-    "badge": "Friendly • Professional • 24/7 • Bilingual",
+    "badge": "Friendly - Professional - 24/7 - Bilingual",
     "title": "Never Miss a Business Call Again",
-    "subtitle": "AI phone answering that sounds human, speaks English & Spanish, and works 24/7 — for a fraction of staff costs",
+    "subtitle": "AI phone answering that sounds human, speaks English & Spanish, and works 24/7 - for a fraction of staff costs",
     "benefit1": "Instant Response",
     "benefit2": "Bilingual Support",
     "benefit3": "Call Logs & Transcripts",
     "cta": "Get Started Now",
     "demo": "Hear MeetCIP Live",
-    "trustBadge": "No contracts • Cancel anytime"
+    "trustBadge": "No contracts - Cancel anytime"
   },
   "features": {
     "title": "Everything You Need to Handle Calls Professionally",
@@ -336,7 +336,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "dpa": "Data Processing Addendum",
-    "copyright": "© 2025 MeetCIP — Call Intelligence Platform",
+    "copyright": "(c) 2025 MeetCIP - Call Intelligence Platform",
     "contactEmail": "Contact: demomeetcip@gmail.com"
   },
   "about": {
