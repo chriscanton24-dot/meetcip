@@ -1,6 +1,9 @@
+
 import { useState, FormEvent } from 'react'
+import { useAnalytics } from '../components/AnalyticsProvider'
 
 export default function Demo() {
+  const { trackEvent, trackConversion } = useAnalytics()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,14 +19,19 @@ export default function Demo() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    
+    // Track demo request start
+    trackEvent('demo_request_started', {
+      company: formData.company,
+      industry: formData.industry,
+    })
+    
     setSubmitting(true)
     setError(null)
 
     try {
-      // Get API URL from environment variable
       const apiUrl = import.meta.env.VITE_API_URL || 'https://ai-answering-service-cloud.onrender.com'
       
-      // Call the backend API
       const response = await fetch(`${apiUrl}/api/demo-request`, {
         method: 'POST',
         headers: {
@@ -39,7 +47,6 @@ export default function Demo() {
           industry: formData.industry || null,
           source: 'landing_page',
           referrer: document.referrer || null,
-          // Add UTM parameters if present
           utm_source: new URLSearchParams(window.location.search).get('utm_source'),
           utm_medium: new URLSearchParams(window.location.search).get('utm_medium'),
           utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign'),
@@ -55,11 +62,16 @@ export default function Demo() {
         throw new Error(data.detail || 'Failed to submit demo request')
       }
 
-      // Success!
+      // Track successful conversion
+      trackConversion('demo_request_completed', 100)
+      trackEvent('demo_request_success', {
+        company: formData.company,
+        industry: formData.industry,
+      })
+      
       console.log('Demo request submitted:', data)
       setSubmitted(true)
       
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -72,6 +84,12 @@ export default function Demo() {
 
     } catch (err) {
       console.error('Error submitting demo request:', err)
+      
+      // Track error
+      trackEvent('demo_request_error', {
+        error: err instanceof Error ? err.message : 'Unknown error',
+      })
+      
       setError(err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.')
     } finally {
       setSubmitting(false)

@@ -430,5 +430,12 @@
         "description": "Your data is yours. Enterprise-grade security and HIPAA compliance."
       }
     }
+  },
+"cookieConsent": {
+    "message": "We use cookies to improve your experience and analyze site traffic.",
+    "details": "By clicking Accept, you agree to our use of cookies.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
