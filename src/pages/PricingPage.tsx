@@ -22,8 +22,7 @@ export default function PricingPage() {
         t('pricing.tiers.starter.features.3'),
         t('pricing.tiers.starter.features.4'),
         t('pricing.tiers.starter.features.5'),
-        t('pricing.tiers.starter.features.6'),
-        t('pricing.tiers.starter.features.7')
+        t('pricing.tiers.starter.features.6')
       ]
     },
     {
