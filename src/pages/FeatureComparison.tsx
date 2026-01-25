@@ -14,6 +14,7 @@ export default function FeatureComparison() {
         { name: t('featureComparison.features.emailNotifications'), starter: true, professional: true, business: true, enterprise: true, industry: true },
         { name: t('featureComparison.features.responseTime'), starter: true, professional: true, business: true, enterprise: true, industry: true },
         { name: t('featureComparison.features.basicKnowledgeBase'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.basicAnalytics'), starter: true, professional: true, business: true, enterprise: true, industry: true },
       ]
     },
     {
@@ -21,7 +22,7 @@ export default function FeatureComparison() {
       items: [
         { name: t('featureComparison.features.advancedRAG'), starter: false, professional: true, business: true, enterprise: true, industry: true },
         { name: t('featureComparison.features.customPrompts'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.bilingualSupport'), starter: false, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.bilingualSupport'), starter: true, professional: true, business: true, enterprise: true, industry: true },
         { name: t('featureComparison.features.industryTemplates'), starter: false, professional: false, business: true, enterprise: true, industry: true },
         { name: t('featureComparison.features.industryDashboard'), starter: false, professional: false, business: false, enterprise: false, industry: true },
       ]
@@ -132,8 +133,8 @@ export default function FeatureComparison() {
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider bg-green-50">
                       <div>{t('featureComparison.industryPackages')}</div>
-                      <div className="text-2xl font-display text-accent mt-1">$149-189</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">300 {t('pricing.callsPerMonth')}</div>
+                      <div className="text-2xl font-display text-accent mt-1">$149+</div>
+                      <div className="text-xs text-gray-600 font-normal mt-1">300+ {t('pricing.callsPerMonth')}</div>
                     </th>
                   </tr>
                 </thead>

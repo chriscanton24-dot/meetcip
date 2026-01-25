@@ -118,9 +118,8 @@
           "2": "Call recording & transcripts",
           "3": "Email notifications",
           "4": "Basic analytics",
-          "5": "SMS notifications",
-          "6": "Standard support",
-          "7": "99.9% uptime guarantee"
+          "5": "Standard support",
+          "6": "99.9% uptime guarantee"
         }
       },
       "professional": {
@@ -177,89 +176,89 @@
       "waterFire": {
         "name": "Water/Fire Restoration",
         "description": "24/7 emergency response for restoration contractors",
-        "valueProposition": "Prioritize emergency calls, capture insurance details, coordinate dispatch instantly",
+        "valueProposition": "Capture every emergency call with instant response, even at 3 AM",
         "features": {
-          "0": "24/7 emergency prioritization",
-          "1": "Insurance claim capture",
-          "2": "Damage severity assessment",
-          "3": "Instant dispatch coordination",
-          "4": "Photo upload instructions",
-          "5": "Service area verification",
-          "6": "Emergency contact routing",
-          "7": "Follow-up scheduling"
+          "0": "Emergency intake protocol",
+          "1": "Insurance information capture",
+          "2": "Damage assessment questions",
+          "3": "Immediate dispatch notification",
+          "4": "Bilingual emergency support",
+          "5": "Priority routing system",
+          "6": "After-hours coverage",
+          "7": "Real-time team alerts"
         }
       },
       "foundation": {
         "name": "Foundation Repair",
-        "description": "Qualify high-value foundation projects automatically",
-        "valueProposition": "Screen for serious foundation issues, capture home details, schedule inspections",
+        "description": "Specialized AI for foundation contractors",
+        "valueProposition": "Qualify serious leads while filtering tire-kickers automatically",
         "features": {
-          "0": "Crack severity classification",
-          "1": "Home age & type capture",
-          "2": "Inspection scheduling",
-          "3": "Warranty information",
-          "4": "Soil type questions",
-          "5": "Budget range qualification",
-          "6": "Before/after photo requests",
-          "7": "Structural engineer referrals"
+          "0": "Problem severity assessment",
+          "1": "Home age & foundation type questions",
+          "2": "Budget qualification",
+          "3": "Inspection scheduling",
+          "4": "Bilingual homeowner support",
+          "5": "Lead scoring system",
+          "6": "Photo submission requests",
+          "7": "Financing information"
         }
       },
       "hvac": {
         "name": "HVAC",
-        "description": "Route emergency repairs vs. maintenance calls intelligently",
-        "valueProposition": "Detect AC failures, route maintenance, capture equipment details for accurate quotes"
+        "description": "Year-round comfort, year-round calls",
+        "valueProposition": "Never miss a service call during peak season rushes"
       },
       "plumbing": {
         "name": "Plumbing",
-        "description": "Prioritize emergency leaks, capture service details",
-        "valueProposition": "Emergency leak detection, water heater replacement qualification, service type routing"
+        "description": "Emergency plumbing never sleeps",
+        "valueProposition": "24/7 emergency intake with priority dispatch"
       },
       "electricians": {
         "name": "Electricians",
-        "description": "Safety-first emergency routing for electrical issues",
-        "valueProposition": "Electrical emergency detection, panel upgrade qualification, safety guidance"
+        "description": "Safe, reliable electrical service",
+        "valueProposition": "Capture every service call with immediate response"
       },
       "garageDoor": {
         "name": "Garage Door Repair",
-        "description": "Fast response for broken garage doors",
-        "valueProposition": "Emergency door routing, issue diagnosis (spring, opener, track), brand tracking"
+        "description": "Quick response for stuck doors",
+        "valueProposition": "Schedule service calls instantly, even during busy times"
       },
       "roofing": {
         "name": "Roofing",
-        "description": "Storm damage prioritization and insurance claims",
-        "valueProposition": "Storm damage priority, roof type identification, insurance claim questions, free inspection scheduling"
+        "description": "Storm damage to routine repairs",
+        "valueProposition": "Handle post-storm call volume with AI assistance"
       },
       "concrete": {
         "name": "Concrete Leveling",
-        "description": "Qualify concrete repair and leveling projects",
-        "valueProposition": "Surface type identification, severity assessment, method education (mudjacking vs. foam)"
+        "description": "Specialized concrete repair services",
+        "valueProposition": "Qualify leads based on project scope and location"
       },
       "fencing": {
         "name": "Fencing",
-        "description": "Capture fencing project details and requirements",
-        "valueProposition": "Material type questions, property measurements, HOA compliance checking, estimate scheduling"
+        "description": "Residential and commercial fencing",
+        "valueProposition": "Capture estimates and schedule site visits"
       },
       "landscaping": {
         "name": "Landscaping",
-        "description": "Route landscaping services and recurring maintenance",
-        "valueProposition": "Service type routing, seasonal scheduling, property size capture, recurring service setup"
+        "description": "Beautiful yards, happy customers",
+        "valueProposition": "Book consultations and manage seasonal rush"
       },
       "realEstate": {
         "name": "Real Estate",
-        "description": "Property inquiry routing and showing scheduling",
-        "valueProposition": "Property inquiry routing, showing scheduler, buyer qualification, neighborhood information"
+        "description": "Always available for your clients",
+        "valueProposition": "Never miss a buyer inquiry or showing request"
       }
     }
   },
   "faq": {
-    "title": "Common Questions",
-    "subtitle": "Everything you need to know about MeetCIP for your industry",
-    "q1": "Which industries does MeetCIP work best for?",
-    "a1": "MeetCIP is pre-configured for 11 industries including Water/Fire Restoration, Foundation Repair, HVAC, Plumbing, Electricians, Roofing, Concrete Leveling, Fencing, Landscaping, Garage Door Repair, and Real Estate. Each package includes industry-specific AI prompts and workflows tailored to your business needs.",
-    "q2": "How does MeetCIP handle emergency calls vs. regular inquiries?",
-    "a2": "MeetCIP automatically detects urgency in customer calls. For emergency services like plumbing leaks or HVAC failures, our AI prioritizes the call, gathers critical information quickly, and can instantly notify your on-call team via SMS or email. Regular inquiries are scheduled appropriately based on your availability.",
-    "q3": "Can MeetCIP qualify leads for high-ticket services?",
-    "a3": "Yes! For industries like Foundation Repair, Roofing, and Concrete Leveling, MeetCIP asks qualification questions about project scope, property details, budget range, and timeline. This helps you prioritize $15k-$50k+ opportunities and show up to appointments with complete information.",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about MeetCIP",
+    "q1": "How does MeetCIP work?",
+    "a1": "MeetCIP uses advanced AI to answer your business phone calls 24/7. When a customer calls, our AI greets them professionally, answers their questions using your business information, captures their details, and notifies you instantly. You can customize responses, set business hours, and train the AI with your specific FAQs.",
+    "q2": "Can MeetCIP handle calls in Spanish?",
+    "a2": "Yes! MeetCIP is fully bilingual in English and Spanish. It automatically detects the caller's language and responds naturally in that language. This is included in all plans at no extra cost.",
+    "q3": "What happens to the calls MeetCIP answers?",
+    "a3": "Every call is recorded (with proper disclosure), transcribed, and logged in your dashboard. You'll receive instant notifications for high-priority calls, and can review all call transcripts, recordings, and caller information anytime. Everything is searchable and exportable.",
     "q4": "Does MeetCIP really sound human? Will customers know it's AI?",
     "a4": "MeetCIP uses advanced voice AI that sounds natural and conversational. Most customers don't realize they're speaking with AI. The system is trained to handle interruptions, ask clarifying questions, and maintain a professional, friendly tone in both English and Spanish.",
     "q5": "How quickly can I get set up?",
@@ -289,6 +288,7 @@
       "emailNotifications": "Email Notifications",
       "responseTime": "< 3 Second Response Time",
       "basicKnowledgeBase": "Basic Knowledge Base",
+      "basicAnalytics": "Basic Analytics",
       "advancedRAG": "Advanced RAG Knowledge Base",
       "customPrompts": "Custom AI Prompts",
       "bilingualSupport": "Bilingual Support (EN/ES)",

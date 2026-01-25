@@ -4,81 +4,81 @@
     "pricing": "Precios",
     "features": "Funcionalidades",
     "industries": "Industrias",
-    "about": "Quienes somos",
-    "contact": "Contactanos",
-    "requestDemo": "Solicita tu Demo",
-    "getStarted": "Comienza Ahora",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "requestDemo": "Solicitar Demo",
+    "getStarted": "Comenzar Ahora",
     "emergencyServices": "Servicios de Emergencia",
-    "homeServices": "Servicios del Hogar",
+    "homeServices": "Servicios para el Hogar",
     "propertyServices": "Servicios de Propiedad",
     "realEstate": "Bienes Raíces",
     "industriesDropdown": {
       "emergencyServices": "Servicios de Emergencia",
-      "waterFireRestoration": "Restauracion de Agua/Fuego",
-      "foundationRepair": "Reparacion de Cimientos",
+      "waterFireRestoration": "Restauración por Agua/Fuego",
+      "foundationRepair": "Reparación de Cimientos",
       "homeServices": "Servicios para el Hogar",
-      "hvac": "Calefaccion y Aire Acondicionado",
-      "plumbing": "Plomeria",
+      "hvac": "HVAC",
+      "plumbing": "Plomería",
       "electricians": "Electricistas",
-      "garageDoor": "Reparacion de Puertas de Garaje",
+      "garageDoor": "Reparación de Puertas de Garaje",
       "propertyServices": "Servicios de Propiedad",
-      "roofing": "Techado",
-      "concreteLeveling": "Nivelacion de Concreto",
+      "roofing": "Techos",
+      "concreteLeveling": "Nivelación de Concreto",
       "fencing": "Cercas",
-      "landscaping": "Jardineria",
-      "realEstate": "Bienes Raices"
+      "landscaping": "Jardinería",
+      "realEstate": "Bienes Raíces"
     }
   },
   "hero": {
     "badge": "Amigable • Profesional • Disponible 24/7 • Bilingüe",
-    "title": "Nunca Pierda una Llamada de Negocios",
+    "title": "Nunca Vuelvas a Perder una Llamada de Negocios",
     "subtitle": "Contestadora telefónica con IA que suena humana, habla inglés y español, y funciona las 24 horas — por una fracción del costo de contratar personal.",
     "benefit1": "Respuesta Instantánea",
     "benefit2": "Soporte Bilingüe",
     "benefit3": "Registros y Transcripciones",
-    "ctaPrimary": "Comienza Ahora",
+    "ctaPrimary": "Comenzar Ahora",
     "ctaSecondary": "Escuchar MeetCIP en Vivo",
     "trustNoContracts": "Sin contratos",
-    "trustCancelAnytime": "Cancele cuando quiera"
+    "trustCancelAnytime": "Cancela cuando quieras"
   },
   "features": {
-    "title": "Todo lo que Necesita para No Perder Ninguna Llamada",
-    "subtitle": "Contestadora telefónica profesional con IA y todas las funciones que su negocio necesita",
+    "title": "Todo lo que Necesitas para Nunca Perder una Llamada",
+    "subtitle": "Contestadora telefónica con IA profesional con todas las funciones que tu negocio necesita",
     "feature1Title": "Contestadora con IA",
-    "feature1Desc": "Conversaciones naturales que suenan humanas, disponibles al instante 24/7/365",
+    "feature1Desc": "Conversaciones naturales que suenan humanas, disponibles instantáneamente 24/7/365",
     "feature2Title": "Soporte Bilingüe",
-    "feature2Desc": "Fluido en inglés y español, detecta automáticamente el idioma del cliente",
+    "feature2Desc": "Fluido en inglés y español, detecta automáticamente el idioma del llamante",
     "feature3Title": "Registros y Transcripciones",
-    "feature3Desc": "Cada llamada grabada, transcrita y consultable en su panel de control",
-    "feature4Title": "Calificación de Prospectos",
+    "feature3Desc": "Cada llamada grabada, transcrita y buscable en tu panel de control",
+    "feature4Title": "Calificación de Clientes",
     "feature4Desc": "Preguntas inteligentes para priorizar oportunidades de alto valor automáticamente",
     "feature5Title": "Notificaciones Instantáneas",
-    "feature5Desc": "Alertas por SMS y correo cuando llamadas importantes requieren su atención",
+    "feature5Desc": "Alertas por SMS y correo cuando llamadas importantes requieren tu atención",
     "feature6Title": "Programación de Citas",
-    "feature6Desc": "Integración de calendario para agendar consultas directamente durante las llamadas",
+    "feature6Desc": "Integración de calendario para reservar consultas directamente durante las llamadas",
     "feature7Title": "Plantillas por Industria",
     "feature7Desc": "Prompts de IA preconfigurados para más de 11 industrias, listos para implementar",
     "feature8Title": "Panel de Análisis",
-    "feature8Desc": "Rastree volumen de llamadas, tiempos de respuesta y métricas de conversión",
+    "feature8Desc": "Rastrea volumen de llamadas, tiempos de respuesta y métricas de conversión",
     "feature9Title": "Integración CRM",
-    "feature9Desc": "Conéctese con sus herramientas existentes para un flujo de trabajo sin interrupciones",
+    "feature9Desc": "Conéctate con tus herramientas existentes para un flujo de trabajo sin problemas",
     "feature10Title": "Entrenamiento Personalizado",
-    "feature10Desc": "Entrene la IA con los detalles de su negocio, preguntas frecuentes y procedimientos",
+    "feature10Desc": "Entrena la IA con los detalles de tu negocio, preguntas frecuentes y procedimientos",
     "feature11Title": "Enrutamiento de Emergencias",
     "feature11Desc": "Detecta urgencia y prioriza llamadas críticas automáticamente",
     "feature12Title": "Soporte Multicanal",
-    "feature12Desc": "Manejo de teléfono, correo de voz y SMS en una plataforma unificada",
-    "scaleTitle": "Construido para Escalar, Con Precios para Crecer",
-    "scaleSubtitle": "Desde emprendedores individuales hasta equipos empresariales, MeetCIP escala con su negocio usando infraestructura de IA avanzada en la que confían miles de empresas",
+    "feature12Desc": "Gestión de teléfono, correo de voz y SMS en una plataforma unificada",
+    "scaleTitle": "Construido para Escalar, Precio para Crecer",
+    "scaleSubtitle": "Desde emprendedores individuales hasta equipos empresariales, MeetCIP escala con tu negocio usando infraestructura de IA avanzada en la que confían miles de empresas",
     "uptime": "Garantía de Disponibilidad",
-    "responseTime": "Tiempo Promedio de Respuesta",
+    "responseTime": "Tiempo de Respuesta Promedio",
     "availability": "Siempre Disponible"
   },
   "pricing": {
     "previewTitle": "Precios Simples y Transparentes",
-    "previewSubtitle": "Elija entre 4 niveles estándar u 11 paquetes específicos por industria",
+    "previewSubtitle": "Elige entre 4 niveles estándar u 11 paquetes específicos por industria",
     "heroTitle": "Precios Simples y Transparentes",
-    "heroSubtitle": "Elija entre 4 niveles estándar u 11 paquetes específicos por industria",
+    "heroSubtitle": "Elige entre 4 niveles estándar u 11 paquetes específicos por industria",
     "standardTiersTitle": "Niveles de Precios Estándar",
     "perMonth": "/mes",
     "perYear": "/año",
@@ -87,8 +87,8 @@
     "callsIncluded": "llamadas incluidas",
     "mostPopular": "MÁS POPULAR",
     "popular": "POPULAR",
-    "getStarted": "Comienza Ahora",
-    "contactUs": "Contáctenos",
+    "getStarted": "Comenzar",
+    "contactUs": "Contáctanos",
     "contactSales": "Contactar Ventas",
     "custom": "Personalizado",
     "monthly": "Mensual",
@@ -98,16 +98,16 @@
     "viewDetails": "Ver Detalles",
     "promo": "¡Precio Promocional!",
     "industryPackagesTitle": "Paquetes Específicos por Industria",
-    "industryPackagesSubtitle": "IA preconfigurada entrenada para su industria con flujos de trabajo especializados",
-    "industryPackagesDesc": "Preconfigurados para Restauración de Agua/Fuego, Reparación de Cimientos, HVAC, Plomería, Electricistas, Techado y más",
+    "industryPackagesSubtitle": "IA preconfigurada entrenada para tu industria con flujos de trabajo especializados",
+    "industryPackagesDesc": "Preconfigurado para Restauración por Agua/Fuego, Reparación de Cimientos, HVAC, Plomería, Electricistas, Techos y más",
     "viewAllPricing": "Ver Todas las Opciones de Precios",
     "moneyBackGuarantee": "Garantía de Devolución de Dinero de 30 Días",
     "categoryEmergency": "Servicios de Emergencia",
-    "categoryHome": "Servicios del Hogar",
+    "categoryHome": "Servicios para el Hogar",
     "categoryProperty": "Servicios de Propiedad",
     "categoryRealEstate": "Bienes Raíces",
-    "ctaTitle": "¿Listo para No Perder Otra Llamada?",
-    "ctaSubtitle": "Únase a cientos de empresas que ya usan MeetCIP para crecer más rápido y servir mejor a sus clientes.",
+    "ctaTitle": "¿Listo para Nunca Perder Otra Llamada?",
+    "ctaSubtitle": "Únete a cientos de negocios que ya usan MeetCIP para crecer más rápido y servir mejor a los clientes.",
     "tiers": {
       "starter": {
         "name": "Inicial",
@@ -118,9 +118,8 @@
           "2": "Grabación y transcripciones de llamadas",
           "3": "Notificaciones por correo electrónico",
           "4": "Análisis básico",
-          "5": "Notificaciones por SMS",
-          "6": "Soporte estándar",
-          "7": "Garantía de disponibilidad del 99.9%"
+          "5": "Soporte estándar",
+          "6": "Garantía de disponibilidad del 99.9%"
         }
       },
       "professional": {
@@ -175,99 +174,99 @@
     },
     "industries": {
       "waterFire": {
-        "name": "Restauración de Agua/Fuego",
+        "name": "Restauración por Agua/Fuego",
         "description": "Respuesta de emergencia 24/7 para contratistas de restauración",
-        "valueProposition": "Priorizar llamadas de emergencia, capturar detalles de seguro, coordinar despacho al instante",
+        "valueProposition": "Captura cada llamada de emergencia con respuesta instantánea, incluso a las 3 AM",
         "features": {
-          "0": "Priorización de emergencias 24/7",
-          "1": "Captura de reclamos de seguro",
-          "2": "Evaluación de gravedad de daños",
-          "3": "Coordinación de despacho instantáneo",
-          "4": "Instrucciones para subir fotos",
-          "5": "Verificación de área de servicio",
-          "6": "Enrutamiento de contacto de emergencia",
-          "7": "Programación de seguimiento"
+          "0": "Protocolo de admisión de emergencias",
+          "1": "Captura de información de seguro",
+          "2": "Preguntas de evaluación de daños",
+          "3": "Notificación de despacho inmediato",
+          "4": "Soporte de emergencia bilingüe",
+          "5": "Sistema de enrutamiento prioritario",
+          "6": "Cobertura fuera de horario",
+          "7": "Alertas en tiempo real al equipo"
         }
       },
       "foundation": {
         "name": "Reparación de Cimientos",
-        "description": "Califique proyectos de cimientos de alto valor automáticamente",
-        "valueProposition": "Detectar problemas graves de cimientos, capturar detalles del hogar, programar inspecciones",
+        "description": "IA especializada para contratistas de cimientos",
+        "valueProposition": "Califica clientes serios mientras filtras curiosos automáticamente",
         "features": {
-          "0": "Clasificación de gravedad de grietas",
-          "1": "Captura de edad y tipo de casa",
-          "2": "Programación de inspecciones",
-          "3": "Información de garantía",
-          "4": "Preguntas sobre tipo de suelo",
-          "5": "Calificación de rango de presupuesto",
-          "6": "Solicitudes de fotos antes/después",
-          "7": "Referencias de ingeniero estructural"
+          "0": "Evaluación de severidad del problema",
+          "1": "Preguntas sobre edad de la casa y tipo de cimiento",
+          "2": "Calificación de presupuesto",
+          "3": "Programación de inspección",
+          "4": "Soporte bilingüe a propietarios",
+          "5": "Sistema de puntuación de clientes",
+          "6": "Solicitudes de envío de fotos",
+          "7": "Información de financiamiento"
         }
       },
       "hvac": {
         "name": "HVAC",
-        "description": "Enrutar reparaciones de emergencia vs. llamadas de mantenimiento inteligentemente",
-        "valueProposition": "Detectar fallas de AC, enrutar mantenimiento, capturar detalles de equipo para cotizaciones precisas"
+        "description": "Comodidad todo el año, llamadas todo el año",
+        "valueProposition": "Nunca pierdas una llamada de servicio durante las temporadas pico"
       },
       "plumbing": {
         "name": "Plomería",
-        "description": "Priorizar fugas de emergencia, capturar detalles de servicio",
-        "valueProposition": "Detección de fugas de emergencia, calificación de reemplazo de calentador de agua, enrutamiento de tipo de servicio"
+        "description": "La plomería de emergencia nunca duerme",
+        "valueProposition": "Admisión de emergencias 24/7 con despacho prioritario"
       },
       "electricians": {
         "name": "Electricistas",
-        "description": "Enrutamiento de emergencias con seguridad primero para problemas eléctricos",
-        "valueProposition": "Detección de emergencia eléctrica, calificación de actualización de panel, orientación de seguridad"
+        "description": "Servicio eléctrico seguro y confiable",
+        "valueProposition": "Captura cada llamada de servicio con respuesta inmediata"
       },
       "garageDoor": {
         "name": "Reparación de Puertas de Garaje",
-        "description": "Respuesta rápida para puertas de garaje rotas",
-        "valueProposition": "Enrutamiento de puertas de emergencia, diagnóstico de problemas (resorte, abridor, riel), seguimiento de marca"
+        "description": "Respuesta rápida para puertas atascadas",
+        "valueProposition": "Programa llamadas de servicio al instante, incluso en momentos ocupados"
       },
       "roofing": {
-        "name": "Techado",
-        "description": "Priorización de daños por tormenta y reclamos de seguro",
-        "valueProposition": "Prioridad de daños por tormenta, identificación de tipo de techo, preguntas de reclamo de seguro, programación de inspección gratuita"
+        "name": "Techos",
+        "description": "Desde daños por tormenta hasta reparaciones rutinarias",
+        "valueProposition": "Maneja el volumen de llamadas post-tormenta con asistencia de IA"
       },
       "concrete": {
         "name": "Nivelación de Concreto",
-        "description": "Calificar proyectos de reparación y nivelación de concreto",
-        "valueProposition": "Identificación de tipo de superficie, evaluación de gravedad, educación sobre métodos (mudjacking vs. espuma)"
+        "description": "Servicios especializados de reparación de concreto",
+        "valueProposition": "Califica clientes basado en alcance del proyecto y ubicación"
       },
       "fencing": {
         "name": "Cercas",
-        "description": "Capturar detalles y requisitos del proyecto de cercas",
-        "valueProposition": "Preguntas sobre tipo de material, mediciones de propiedad, verificación de cumplimiento de HOA, programación de estimados"
+        "description": "Cercas residenciales y comerciales",
+        "valueProposition": "Captura estimados y programa visitas al sitio"
       },
       "landscaping": {
-        "name": "Paisajismo",
-        "description": "Enrutar servicios de paisajismo y mantenimiento recurrente",
-        "valueProposition": "Enrutamiento de tipo de servicio, programación estacional, captura de tamaño de propiedad, configuración de servicio recurrente"
+        "name": "Jardinería",
+        "description": "Jardines hermosos, clientes felices",
+        "valueProposition": "Agenda consultas y gestiona la temporada alta"
       },
       "realEstate": {
         "name": "Bienes Raíces",
-        "description": "Enrutamiento de consultas de propiedad y programación de visitas",
-        "valueProposition": "Enrutamiento de consultas de propiedad, programador de visitas, calificación de compradores, información del vecindario"
+        "description": "Siempre disponible para tus clientes",
+        "valueProposition": "Nunca pierdas una consulta de comprador o solicitud de visita"
       }
     }
   },
   "faq": {
     "title": "Preguntas Frecuentes",
-    "subtitle": "Todo lo que necesita saber sobre MeetCIP para su industria",
-    "q1": "¿Para qué industrias funciona mejor MeetCIP?",
-    "a1": "MeetCIP está preconfigurado para 11 industrias incluyendo Restauración de Agua/Fuego, Reparación de Cimientos, HVAC, Plomería, Electricistas, Techado, Nivelación de Concreto, Cercas, Paisajismo, Reparación de Puertas de Garaje y Bienes Raíces. Cada paquete incluye prompts de IA y flujos de trabajo específicos adaptados a las necesidades de su negocio.",
-    "q2": "¿Cómo maneja MeetCIP las llamadas de emergencia vs. consultas regulares?",
-    "a2": "MeetCIP detecta automáticamente la urgencia en las llamadas de los clientes. Para servicios de emergencia como fugas de plomería o fallas de HVAC, nuestra IA prioriza la llamada, recopila información crítica rápidamente y puede notificar instantáneamente a su equipo de guardia por SMS o correo. Las consultas regulares se programan apropiadamente según su disponibilidad.",
-    "q3": "¿Puede MeetCIP calificar prospectos para servicios de alto valor?",
-    "a3": "¡Sí! Para industrias como Reparación de Cimientos, Techado y Nivelación de Concreto, MeetCIP hace preguntas de calificación sobre el alcance del proyecto, detalles de la propiedad, rango de presupuesto y cronograma. Esto le ayuda a priorizar oportunidades de $15k-$50k+ y llegar a las citas con información completa.",
+    "subtitle": "Todo lo que necesitas saber sobre MeetCIP",
+    "q1": "¿Cómo funciona MeetCIP?",
+    "a1": "MeetCIP usa IA avanzada para contestar las llamadas telefónicas de tu negocio 24/7. Cuando un cliente llama, nuestra IA lo saluda profesionalmente, responde sus preguntas usando la información de tu negocio, captura sus detalles y te notifica instantáneamente. Puedes personalizar respuestas, establecer horarios de negocio y entrenar la IA con tus preguntas frecuentes específicas.",
+    "q2": "¿Puede MeetCIP manejar llamadas en español?",
+    "a2": "¡Sí! MeetCIP es completamente bilingüe en inglés y español. Detecta automáticamente el idioma del llamante y responde naturalmente en ese idioma. Esto está incluido en todos los planes sin costo adicional.",
+    "q3": "¿Qué sucede con las llamadas que MeetCIP contesta?",
+    "a3": "Cada llamada se graba (con divulgación adecuada), se transcribe y se registra en tu panel de control. Recibirás notificaciones instantáneas para llamadas de alta prioridad, y puedes revisar todas las transcripciones, grabaciones e información del llamante en cualquier momento. Todo es buscable y exportable.",
     "q4": "¿MeetCIP realmente suena humano? ¿Los clientes sabrán que es IA?",
-    "a4": "MeetCIP usa IA de voz avanzada que suena natural y conversacional. La mayoría de los clientes no se dan cuenta de que están hablando con IA. El sistema está entrenado para manejar interrupciones, hacer preguntas aclaratorias y mantener un tono profesional y amigable tanto en inglés como en español.",
-    "q5": "¿Qué tan rápido puedo configurarlo?",
-    "a5": "La mayoría de los negocios están en funcionamiento en 24-48 horas. La configuración incluye: (1) Elegir su paquete de industria, (2) Conectar su número de teléfono, (3) Entrenar la IA con los detalles de su negocio, (4) Probar llamadas. Nuestro equipo maneja el trabajo técnico - usted solo proporciona información sobre sus servicios.",
-    "q6": "¿Qué pasa si MeetCIP no puede responder una pregunta?",
-    "a6": "Si un cliente pregunta algo fuera del conocimiento de MeetCIP, educadamente explicará que necesita conectarlo con su equipo, tomará su información de contacto y le notificará de inmediato. Usted mantiene control total y siempre puede intervenir en cualquier conversación.",
-    "stillHaveQuestions": "¿Todavía tiene preguntas?",
-    "contactSupport": "Contacte a nuestro equipo de soporte →"
+    "a4": "MeetCIP usa voz de IA avanzada que suena natural y conversacional. La mayoría de los clientes no se dan cuenta de que están hablando con IA. El sistema está entrenado para manejar interrupciones, hacer preguntas aclaratorias y mantener un tono profesional y amigable tanto en inglés como en español.",
+    "q5": "¿Qué tan rápido puedo configurar?",
+    "a5": "La mayoría de los negocios están en vivo dentro de 24-48 horas. La configuración incluye: (1) Elegir tu paquete de industria, (2) Conectar tu número de teléfono, (3) Entrenar la IA sobre los detalles de tu negocio, (4) Probar llamadas. Nuestro equipo maneja el trabajo técnico - tú solo proporcionas información sobre tus servicios.",
+    "q6": "¿Qué sucede si MeetCIP no puede responder una pregunta?",
+    "a6": "Si un llamante hace algo fuera del conocimiento de MeetCIP, explicará educadamente que necesita conectarlos con tu equipo, tomará su información de contacto y te notificará inmediatamente. Mantienes el control total y siempre puedes unirte a cualquier conversación.",
+    "stillHaveQuestions": "¿Todavía tienes preguntas?",
+    "contactSupport": "Contacta a nuestro equipo de soporte →"
   },
   "featureComparison": {
     "title": "Compare Funcionalidades Entre Planes",
@@ -289,6 +288,7 @@
       "emailNotifications": "Notificaciones por Correo",
       "responseTime": "Tiempo de Respuesta < 3 Segundos",
       "basicKnowledgeBase": "Base de Conocimientos Básica",
+      "basicAnalytics": "Análisis Básico",
       "advancedRAG": "Base de Conocimientos RAG Avanzada",
       "customPrompts": "Prompts de IA Personalizados",
       "bilingualSupport": "Soporte Bilingüe (EN/ES)",
@@ -318,7 +318,7 @@
     },
     "keyFeatures": {
       "lightningFast": {
-        "title": "Ultrarrápido",
+        "title": "Extremadamente Rápido",
         "description": "Tiempo de respuesta promedio de 2-4 segundos con infraestructura global"
       },
       "bilingualSupport": {
@@ -326,26 +326,26 @@
         "description": "Cambia sin problemas entre inglés y español a mitad de conversación"
       },
       "industryTemplates": {
-        "title": "Experiencia en Industrias",
-        "description": "Preentrenado en más de 11 industrias con flujos de trabajo especializados"
+        "title": "Experiencia por Industria",
+        "description": "Pre-entrenado en más de 11 industrias con flujos de trabajo especializados"
       }
     },
     "infrastructureTitle": "Construido sobre Infraestructura de Nivel Empresarial",
     "infrastructure": {
       "security": {
         "name": "Seguridad de Nivel Bancario",
-        "description": "Cifrado de extremo a extremo, cumplimiento SOC 2"
+        "description": "Encriptación de extremo a extremo, cumple con SOC 2"
       },
       "fast": {
-        "name": "Ultrarrápido",
+        "name": "Extremadamente Rápido",
         "description": "Tiempo de respuesta de 2-4 segundos garantizado"
       },
       "global": {
         "name": "Cobertura Global",
-        "description": "99.9% de tiempo activo con sistemas redundantes"
+        "description": "99.9% de disponibilidad con sistemas redundantes"
       },
       "scaling": {
-        "name": "Escalado Automático",
+        "name": "Auto-Escalamiento",
         "description": "Maneja picos de llamadas automáticamente"
       },
       "analytics": {
@@ -361,20 +361,20 @@
         "description": "Cero mantenimiento, siempre actualizado"
       },
       "multiTenant": {
-        "name": "Seguridad Multiusuario",
+        "name": "Seguridad Multi-Inquilino",
         "description": "Aislamiento completo de datos por negocio"
       }
     },
     "faqTitle": "Preguntas Frecuentes",
     "faq": {
-      "q1": "¿Puedo actualizar o cambiar a un plan inferior?",
-      "a1": "¡Sí! Puede cambiar de plan en cualquier momento. Las actualizaciones tienen efecto inmediato, y los cambios a plan inferior se aplican en su próximo ciclo de facturación.",
-      "q2": "¿Qué pasa si excedo mi límite de llamadas?",
-      "a2": "Le notificaremos al 80% y 100% de uso. Las llamadas adicionales se facturan a $0.50-$0.99 por llamada dependiendo de su plan, o puede actualizar en cualquier momento.",
-      "q3": "¿Las llamadas no usadas se acumulan?",
-      "a3": "No, las llamadas se reinician cada ciclo de facturación. Sin embargo, si usa consistentemente menos llamadas de las que su plan incluye, le recomendaremos un plan más rentable.",
+      "q1": "¿Puedo actualizar o cambiar mi plan?",
+      "a1": "¡Sí! Puedes cambiar de plan en cualquier momento. Las actualizaciones surten efecto de inmediato, y las reducciones se aplican en tu próximo ciclo de facturación.",
+      "q2": "¿Qué sucede si excedo mi límite de llamadas?",
+      "a2": "Te notificaremos al 80% y 100% de uso. Las llamadas adicionales se facturan a $0.50-$0.99 por llamada dependiendo de tu plan, o puedes actualizar en cualquier momento.",
+      "q3": "¿Las llamadas no utilizadas se acumulan?",
+      "a3": "No, las llamadas se reinician cada ciclo de facturación. Sin embargo, si usas consistentemente menos llamadas de las que incluye tu plan, te recomendaremos un plan más rentable.",
       "q4": "¿Hay tarifas de configuración?",
-      "a4": "No hay tarifas de configuración para ningún plan. Creemos en precios transparentes sin costos ocultos.",
+      "a4": "Sin tarifas de configuración para ningún plan. Creemos en precios transparentes sin costos ocultos.",
       "q5": "¿Qué métodos de pago aceptan?",
       "a5": "Aceptamos todas las tarjetas de crédito principales (Visa, MasterCard, Amex, Discover) y transferencias ACH para planes anuales.",
       "q6": "¿Hay un contrato?",
@@ -382,40 +382,40 @@
     }
   },
   "footer": {
-    "tagline": "Su recepcionista virtual amigable 24/7. Nunca pierda otra llamada de cliente.",
+    "tagline": "Tu recepcionista virtual amigable 24/7. Nunca pierdas otra llamada de cliente.",
     "product": "Producto",
     "pricing": "Precios",
-    "requestDemo": "Solicita tu Demo",
+    "requestDemo": "Solicitar Demo",
     "features": "Funcionalidades",
     "company": "Empresa",
-    "aboutUs": "Quienes somos",
-    "contact": "Contactanos",
+    "aboutUs": "Sobre Nosotros",
+    "contact": "Contacto",
     "legal": "Legal",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
-    "dpa": "Acuerdo de Procesamiento de Datos",
-    "copyright": "© 2025 MeetCIP — Plataforma de Inteligencia de Llamadas. Todos los derechos reservados.",
+    "dpa": "Adenda de Procesamiento de Datos",
+    "copyright": "© 2025 MeetCIP — Call Intelligence Platform. Todos los derechos reservados.",
     "contactEmail": "Contacto: demomeetcip@gmail.com"
   },
   "about": {
     "title": "Empoderando Pequeñas Empresas",
     "subtitle": "Creemos que cada negocio merece tecnología de servicio al cliente de nivel empresarial.",
     "missionTitle": "Nuestra Misión",
-    "missionPara1": "MeetCIP fue fundada en una observación simple: las pequeñas empresas pierden miles de dólares cada año por llamadas perdidas. Ya sea después del horario laboral, durante períodos ocupados, o cuando el personal no está disponible, cada llamada perdida es una oportunidad perdida.",
-    "missionPara2": "Creamos MeetCIP para ayudar a las pequeñas empresas a proporcionar un excelente servicio al cliente sin contratar personal adicional. Ahora cualquier negocio puede responder cada llamada, 24/7—sin los costos generales o la complejidad.",
+    "missionPara1": "MeetCIP fue fundado con una observación simple: las pequeñas empresas pierden miles de dólares cada año por llamadas perdidas. Ya sea fuera de horario, durante períodos ocupados o cuando el personal no está disponible, cada llamada perdida es una oportunidad perdida.",
+    "missionPara2": "Creamos MeetCIP para ayudar a las pequeñas empresas a proporcionar un excelente servicio al cliente sin contratar personal adicional. Ahora cualquier negocio puede contestar cada llamada, 24/7, sin los costos generales ni la complejidad.",
     "valuesTitle": "Nuestros Valores",
     "values": {
       "accessibility": {
         "title": "Accesibilidad",
-        "description": "Tecnología avanzada hecha simple y asequible para empresas de todos los tamaños."
+        "description": "Tecnología avanzada hecha simple y asequible para negocios de todos los tamaños."
       },
       "reliability": {
         "title": "Confiabilidad",
-        "description": "Servicio siempre activo en el que puede confiar, con disponibilidad garantizada del 99.9%."
+        "description": "Servicio siempre activo en el que puedes confiar, con 99.9% de disponibilidad garantizada."
       },
       "innovation": {
         "title": "Innovación",
-        "description": "Mejora continua a través de IA de vanguardia y retroalimentación del cliente."
+        "description": "Mejora continua a través de IA de vanguardia y retroalimentación de clientes."
       },
       "transparency": {
         "title": "Transparencia",
@@ -423,18 +423,18 @@
       },
       "customerFirst": {
         "title": "Cliente Primero",
-        "description": "Su éxito es nuestro éxito. Crecemos cuando usted crece."
+        "description": "Tu éxito es nuestro éxito. Crecemos cuando tú creces."
       },
       "privacy": {
         "title": "Privacidad",
-        "description": "Sus datos son suyos. Seguridad de nivel empresarial y cumplimiento HIPAA."
+        "description": "Tus datos son tuyos. Seguridad de nivel empresarial y cumplimiento HIPAA."
       }
     }
   },
 "cookieConsent": {
-    "message": "Usamos cookies para mejorar su experiencia y analizar el trafico del sitio.",
-    "details": "Al hacer clic en Aceptar, acepta nuestro uso de cookies.",
-    "learnMore": "Aprender mas",
+    "message": "Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio.",
+    "details": "Al hacer clic en Aceptar, aceptas nuestro uso de cookies.",
+    "learnMore": "Más información",
     "accept": "Aceptar",
     "decline": "Rechazar"
   }
