@@ -21,7 +21,7 @@ const Step2_ChoosePlan: React.FC<Step2Props> = ({
     {
       id: 'starter',
       name: 'Starter',
-      price: 49,
+      price: 59,
       calls: 100,
       features: [
         '100 calls per month',

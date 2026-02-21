@@ -10,8 +10,8 @@ export default function PricingPage() {
   const standardTiers = [
     {
       name: t('pricing.tiers.starter.name'),
-      monthlyPrice: 49,
-      annualPrice: 470,
+      monthlyPrice: 59,
+      annualPrice: 565,
       calls: 100,
       overage: 0.50,
       description: t('pricing.tiers.starter.description'),
@@ -47,8 +47,8 @@ export default function PricingPage() {
     },
     {
       name: t('pricing.tiers.business.name'),
-      monthlyPrice: 249,
-      annualPrice: 2390,
+      monthlyPrice: 269,
+      annualPrice: 2588,
       calls: 500,
       overage: 0.35,
       description: t('pricing.tiers.business.description'),
