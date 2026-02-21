@@ -57,7 +57,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.starter.name')}</h3>
               <div className="mb-4">
-                <span className="text-5xl font-display font-bold text-accent">$49</span>
+                <span className="text-5xl font-display font-bold text-accent">$59</span>
                 <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
               </div>
               <p className="text-gray-600 mb-6">100 {t('pricing.callsPerMonth')}</p>
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.business.name')}</h3>
               <div className="mb-4">
-                <span className="text-5xl font-display font-bold text-accent">$249</span>
+                <span className="text-5xl font-display font-bold text-accent">$269</span>
                 <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
               </div>
               <p className="text-gray-600 mb-6">500 {t('pricing.callsPerMonth')}</p>
@@ -96,23 +96,6 @@ export default function Home() {
                 {t('pricing.getStarted')}
               </Link>
             </div>
-          </div>
-          
-          {/* Industry Packages Teaser */}
-          <div className="bg-white rounded-2xl p-8 max-w-4xl mx-auto border-2 border-accent mb-8">
-            <h3 className="text-2xl font-display font-bold text-primary mb-4">{t('pricing.industryPackagesTitle')}</h3>
-            <p className="text-gray-600 mb-6">
-              {t('pricing.industryPackagesDesc')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-6">
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">🏡 {t('header.realEstate')}</span>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">🔥 {t('header.emergencyServices')}</span>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">🏠 {t('header.homeServices')}</span>
-              <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">🏗️ {t('header.propertyServices')}</span>
-            </div>
-            <Link to="/pricing" className="btn-primary inline-block">
-              {t('pricing.viewAllPricing')}
-            </Link>
           </div>
           
           {/* Money-Back Guarantee */}

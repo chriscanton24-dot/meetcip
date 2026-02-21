@@ -9,63 +9,63 @@ export default function FeatureComparison() {
     {
       category: t('featureComparison.categories.core'),
       items: [
-        { name: t('featureComparison.features.aiAnswering247'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.callLogging'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.emailNotifications'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.responseTime'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.basicKnowledgeBase'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.basicAnalytics'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.aiAnswering247'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.callLogging'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.emailNotifications'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.responseTime'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.basicKnowledgeBase'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.basicAnalytics'), starter: true, professional: true, business: true, enterprise: true },
       ]
     },
     {
       category: t('featureComparison.categories.advancedAI'),
       items: [
-        { name: t('featureComparison.features.advancedRAG'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.customPrompts'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.bilingualSupport'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.industryTemplates'), starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.industryDashboard'), starter: false, professional: false, business: false, enterprise: false, industry: true },
+        { name: t('featureComparison.features.advancedRAG'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.customPrompts'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.bilingualSupport'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.industryTemplates'), starter: false, professional: false, business: true, enterprise: true },
+        { name: t('featureComparison.features.industryDashboard'), starter: false, professional: false, business: false, enterprise: false },
       ]
     },
     {
       category: t('featureComparison.categories.phoneManagement'),
       items: [
-        { name: t('featureComparison.features.phoneNumbers'), starter: '1', professional: '1', business: '3', enterprise: t('featureComparison.unlimited'), industry: '1' },
-        { name: t('featureComparison.features.callRecording'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.callTransfer'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.voicemailTranscription'), starter: true, professional: true, business: true, enterprise: true, industry: true },
+        { name: t('featureComparison.features.phoneNumbers'), starter: '1', professional: '1', business: '3', enterprise: t('featureComparison.unlimited') },
+        { name: t('featureComparison.features.callRecording'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.callTransfer'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.voicemailTranscription'), starter: true, professional: true, business: true, enterprise: true },
       ]
     },
     {
       category: t('featureComparison.categories.integrations'),
       items: [
-        { name: t('featureComparison.features.emailIntegration'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.smsNotifications'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.calendarSync'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.crmIntegration'), starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.apiAccess'), starter: false, professional: false, business: true, enterprise: true, industry: false },
-        { name: t('featureComparison.features.webhooks'), starter: false, professional: false, business: true, enterprise: true, industry: false },
+        { name: t('featureComparison.features.emailIntegration'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.smsNotifications'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.calendarSync'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.crmIntegration'), starter: false, professional: false, business: true, enterprise: true },
+        { name: t('featureComparison.features.apiAccess'), starter: false, professional: false, business: true, enterprise: true },
+        { name: t('featureComparison.features.webhooks'), starter: false, professional: false, business: true, enterprise: true },
       ]
     },
     {
       category: t('featureComparison.categories.support'),
       items: [
-        { name: t('featureComparison.features.emailSupport'), starter: true, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.prioritySupport'), starter: false, professional: true, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.phoneSupport'), starter: false, professional: false, business: true, enterprise: true, industry: true },
-        { name: t('featureComparison.features.dedicatedManager'), starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: t('featureComparison.features.onboardingAssistance'), starter: false, professional: false, business: false, enterprise: true, industry: true },
+        { name: t('featureComparison.features.emailSupport'), starter: true, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.prioritySupport'), starter: false, professional: true, business: true, enterprise: true },
+        { name: t('featureComparison.features.phoneSupport'), starter: false, professional: false, business: true, enterprise: true },
+        { name: t('featureComparison.features.dedicatedManager'), starter: false, professional: false, business: false, enterprise: true },
+        { name: t('featureComparison.features.onboardingAssistance'), starter: false, professional: false, business: false, enterprise: true },
       ]
     },
     {
       category: t('featureComparison.categories.enterprise'),
       items: [
-        { name: t('featureComparison.features.multiUserAccounts'), starter: false, professional: false, business: true, enterprise: true, industry: false },
-        { name: t('featureComparison.features.multiLocation'), starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: t('featureComparison.features.whiteLabel'), starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: t('featureComparison.features.customBranding'), starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: t('featureComparison.features.slaGuarantee'), starter: false, professional: false, business: false, enterprise: true, industry: false },
-        { name: t('featureComparison.features.customIntegrations'), starter: false, professional: false, business: false, enterprise: true, industry: false },
+        { name: t('featureComparison.features.multiUserAccounts'), starter: false, professional: false, business: true, enterprise: true },
+        { name: t('featureComparison.features.multiLocation'), starter: false, professional: false, business: false, enterprise: true },
+        { name: t('featureComparison.features.whiteLabel'), starter: false, professional: false, business: false, enterprise: true },
+        { name: t('featureComparison.features.customBranding'), starter: false, professional: false, business: false, enterprise: true },
+        { name: t('featureComparison.features.slaGuarantee'), starter: false, professional: false, business: false, enterprise: true },
+        { name: t('featureComparison.features.customIntegrations'), starter: false, professional: false, business: false, enterprise: true },
       ]
     }
   ]
@@ -110,7 +110,7 @@ export default function FeatureComparison() {
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
                       <div>{t('pricing.tiers.starter.name')}</div>
-                      <div className="text-2xl font-display text-accent mt-1">$49</div>
+                      <div className="text-2xl font-display text-accent mt-1">$59</div>
                       <div className="text-xs text-gray-600 font-normal mt-1">100 {t('pricing.callsPerMonth')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider bg-accent/10">
@@ -123,7 +123,7 @@ export default function FeatureComparison() {
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
                       <div>{t('pricing.tiers.business.name')}</div>
-                      <div className="text-2xl font-display text-accent mt-1">$249</div>
+                      <div className="text-2xl font-display text-accent mt-1">$269</div>
                       <div className="text-xs text-gray-600 font-normal mt-1">500 {t('pricing.callsPerMonth')}</div>
                     </th>
                     <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider">
@@ -131,18 +131,13 @@ export default function FeatureComparison() {
                       <div className="text-2xl font-display text-accent mt-1">{t('pricing.custom')}</div>
                       <div className="text-xs text-gray-600 font-normal mt-1">{t('featureComparison.unlimited')}</div>
                     </th>
-                    <th className="px-6 py-4 text-center text-sm font-bold text-primary uppercase tracking-wider bg-green-50">
-                      <div>{t('featureComparison.industryPackages')}</div>
-                      <div className="text-2xl font-display text-accent mt-1">$149+</div>
-                      <div className="text-xs text-gray-600 font-normal mt-1">300+ {t('pricing.callsPerMonth')}</div>
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {features.map((category, categoryIndex) => (
                     <React.Fragment key={`category-${categoryIndex}`}>
                       <tr className="bg-gray-50">
-                        <td colSpan={6} className="px-6 py-3 text-left text-sm font-bold text-primary">
+                        <td colSpan={5} className="px-6 py-3 text-left text-sm font-bold text-primary">
                           {category.category}
                         </td>
                       </tr>
@@ -162,9 +157,6 @@ export default function FeatureComparison() {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-center">
                             {renderValue(feature.enterprise)}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-center bg-green-50">
-                            {renderValue(feature.industry)}
                           </td>
                         </tr>
                       ))}
