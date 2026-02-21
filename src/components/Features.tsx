@@ -21,11 +21,6 @@ export default function Features() {
       descKey: 'features.feature3Desc'
     },
     {
-      icon: '🎯',
-      titleKey: 'features.feature4Title',
-      descKey: 'features.feature4Desc'
-    },
-    {
       icon: '🔔',
       titleKey: 'features.feature5Title',
       descKey: 'features.feature5Desc'
@@ -36,17 +31,12 @@ export default function Features() {
       descKey: 'features.feature6Desc'
     },
     {
-      icon: '🏭',
-      titleKey: 'features.feature7Title',
-      descKey: 'features.feature7Desc'
-    },
-    {
       icon: '📊',
       titleKey: 'features.feature8Title',
       descKey: 'features.feature8Desc'
     },
     {
-      icon: '🔗',
+      icon: '🗂️',
       titleKey: 'features.feature9Title',
       descKey: 'features.feature9Desc'
     },
