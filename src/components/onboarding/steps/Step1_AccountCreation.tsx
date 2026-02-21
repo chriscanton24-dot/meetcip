@@ -12,6 +12,7 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
   const [password, setPassword] = useState(initialData.password || '')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [agreedToTerms, setAgreedToTerms] = useState(false)
+  const [smsConsent, setSmsConsent] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const [errors, setErrors] = useState<{[key: string]: string}>({})
@@ -56,7 +57,6 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
     setErrors({})
 
     try {
-      // Call backend signup endpoint
       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
       const response = await fetch(`${API_URL}/api/auth/signup`, {
         method: 'POST',
@@ -66,7 +66,9 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
         body: JSON.stringify({
           full_name: fullName,
           email: email,
-          password: password
+          password: password,
+          sms_consent: smsConsent,
+          sms_consent_timestamp: new Date().toISOString()
         })
       })
 
@@ -77,7 +79,6 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
 
       const data = await response.json()
 
-      // ✅ CRITICAL: Store JWT token and business_id in localStorage
       localStorage.setItem('token', data.token)
       localStorage.setItem('business_id', data.business_id)
       localStorage.setItem('user_id', data.user_id)
@@ -85,16 +86,17 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
       console.log('✅ Signup successful! Token stored:', {
         token: data.token.substring(0, 20) + '...',
         business_id: data.business_id,
-        user_id: data.user_id
+        user_id: data.user_id,
+        sms_consent: smsConsent
       })
 
-      // Proceed to Step 2
       onNext({
         full_name: fullName,
         email: email,
         password: password,
         user_id: data.user_id,
-        business_id: data.business_id
+        business_id: data.business_id,
+        sms_consent: smsConsent
       })
 
     } catch (error: any) {
@@ -175,6 +177,52 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
           {errors.confirmPassword && <p className="error-message">{errors.confirmPassword}</p>}
         </div>
 
+        {/* SMS Consent — COMPLIANCE-A2P-0001 | Twilio A2P 10DLC Required */}
+        <div className="form-section" style={{
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
+          borderRadius: '8px',
+          padding: '16px',
+          marginBottom: '20px'
+        }}>
+          <h3 style={{margin: '0 0 12px 0', fontSize: '16px', fontWeight: '600'}}>
+            📱 Text Message Notifications (Optional)
+          </h3>
+
+          <label className="checkbox-label">
+            <input
+              type="checkbox"
+              checked={smsConsent}
+              onChange={(e) => setSmsConsent(e.target.checked)}
+              disabled={isSubmitting}
+            />
+            <span style={{fontSize: '14px', lineHeight: '1.4'}}>
+              I agree to receive SMS messages from MeetCIP regarding missed call alerts,
+              call summaries, and account notifications. Message frequency varies.
+              Message and data rates may apply. Reply STOP to opt out or HELP for help.
+              <strong> Consent is not a condition of purchase.</strong> View our{' '}
+              <a href="/privacy" target="_blank" rel="noopener noreferrer"
+                 style={{color: '#3b82f6', textDecoration: 'underline'}}>
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a href="/terms" target="_blank" rel="noopener noreferrer"
+                 style={{color: '#3b82f6', textDecoration: 'underline'}}>
+                Terms & Conditions
+              </a>.
+            </span>
+          </label>
+
+          <p style={{
+            fontSize: '12px',
+            color: '#6b7280',
+            margin: '8px 0 0 24px',
+            fontStyle: 'italic'
+          }}>
+            ℹ️ Text notifications are optional. You can create your account without agreeing to SMS messages.
+          </p>
+        </div>
+
         <div className="form-section">
           <label className={`checkbox-label ${errors.terms ? 'error' : ''}`}>
             <input
@@ -212,4 +260,5 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
     </div>
   )
 }
+
 export default Step1_AccountCreation
