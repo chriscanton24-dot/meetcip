@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from 'react'
 import { useAnalytics } from '../components/AnalyticsProvider'
 
@@ -19,24 +18,21 @@ export default function Demo() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    
-    // Track demo request start
+
     trackEvent('demo_request_started', {
       company: formData.company,
       industry: formData.industry,
     })
-    
+
     setSubmitting(true)
     setError(null)
 
     try {
       const apiUrl = import.meta.env.VITE_API_URL || 'https://ai-answering-service-cloud.onrender.com'
-      
+
       const response = await fetch(`${apiUrl}/api/demo-request`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -62,34 +58,21 @@ export default function Demo() {
         throw new Error(data.detail || 'Failed to submit demo request')
       }
 
-      // Track successful conversion
       trackConversion('demo_request_completed', 100)
       trackEvent('demo_request_success', {
         company: formData.company,
         industry: formData.industry,
       })
-      
+
       console.log('Demo request submitted:', data)
       setSubmitted(true)
-      
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        employees: '',
-        callVolume: '',
-        industry: ''
-      })
+      setFormData({ name: '', email: '', phone: '', company: '', employees: '', callVolume: '', industry: '' })
 
     } catch (err) {
       console.error('Error submitting demo request:', err)
-      
-      // Track error
       trackEvent('demo_request_error', {
         error: err instanceof Error ? err.message : 'Unknown error',
       })
-      
       setError(err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.')
     } finally {
       setSubmitting(false)
@@ -131,10 +114,7 @@ export default function Demo() {
             </ul>
           </div>
           <div className="mt-8">
-            <button 
-              onClick={() => setSubmitted(false)} 
-              className="btn-secondary"
-            >
+            <button onClick={() => setSubmitted(false)} className="btn-secondary">
               Submit Another Request
             </button>
           </div>
@@ -147,11 +127,9 @@ export default function Demo() {
     <div>
       <div className="gradient-mesh noise-overlay">
         <div className="section-container text-center">
-          <h1 className="heading-xl text-primary mb-6">
-            See CIP in Action
-          </h1>
+          <h1 className="heading-xl text-primary mb-6">See MeetCIP in Action</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Schedule a personalized demo and discover how AI can transform your business.
+            Schedule a personalized demo and discover how AI + CRM can transform your business.
           </p>
         </div>
       </div>
@@ -160,7 +138,7 @@ export default function Demo() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
             <h2 className="heading-md text-primary mb-6">Request Free Demo</h2>
-            
+
             {error && (
               <div className="mb-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
                 <div className="flex items-start space-x-3">
@@ -180,9 +158,7 @@ export default function Demo() {
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">Full Name *</label>
                   <input
-                    type="text"
-                    required
-                    value={formData.name}
+                    type="text" required value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent"
                     disabled={submitting}
@@ -191,9 +167,7 @@ export default function Demo() {
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">Email *</label>
                   <input
-                    type="email"
-                    required
-                    value={formData.email}
+                    type="email" required value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent"
                     disabled={submitting}
@@ -205,9 +179,7 @@ export default function Demo() {
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">Phone *</label>
                   <input
-                    type="tel"
-                    required
-                    value={formData.phone}
+                    type="tel" required value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent"
                     disabled={submitting}
@@ -216,9 +188,7 @@ export default function Demo() {
                 <div>
                   <label className="block text-sm font-bold text-primary mb-2">Company *</label>
                   <input
-                    type="text"
-                    required
-                    value={formData.company}
+                    type="text" required value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-accent focus:border-accent"
                     disabled={submitting}
@@ -260,7 +230,7 @@ export default function Demo() {
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-primary mb-2">Industry</label>
+                <label className="block text-sm font-bold text-primary mb-2">Business Type</label>
                 <select
                   value={formData.industry}
                   onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
@@ -268,23 +238,20 @@ export default function Demo() {
                   disabled={submitting}
                 >
                   <option value="">Select...</option>
-                  <option value="emergency">Water/Fire Restoration</option>
-                  <option value="foundation">Foundation Repair</option>
-                  <option value="hvac">HVAC</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="electricians">Electricians</option>
-                  <option value="garage">Garage Door Repair</option>
-                  <option value="roofing">Roofing</option>
-                  <option value="concrete">Concrete Leveling</option>
-                  <option value="fencing">Fencing</option>
-                  <option value="landscaping">Landscaping</option>
-                  <option value="realestate">Real Estate</option>
+                  <option value="home_services">Home Services</option>
+                  <option value="professional_services">Professional Services</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="real_estate">Real Estate</option>
+                  <option value="retail">Retail</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="legal">Legal</option>
+                  <option value="financial">Financial Services</option>
                   <option value="other">Other</option>
                 </select>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full btn-primary text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={submitting}
               >
@@ -298,7 +265,7 @@ export default function Demo() {
                   </span>
                 ) : 'Request Demo'}
               </button>
-              
+
               <p className="text-sm text-gray-500 text-center">
                 By submitting this form, you agree to our <a href="/terms" className="text-accent hover:underline">Terms of Service</a> and <a href="/privacy" className="text-accent hover:underline">Privacy Policy</a>.
               </p>
@@ -309,26 +276,11 @@ export default function Demo() {
             <h3 className="text-2xl font-display font-bold text-primary mb-6">What You'll See</h3>
             <div className="space-y-4">
               {[
-                {
-                  title: 'Live Call Simulation',
-                  description: 'Watch AI handle real scenarios in real-time'
-                },
-                {
-                  title: 'Dashboard Walkthrough',
-                  description: 'Manage calls, view transcripts, track analytics'
-                },
-                {
-                  title: 'Custom Configuration',
-                  description: 'Learn to train AI with your business info'
-                },
-                {
-                  title: 'Integration Options',
-                  description: 'Explore calendar sync and CRM connections'
-                },
-                {
-                  title: 'Pricing & Setup',
-                  description: 'Get answers and choose your plan'
-                }
+                { title: 'Live Call Simulation',    description: 'Watch AI handle real scenarios in real-time'           },
+                { title: 'CRM Walkthrough',         description: 'See caller recognition, customer profiles, and service history in action' },
+                { title: 'Dashboard Walkthrough',   description: 'Manage calls, view transcripts, track revenue intelligence' },
+                { title: 'Custom Configuration',    description: 'Learn to train AI with your business info'              },
+                { title: 'Pricing & Setup',         description: 'Get answers and choose your plan'                       },
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-surface rounded-2xl border-2 border-gray-100">
                   <div className="w-10 h-10 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
