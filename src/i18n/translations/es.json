@@ -26,17 +26,17 @@
     "feature1Title": "Contestadora con IA",
     "feature1Desc": "Conversaciones naturales que suenan humanas, disponibles instantáneamente 24/7/365",
     "feature2Title": "Soporte Bilingüe",
-    "feature2Desc": "Fluido en inglés y español, detecta automáticamente el idioma del llamante",
+    "feature2Desc": "Soporte completo en inglés y español — cada llamante es atendido en el idioma de su preferencia",
     "feature3Title": "Registros y Transcripciones",
     "feature3Desc": "Cada llamada grabada, transcrita y buscable en tu panel de control",
     "feature5Title": "Notificaciones Instantáneas",
-    "feature5Desc": "Alertas por SMS y correo cuando llamadas importantes requieren tu atención",
+    "feature5Desc": "Alertas por correo en todos los planes — alertas por SMS y correo en Profesional y superior cuando llamadas importantes requieren tu atención",
     "feature6Title": "Programación de Citas",
     "feature6Desc": "Integración de calendario para reservar consultas directamente durante las llamadas",
     "feature8Title": "Inteligencia de Ingresos",
     "feature8Desc": "Rastrea volumen de llamadas, tasas de conversión e impacto en ingresos en tiempo real",
-    "feature10Title": "Entrenamiento Personalizado",
-    "feature10Desc": "Entrena la IA con los detalles de tu negocio, preguntas frecuentes y procedimientos",
+    "feature10Title": "Sube la Info de Tu Negocio",
+    "feature10Desc": "Sube tus servicios, precios, preguntas frecuentes y procedimientos — la IA aprende tu negocio y responde a los llamantes con precisión",
     "feature11Title": "Enrutamiento de Emergencias",
     "feature11Desc": "Detecta urgencia y prioriza llamadas críticas automáticamente",
     "feature12Title": "Soporte Multicanal",
@@ -130,14 +130,12 @@
         "features": {
           "0": "500 llamadas/mes",
           "1": "Todo en Profesional",
-          "2": "Gerente de cuenta dedicado",
-          "3": "Entrenamiento de IA personalizado",
-          "4": "Acceso a API",
-          "5": "Opción de marca blanca",
-          "6": "Integraciones personalizadas",
-          "7": "Informes avanzados",
-          "8": "Acceso multiusuario",
-          "9": "Incorporación prioritaria"
+          "2": "Entrenamiento de IA personalizado",
+          "3": "Opción de marca blanca",
+          "4": "Integraciones personalizadas",
+          "5": "Informes avanzados",
+          "6": "Acceso multiusuario",
+          "7": "Incorporación prioritaria"
         }
       },
       "enterprise": {
@@ -207,7 +205,7 @@
       "voicemailTranscription": "Transcripción de Correo de Voz",
       "emailIntegration": "Integración de Correo",
       "smsNotifications": "Notificaciones SMS",
-      "calendarSync": "Sincronización de Calendario (Google/Outlook)",
+      "calendarSync": "Sincronización de Calendario (Google)",
       "apiAccess": "Acceso a API",
       "webhooks": "Webhooks",
       "emailSupport": "Soporte por Correo",
@@ -256,7 +254,7 @@
       },
       "analytics": {
         "name": "Análisis en Tiempo Real",
-        "description": "Panel en vivo con información instantánea"
+        "description": "Volumen de llamadas en tiempo real, tendencias de conversión e impacto en ingresos — todo en un panel"
       },
       "hipaa": {
         "name": "Listo para HIPAA",

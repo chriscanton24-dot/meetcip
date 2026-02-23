@@ -26,17 +26,17 @@
     "feature1Title": "AI-Powered Answering",
     "feature1Desc": "Natural conversations that sound human, available instantly 24/7/365",
     "feature2Title": "Bilingual Support",
-    "feature2Desc": "Fluent in English and Spanish, automatically detects caller language",
+    "feature2Desc": "Full English and Spanish support — each caller is served in their language of choice",
     "feature3Title": "Call Logging & Transcripts",
     "feature3Desc": "Every call recorded, transcribed, and searchable in your dashboard",
     "feature5Title": "Instant Notifications",
-    "feature5Desc": "SMS and email alerts when important calls require your attention",
+    "feature5Desc": "Email alerts on all plans — SMS and email alerts on Professional and above when important calls need your attention",
     "feature6Title": "Appointment Scheduling",
     "feature6Desc": "Calendar integration to book consultations directly during calls",
     "feature8Title": "Revenue Intelligence",
     "feature8Desc": "Track call volume, conversion rates, and revenue impact in real time",
-    "feature10Title": "Custom Training",
-    "feature10Desc": "Train the AI with your business details, FAQs, and procedures",
+    "feature10Title": "Upload Business Info",
+    "feature10Desc": "Upload your services, pricing, FAQs, and procedures — the AI learns your business and answers callers accurately",
     "feature11Title": "Emergency Routing",
     "feature11Desc": "Detect urgency and prioritize critical calls automatically",
     "feature12Title": "Multi-Channel Support",
@@ -130,14 +130,12 @@
         "features": {
           "0": "500 calls/month",
           "1": "Everything in Professional",
-          "2": "Dedicated account manager",
-          "3": "Custom AI training",
-          "4": "API access",
-          "5": "White-label option",
-          "6": "Custom integrations",
-          "7": "Advanced reporting",
-          "8": "Multi-user access",
-          "9": "Priority onboarding"
+          "2": "Custom AI training",
+          "3": "White-label option",
+          "4": "Custom integrations",
+          "5": "Advanced reporting",
+          "6": "Multi-user access",
+          "7": "Priority onboarding"
         }
       },
       "enterprise": {
@@ -207,7 +205,7 @@
       "voicemailTranscription": "Voicemail Transcription",
       "emailIntegration": "Email Integration",
       "smsNotifications": "SMS Notifications",
-      "calendarSync": "Calendar Sync (Google/Outlook)",
+      "calendarSync": "Calendar Sync (Google)",
       "apiAccess": "API Access",
       "webhooks": "Webhooks",
       "emailSupport": "Email Support",
@@ -256,7 +254,7 @@
       },
       "analytics": {
         "name": "Real-Time Analytics",
-        "description": "Live dashboard with instant insights"
+        "description": "Real-time call volume, conversion trends, and revenue impact — all in one dashboard"
       },
       "hipaa": {
         "name": "HIPAA Ready",

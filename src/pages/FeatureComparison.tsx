@@ -29,7 +29,6 @@ export default function FeatureComparison() {
       items: [
         { name: t('featureComparison.features.phoneNumbers'),           starter: '1',   professional: '1',   business: '3',   enterprise: t('featureComparison.unlimited') },
         { name: t('featureComparison.features.callRecording'),          starter: true,  professional: true,  business: true,  enterprise: true  },
-        { name: t('featureComparison.features.callTransfer'),           starter: false, professional: true,  business: true,  enterprise: true  },
         { name: t('featureComparison.features.voicemailTranscription'), starter: true,  professional: true,  business: true,  enterprise: true  },
       ]
     },
@@ -39,8 +38,6 @@ export default function FeatureComparison() {
         { name: t('featureComparison.features.emailIntegration'),  starter: true,  professional: true,  business: true,  enterprise: true  },
         { name: t('featureComparison.features.smsNotifications'),  starter: false, professional: true,  business: true,  enterprise: true  },
         { name: t('featureComparison.features.calendarSync'),      starter: false, professional: true,  business: true,  enterprise: true  },
-        { name: t('featureComparison.features.apiAccess'),         starter: false, professional: false, business: true,  enterprise: true  },
-        { name: t('featureComparison.features.webhooks'),          starter: false, professional: false, business: true,  enterprise: true  },
       ]
     },
     {
