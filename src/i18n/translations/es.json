@@ -71,8 +71,8 @@
   "pricing": {
     "previewTitle": "Precios Simples y Transparentes",
     "previewSubtitle": "Precios simples y transparentes para negocios de todos los tamaños",
-    "heroTitle": "Precios Simples y Transparentes",
-    "heroSubtitle": "Precios simples y transparentes para empresas de todos los tamaños",
+    "heroTitle": "Planes Diseñados para Cada Negocio",
+    "heroSubtitle": "Precios simples y transparentes — sin contratos, sin tarifas ocultas, cancela en cualquier momento",
     "standardTiersTitle": "Niveles de Precios Estándar",
     "perMonth": "/mes",
     "perYear": "/año",
@@ -226,7 +226,7 @@
       },
       "bilingualSupport": {
         "title": "Verdaderamente Bilingüe",
-        "description": "Cambia sin problemas entre inglés y español a mitad de conversación"
+        "description": "Soporte completo en inglés y español — los llamantes eligen su idioma preferido y la IA los atiende con fluidez de principio a fin"
       },
       "crmAI": {
         "title": "CRM + IA Combinados",

@@ -71,8 +71,8 @@
   "pricing": {
     "previewTitle": "Simple, Transparent Pricing",
     "previewSubtitle": "Simple, transparent pricing for businesses of all sizes",
-    "heroTitle": "Simple, Transparent Pricing",
-    "heroSubtitle": "Simple, transparent pricing for businesses of all sizes",
+    "heroTitle": "Plans Built for Every Business",
+    "heroSubtitle": "Simple, transparent pricing — no contracts, no hidden fees, cancel anytime",
     "standardTiersTitle": "Standard Pricing Tiers",
     "perMonth": "/month",
     "perYear": "/year",
@@ -226,7 +226,7 @@
       },
       "bilingualSupport": {
         "title": "Truly Bilingual",
-        "description": "Seamlessly switches between English and Spanish mid-conversation"
+        "description": "Full English and Spanish support — callers choose their preferred language and the AI serves them fluently from start to finish"
       },
       "crmAI": {
         "title": "CRM + AI Combined",
