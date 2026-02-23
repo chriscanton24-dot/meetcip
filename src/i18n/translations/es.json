@@ -9,11 +9,11 @@
     "getStarted": "Comenzar Ahora"
   },
   "hero": {
-    "badge": "Amigable • Profesional • Disponible 24/7 • Bilingüe",
-    "title": "Nunca Vuelvas a Perder una Llamada de Negocios",
-    "subtitle": "Contestadora telefónica con IA que suena humana, habla inglés y español, y funciona las 24 horas — por una fracción del costo de contratar personal.",
+    "badge": "CRM + IA — La Contestadora Más Inteligente",
+    "title": "La IA que Contesta Llamadas Y Administra Tu CRM",
+    "subtitle": "MeetCIP contesta cada llamada, reconoce a tus clientes, actualiza tu CRM automáticamente y se vuelve más inteligente con cada conversación — desde $59/mes.",
     "benefit1": "Respuesta Instantánea",
-    "benefit2": "Soporte Bilingüe",
+    "benefit2": "CRM Integrado",
     "benefit3": "Registros y Transcripciones",
     "ctaPrimary": "Comenzar Ahora",
     "ctaSecondary": "Escuchar MeetCIP en Vivo",
@@ -118,10 +118,9 @@
           "2": "Soporte prioritario",
           "3": "Saludos personalizados",
           "4": "Análisis avanzado",
-          "5": "Integración CRM",
+          "5": "CRM Integrado",
           "6": "Sincronización de calendario",
-          "7": "Puntuación de clientes potenciales",
-          "8": "Flujos de trabajo personalizados"
+          "7": "Flujos de trabajo personalizados"
         }
       },
       "business": {

@@ -40,8 +40,7 @@ export default function PricingPage() {
         t('pricing.tiers.professional.features.4'),
         t('pricing.tiers.professional.features.5'),
         t('pricing.tiers.professional.features.6'),
-        t('pricing.tiers.professional.features.7'),
-        t('pricing.tiers.professional.features.8')
+        t('pricing.tiers.professional.features.7')
       ],
       highlighted: true
     },
@@ -61,8 +60,6 @@ export default function PricingPage() {
         t('pricing.tiers.business.features.5'),
         t('pricing.tiers.business.features.6'),
         t('pricing.tiers.business.features.7'),
-        t('pricing.tiers.business.features.8'),
-        t('pricing.tiers.business.features.9')
       ]
     },
     {

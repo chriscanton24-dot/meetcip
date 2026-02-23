@@ -9,11 +9,11 @@
     "getStarted": "Get Started Now"
   },
   "hero": {
-    "badge": "Friendly • Professional • Available 24/7 • Bilingual",
-    "title": "Never Miss a Business Call Again",
-    "subtitle": "AI-powered phone answering that sounds human, speaks English & Spanish, and works round the clock — for a fraction of the cost of hiring staff.",
+    "badge": "CRM + AI — The Smarter Answering Service",
+    "title": "The AI That Answers Calls AND Runs Your CRM",
+    "subtitle": "MeetCIP answers every call, recognizes your customers, updates your CRM automatically, and gets smarter with every conversation — starting at $59/month.",
     "benefit1": "Instant Response",
-    "benefit2": "Bilingual Support",
+    "benefit2": "Built-in CRM",
     "benefit3": "Call Logs & Transcripts",
     "ctaPrimary": "Get Started Now",
     "ctaSecondary": "Hear MeetCIP Live",
@@ -118,10 +118,9 @@
           "2": "Priority support",
           "3": "Custom greetings",
           "4": "Advanced analytics",
-          "5": "CRM integration",
+          "5": "Built-in CRM",
           "6": "Calendar sync",
-          "7": "Lead scoring",
-          "8": "Custom workflows"
+          "7": "Custom workflows"
         }
       },
       "business": {
