@@ -9,6 +9,7 @@ interface Step1Props {
 const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} }) => {
   const [fullName, setFullName] = useState(initialData.full_name || '')
   const [email, setEmail] = useState(initialData.email || '')
+  const [phone, setPhone] = useState(initialData.phone || '')
   const [password, setPassword] = useState(initialData.password || '')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [agreedToTerms, setAgreedToTerms] = useState(false)
@@ -16,6 +17,18 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const [errors, setErrors] = useState<{[key: string]: string}>({})
+
+  // Format phone number as user types: (XXX) XXX-XXXX
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10)
+    if (digits.length <= 3) return digits
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(formatPhone(e.target.value))
+  }
 
   const validate = () => {
     const newErrors: {[key: string]: string} = {}
@@ -28,6 +41,14 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = 'Invalid email address'
+    }
+
+    // Phone: required if SMS consent checked, optional otherwise
+    const phoneDigits = phone.replace(/\D/g, '')
+    if (smsConsent && !phone.trim()) {
+      newErrors.phone = 'Phone number is required to receive SMS notifications'
+    } else if (phone.trim() && phoneDigits.length !== 10) {
+      newErrors.phone = 'Please enter a valid 10-digit US phone number'
     }
 
     if (!password) {
@@ -58,6 +79,7 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
 
     try {
       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const phoneDigits = phone.replace(/\D/g, '')
       const response = await fetch(`${API_URL}/api/auth/signup`, {
         method: 'POST',
         headers: {
@@ -67,8 +89,9 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
           full_name: fullName,
           email: email,
           password: password,
+          phone: phoneDigits ? `+1${phoneDigits}` : null,
           sms_consent: smsConsent,
-          sms_consent_timestamp: new Date().toISOString()
+          sms_consent_timestamp: smsConsent ? new Date().toISOString() : null
         })
       })
 
@@ -94,6 +117,7 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
         full_name: fullName,
         email: email,
         password: password,
+        phone: phoneDigits ? `+1${phoneDigits}` : null,
         user_id: data.user_id,
         business_id: data.business_id,
         sms_consent: smsConsent
@@ -114,7 +138,7 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
       <div className="step-header-content">
         <h1>Create Your Account</h1>
         <p className="step-description">
-          Get started with MeetCIP - your AI answering service
+          Get started with MeetCIP CRM + AI
         </p>
       </div>
 
@@ -152,6 +176,25 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
         </div>
 
         <div className="form-section">
+          <label className="form-label">
+            Phone Number
+            <span style={{ fontSize: '12px', fontWeight: '400', color: '#6b7280', marginLeft: '6px' }}>
+              (Required for SMS notifications)
+            </span>
+          </label>
+          <input
+            type="tel"
+            className={`form-input ${errors.phone ? 'error' : ''}`}
+            placeholder="(210) 555-0100"
+            value={phone}
+            onChange={handlePhoneChange}
+            disabled={isSubmitting}
+            maxLength={14}
+          />
+          {errors.phone && <p className="error-message">{errors.phone}</p>}
+        </div>
+
+        <div className="form-section">
           <label className="form-label required">Password</label>
           <input
             type="password"
@@ -177,7 +220,7 @@ const Step1_AccountCreation: React.FC<Step1Props> = ({ onNext, initialData = {} 
           {errors.confirmPassword && <p className="error-message">{errors.confirmPassword}</p>}
         </div>
 
-        {/* SMS Consent — COMPLIANCE-A2P-0001 | Twilio A2P 10DLC Required */}
+        {/* SMS Consent — COMPLIANCE-A2P-0002 | Twilio A2P 10DLC Required */}
         <div className="form-section" style={{
           background: '#f8fafc',
           border: '1px solid #e2e8f0',
