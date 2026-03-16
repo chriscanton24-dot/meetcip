@@ -9,7 +9,7 @@ export default function Testimonials() {
     },
     {
       name: 'Mike Rodriguez',
-      company: 'Best of SA Fence Painting',
+      company: 'Best of SA Fencing',
       role: 'Manager',
       content: 'Customers think they\'re speaking to a real receptionist. MeetCIP handles everything and sends us the leads instantly.',
       rating: 5

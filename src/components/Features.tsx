@@ -16,6 +16,7 @@ export default function Features() {
     { icon: '▶️', titleKey: 'features.feature13Title', descKey: 'features.feature13Desc' },
     { icon: '🌙', titleKey: 'features.feature14Title', descKey: 'features.feature14Desc' },
     { icon: '💰', titleKey: 'features.feature15Title', descKey: 'features.feature15Desc' },
+    { icon: '🧪', titleKey: 'features.feature16Title', descKey: 'features.feature16Desc' },
   ]
 
   const crmCards = [

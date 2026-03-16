@@ -28,19 +28,6 @@ import PricingPage from './pages/PricingPage'
 // Pages - New
 import FeatureComparison from './pages/FeatureComparison'
 
-// Industry Landing Pages
-import WaterFireRestoration from './pages/WaterFireRestoration'
-import FoundationRepair from './pages/FoundationRepair'
-import HVAC from './pages/HVAC'
-import Plumbing from './pages/Plumbing'
-import Electricians from './pages/Electricians'
-import GarageDoorRepair from './pages/GarageDoorRepair'
-import Roofing from './pages/Roofing'
-import ConcreteLeveling from './pages/ConcreteLeveling'
-import Fencing from './pages/Fencing'
-import Landscaping from './pages/Landscaping'
-import RealEstate from './pages/RealEstate'
-
 // Get GA4 Measurement ID from environment
 const GA4_MEASUREMENT_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID || 'G-Y2S6TMPTC1'
 
@@ -78,19 +65,6 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/dpa" element={<DPA />} />
-              
-              {/* Industry Landing Pages */}
-              <Route path="/industries/water-fire-restoration" element={<WaterFireRestoration />} />
-              <Route path="/industries/foundation-repair" element={<FoundationRepair />} />
-              <Route path="/industries/hvac" element={<HVAC />} />
-              <Route path="/industries/plumbing" element={<Plumbing />} />
-              <Route path="/industries/electricians" element={<Electricians />} />
-              <Route path="/industries/garage-door-repair" element={<GarageDoorRepair />} />
-              <Route path="/industries/roofing" element={<Roofing />} />
-              <Route path="/industries/concrete-leveling" element={<ConcreteLeveling />} />
-              <Route path="/industries/fencing" element={<Fencing />} />
-              <Route path="/industries/landscaping" element={<Landscaping />} />
-              <Route path="/industries/real-estate" element={<RealEstate />} />
             </Routes>
           </main>
           <Footer />

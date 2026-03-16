@@ -52,6 +52,8 @@
     "feature14Desc": "Every after-hours call captured, logged, and summarized — never lose a lead that called at 11 PM again",
     "feature15Title": "Built to Save You Money",
     "feature15Desc": "A full-time receptionist costs $35,000–$45,000/year. MeetCIP starts at $59/month — same coverage, no payroll, no sick days",
+    "feature16Title": "Test AI Knowledge",
+    "feature16Desc": "Ask your AI anything about your business before going live — verify its answers, refine its responses, and confirm it's ready to impress your customers",
     "crmSectionTitle": "MeetCIP CRM + AI — Your Unfair Advantage",
     "crmSectionSubtitle": "Every other answering service just takes messages. MeetCIP remembers every caller, updates your CRM automatically, and makes your AI smarter with every single call.",
     "crmCard1Title": "Caller Recognition",
@@ -285,7 +287,7 @@
     }
   },
   "footer": {
-    "tagline": "Your friendly 24/7 virtual receptionist. Never miss another customer call.",
+    "tagline": "The AI that answers calls AND runs your CRM. Never miss a customer again.",
     "product": "Product",
     "pricing": "Pricing",
     "requestDemo": "Request Demo",
@@ -297,7 +299,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "dpa": "Data Processing Addendum",
-    "copyright": "© 2025 MeetCIP — Call Intelligence Platform. All rights reserved.",
+    "copyright": "© 2026 MeetCIP. All rights reserved.",
     "contactEmail": "Contact: demomeetcip@gmail.com"
   },
   "about": {

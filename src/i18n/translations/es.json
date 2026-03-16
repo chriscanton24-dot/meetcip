@@ -52,6 +52,8 @@
     "feature14Desc": "Cada llamada fuera de horario capturada, registrada y resumida — nunca pierdas un cliente que llamó a las 11 PM",
     "feature15Title": "Diseñado para Ahorrarte Dinero",
     "feature15Desc": "Una recepcionista de tiempo completo cuesta $35,000–$45,000/año. MeetCIP comienza en $59/mes — la misma cobertura, sin nómina, sin días de enfermedad",
+    "feature16Title": "Prueba el Conocimiento de la IA",
+    "feature16Desc": "Pregúntale a tu IA cualquier cosa sobre tu negocio antes de salir en vivo — verifica sus respuestas, refínalas y confirma que está lista para impresionar a tus clientes",
     "crmSectionTitle": "MeetCIP CRM + IA — Tu Ventaja Competitiva",
     "crmSectionSubtitle": "Cualquier otra contestadora solo toma mensajes. MeetCIP recuerda a cada llamante, actualiza tu CRM automáticamente y hace tu IA más inteligente con cada llamada.",
     "crmCard1Title": "Reconocimiento de Llamantes",
@@ -285,7 +287,7 @@
     }
   },
   "footer": {
-    "tagline": "Tu recepcionista virtual amigable 24/7. Nunca pierdas otra llamada de cliente.",
+    "tagline": "La IA que contesta llamadas Y administra tu CRM. Nunca pierdas un cliente.",
     "product": "Producto",
     "pricing": "Precios",
     "requestDemo": "Solicitar Demo",
@@ -297,7 +299,7 @@
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
     "dpa": "Adenda de Procesamiento de Datos",
-    "copyright": "© 2025 MeetCIP — Call Intelligence Platform. Todos los derechos reservados.",
+    "copyright": "© 2026 MeetCIP. Todos los derechos reservados.",
     "contactEmail": "Contacto: demomeetcip@gmail.com"
   },
   "about": {
