@@ -1,9 +1,12 @@
 
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useAnalytics } from './AnalyticsProvider'
 
 export default function Hero() {
   const { t } = useTranslation()
+  // BUILD-WEB-ANALYTICS-0001-hero-cta-events
+  const { trackEvent } = useAnalytics()
 
   return (
     <div className="gradient-mesh noise-overlay">
@@ -48,10 +51,18 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/onboarding" className="btn-primary px-8 py-4 text-lg">
+              <Link
+                to="/onboarding"
+                className="btn-primary px-8 py-4 text-lg"
+                onClick={() => trackEvent('cta_click', { button: 'get_started', destination: '/onboarding', location: 'hero' })}
+              >
                 {t('hero.ctaPrimary')}
               </Link>
-              <a href="tel:+12107563650" className="btn-secondary px-8 py-4 text-lg">
+              <a
+                href="tel:+12107563650"
+                className="btn-secondary px-8 py-4 text-lg"
+                onClick={() => trackEvent('cta_click', { button: 'hear_live', destination: 'tel', location: 'hero' })}
+              >
                 {t('hero.ctaSecondary')}
               </a>
             </div>
