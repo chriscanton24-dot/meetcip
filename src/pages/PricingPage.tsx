@@ -1,19 +1,66 @@
 
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+
+// BUILD-WEB-PRICING-SSOT-0001: Backend URL — all pricing reads from pricing_config via this endpoint.
+const BACKEND_URL = 'https://ai-answering-service-cloud.onrender.com'
+
+// BUILD-WEB-PRICING-SSOT-0001: Fallback values — used ONLY if /api/pricing is unreachable.
+// These must match pricing_config DB values exactly. Update DB first — this is last resort only.
+const PRICING_FALLBACK: Record<string, { monthlyPrice: number | null; annualPrice: number | null; calls: number | null; overage: number | null }> = {
+  starter:      { monthlyPrice: 59,  annualPrice: 565,  calls: 100, overage: 0.50 },
+  professional: { monthlyPrice: 149, annualPrice: 1430, calls: 300, overage: 0.40 },
+  business:     { monthlyPrice: 269, annualPrice: 2588, calls: 500, overage: 0.35 },
+  enterprise:   { monthlyPrice: null, annualPrice: null, calls: null, overage: null },
+}
 
 export default function PricingPage() {
   const { t } = useTranslation()
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
+  const [pricing, setPricing] = useState(PRICING_FALLBACK)
 
+  // BUILD-WEB-PRICING-SSOT-0001: Fetch live prices from pricing_config DB on mount.
+  // On success: state updated from DB — single source of truth enforced.
+  // On failure: state retains PRICING_FALLBACK values — page never goes blank.
+  useEffect(() => {
+    fetch(`${BACKEND_URL}/api/pricing`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.tiers)) {
+          const map: typeof PRICING_FALLBACK = { ...PRICING_FALLBACK }
+          data.tiers.forEach((tier: {
+            tier_key: string
+            monthly_price: number | null
+            annual_price: number | null
+            calls_per_month: number | null
+            overage_rate: number | null
+          }) => {
+            map[tier.tier_key] = {
+              monthlyPrice: tier.monthly_price,
+              annualPrice:  tier.annual_price,
+              calls:        tier.calls_per_month,
+              overage:      tier.overage_rate,
+            }
+          })
+          setPricing(map)
+        }
+      })
+      .catch(err => {
+        console.warn('BUILD-WEB-PRICING-SSOT-0001: /api/pricing fetch failed — using fallback values', err)
+      })
+  }, [])
+
+  // BUILD-WEB-PRICING-SSOT-0001: Tier array built from DB-sourced state.
+  // Labels, descriptions, and feature lists remain translation-key driven (t() calls).
+  // Only prices, calls, and overage come from pricing state.
   const standardTiers = [
     {
       name: t('pricing.tiers.starter.name'),
-      monthlyPrice: 59,
-      annualPrice: 565,
-      calls: 100,
-      overage: 0.50,
+      monthlyPrice: pricing.starter?.monthlyPrice,
+      annualPrice: pricing.starter?.annualPrice,
+      calls: pricing.starter?.calls,
+      overage: pricing.starter?.overage,
       description: t('pricing.tiers.starter.description'),
       features: [
         t('pricing.tiers.starter.features.0'),
@@ -27,10 +74,10 @@ export default function PricingPage() {
     },
     {
       name: t('pricing.tiers.professional.name'),
-      monthlyPrice: 149,
-      annualPrice: 1430,
-      calls: 300,
-      overage: 0.40,
+      monthlyPrice: pricing.professional?.monthlyPrice,
+      annualPrice: pricing.professional?.annualPrice,
+      calls: pricing.professional?.calls,
+      overage: pricing.professional?.overage,
       description: t('pricing.tiers.professional.description'),
       features: [
         t('pricing.tiers.professional.features.0'),
@@ -46,10 +93,10 @@ export default function PricingPage() {
     },
     {
       name: t('pricing.tiers.business.name'),
-      monthlyPrice: 269,
-      annualPrice: 2588,
-      calls: 500,
-      overage: 0.35,
+      monthlyPrice: pricing.business?.monthlyPrice,
+      annualPrice: pricing.business?.annualPrice,
+      calls: pricing.business?.calls,
+      overage: pricing.business?.overage,
       description: t('pricing.tiers.business.description'),
       features: [
         t('pricing.tiers.business.features.0'),
@@ -64,10 +111,10 @@ export default function PricingPage() {
     },
     {
       name: t('pricing.tiers.enterprise.name'),
-      monthlyPrice: null,
-      annualPrice: null,
+      monthlyPrice: pricing.enterprise?.monthlyPrice,
+      annualPrice: pricing.enterprise?.annualPrice,
       calls: t('pricing.tiers.enterprise.callsUnlimited'),
-      overage: null,
+      overage: pricing.enterprise?.overage,
       description: t('pricing.tiers.enterprise.description'),
       features: [
         t('pricing.tiers.enterprise.features.0'),

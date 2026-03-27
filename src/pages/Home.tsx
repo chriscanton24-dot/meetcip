@@ -3,12 +3,47 @@ import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+
+// BUILD-WEB-PRICING-SSOT-0001: Backend URL — prices read from pricing_config DB.
+const BACKEND_URL = 'https://ai-answering-service-cloud.onrender.com'
+
+// BUILD-WEB-PRICING-SSOT-0001: Fallback — used ONLY if /api/pricing unreachable.
+const HOME_PRICING_FALLBACK = {
+  starter:      { monthlyPrice: 59,  calls: 100 },
+  professional: { monthlyPrice: 149, calls: 300 },
+  business:     { monthlyPrice: 269, calls: 500 },
+}
 
 export default function Home() {
   const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(0)
+  const [homePricing, setHomePricing] = useState(HOME_PRICING_FALLBACK)
+
+  // BUILD-WEB-PRICING-SSOT-0001: Fetch live prices on mount.
+  // On success: state updated from DB. On failure: fallback values retained.
+  useEffect(() => {
+    fetch(`${BACKEND_URL}/api/pricing`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.tiers)) {
+          const map: typeof HOME_PRICING_FALLBACK = { ...HOME_PRICING_FALLBACK }
+          data.tiers.forEach((tier: { tier_key: string; monthly_price: number | null; calls_per_month: number | null }) => {
+            if (tier.tier_key in map) {
+              map[tier.tier_key as keyof typeof map] = {
+                monthlyPrice: tier.monthly_price ?? map[tier.tier_key as keyof typeof map].monthlyPrice,
+                calls:        tier.calls_per_month ?? map[tier.tier_key as keyof typeof map].calls,
+              }
+            }
+          })
+          setHomePricing(map)
+        }
+      })
+      .catch(err => {
+        console.warn('BUILD-WEB-PRICING-SSOT-0001: /api/pricing fetch failed — using fallback', err)
+      })
+  }, [])
 
   const faqs = [
     {
@@ -57,10 +92,10 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.starter.name')}</h3>
               <div className="mb-4">
-                <span className="text-5xl font-display font-bold text-accent">$59</span>
+                <span className="text-5xl font-display font-bold text-accent">${homePricing.starter.monthlyPrice}</span>
                 <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
               </div>
-              <p className="text-gray-600 mb-6">100 {t('pricing.callsPerMonth')}</p>
+              <p className="text-gray-600 mb-6">{homePricing.starter.calls} {t('pricing.callsPerMonth')}</p>
               <Link to="/onboarding" className="block w-full text-center py-3 px-6 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors">
                 {t('pricing.getStarted')}
               </Link>
@@ -75,10 +110,10 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-display font-bold mb-2">{t('pricing.tiers.professional.name')}</h3>
               <div className="mb-4">
-                <span className="text-5xl font-display font-bold">$149</span>
+                <span className="text-5xl font-display font-bold">${homePricing.professional.monthlyPrice}</span>
                 <span className="text-lg text-white/80">{t('pricing.perMonth')}</span>
               </div>
-              <p className="text-white/90 mb-6">300 {t('pricing.callsPerMonth')}</p>
+              <p className="text-white/90 mb-6">{homePricing.professional.calls} {t('pricing.callsPerMonth')}</p>
               <Link to="/onboarding" className="block w-full text-center py-3 px-6 bg-white text-accent rounded-xl font-bold hover:bg-gray-100 transition-colors">
                 {t('pricing.getStarted')}
               </Link>
@@ -88,10 +123,10 @@ export default function Home() {
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.business.name')}</h3>
               <div className="mb-4">
-                <span className="text-5xl font-display font-bold text-accent">$269</span>
+                <span className="text-5xl font-display font-bold text-accent">${homePricing.business.monthlyPrice}</span>
                 <span className="text-lg text-gray-600">{t('pricing.perMonth')}</span>
               </div>
-              <p className="text-gray-600 mb-6">500 {t('pricing.callsPerMonth')}</p>
+              <p className="text-gray-600 mb-6">{homePricing.business.calls} {t('pricing.callsPerMonth')}</p>
               <Link to="/onboarding" className="block w-full text-center py-3 px-6 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors">
                 {t('pricing.getStarted')}
               </Link>
