@@ -68,6 +68,12 @@
     radial-gradient(at 0% 100%, rgba(15, 23, 42, 0.03) 0px, transparent 50%);
 }
 
+/* Circular loop orbit ring spin — MKT-WEBSITE-HOME-0001 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 /* Floating blobs */
 @keyframes blob {
   0%, 100% { 

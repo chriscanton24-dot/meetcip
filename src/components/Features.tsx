@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
 
-// MKT-WEBSITE-HOME-0001: Full replacement per Director directive
-// Section 2 — Pain narrative + 6 cards
-// Section 3 — Animated circular loop Cards A–H with center text
-// Fix v2: headline overlap resolved (mb-20), left/right card clipping resolved (outer wrapper px-20, G inset to left:4%)
+// MKT-WEBSITE-HOME-0001
+// Fix v3: Headline is rendered in its OWN div ABOVE the circle wrapper.
+// The circle wrapper has explicit paddingTop so Card A (top: 0%, translate -50%)
+// has physical space above it and can never reach the headline.
 export default function Features() {
   const { t } = useTranslation()
 
@@ -27,18 +27,21 @@ export default function Features() {
     { id: 'H', key: 'cardH', tag: t('features.loopH_tag') },
   ]
 
-  // 8 positions on a 760×760 circle.
-  // Cards are 148px wide, centred on anchor via translate(-50%,-50%).
-  // G (left) inset to left:4% — prevents viewport clip.
-  // C (right) inset to left:96% — prevents viewport clip.
+  // Card dimensions
+  const CARD_W = 148
+  const CARD_H = 180 // approximate max card height in px — used for paddingTop calculation
+
+  // 8 positions on a 720×720 circle.
+  // Cards are centred on their anchor via translate(-50%, -50%).
+  // G (left) inset to left:4%, C (right) inset to left:96% — prevents clip.
   const positions: React.CSSProperties[] = [
     { top: '0%',    left: '50%',   transform: 'translate(-50%, -50%)' }, // A top
     { top: '14.6%', left: '85.4%', transform: 'translate(-50%, -50%)' }, // B top-right
-    { top: '50%',   left: '96%',   transform: 'translate(-50%, -50%)' }, // C right (inset)
+    { top: '50%',   left: '96%',   transform: 'translate(-50%, -50%)' }, // C right
     { top: '85.4%', left: '85.4%', transform: 'translate(-50%, -50%)' }, // D bottom-right
     { top: '100%',  left: '50%',   transform: 'translate(-50%, -50%)' }, // E bottom
     { top: '85.4%', left: '14.6%', transform: 'translate(-50%, -50%)' }, // F bottom-left
-    { top: '50%',   left: '4%',    transform: 'translate(-50%, -50%)' }, // G left (inset)
+    { top: '50%',   left: '4%',    transform: 'translate(-50%, -50%)' }, // G left
     { top: '14.6%', left: '14.6%', transform: 'translate(-50%, -50%)' }, // H top-left
   ]
 
@@ -50,7 +53,6 @@ export default function Features() {
       ══════════════════════════════════════ */}
       <div className="bg-white">
         <div className="section-container">
-
           <div className="text-center mb-16">
             <h2 className="heading-lg text-primary mb-6">
               {t('features.painHeadline')}
@@ -94,164 +96,173 @@ export default function Features() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
 
       {/* ══════════════════════════════════════
           SECTION 3 — CIRCULAR LOOP A–H
       ══════════════════════════════════════ */}
-      <div className="bg-surface overflow-hidden">
-        <div className="section-container">
+      <div className="bg-surface">
 
-          {/* Headline — generous mb-20 so Card A (top) clears it */}
-          <div className="text-center mb-20">
-            <h2 className="heading-lg text-primary">
-              {t('features.loopHeadline')}
-            </h2>
-          </div>
+        {/* ── HEADLINE — its own block, fully outside the circle container ── */}
+        <div className="text-center pt-20 pb-0 px-4">
+          <h2 className="heading-lg text-primary">
+            {t('features.loopHeadline')}
+          </h2>
+        </div>
 
-          {/* ── DESKTOP CIRCULAR LAYOUT (lg+) ── */}
-          <div className="hidden lg:flex justify-center">
-            {/*
-              Outer wrapper is wider than the 760px circle.
-              px-20 (80px each side) gives breathing room so cards anchored
-              at the left/right edges (G, C) never clip outside the viewport.
-            */}
-            <div className="relative" style={{ width: '920px', paddingBottom: '80px' }}>
+        {/* ── DESKTOP CIRCULAR LAYOUT (lg+) ── */}
+        <div className="hidden lg:flex justify-center overflow-hidden">
+          {/*
+            Outer wrapper: 920px wide so cards at the left/right edges
+            (G at left:4%, C at left:96%) have room without clipping.
 
-              {/* 760×760 circle container — centred in outer wrapper */}
+            paddingTop: CARD_H + 20px — this is the KEY fix.
+            Card A anchors at top:0% of the 720px circle and translates
+            up by 50% of its own height (~90px). The paddingTop pushes
+            the circle DOWN inside this wrapper so Card A's top edge
+            sits below the headline above it.
+
+            paddingBottom: same logic for Card E at the bottom.
+          */}
+          <div
+            style={{
+              width: '920px',
+              paddingTop: `${CARD_H + 20}px`,
+              paddingBottom: `${CARD_H + 40}px`,
+            }}
+          >
+            {/* 720×720 circle — centred in outer wrapper */}
+            <div
+              className="relative mx-auto"
+              style={{ width: '720px', height: '720px' }}
+            >
+              {/* Orbit ring */}
               <div
-                className="relative mx-auto"
-                style={{ width: '760px', height: '760px' }}
+                className="absolute inset-0 rounded-full border-2 border-accent/20"
+                style={{ animation: 'spin 40s linear infinite' }}
+              />
+              {/* Inner ring */}
+              <div
+                className="absolute rounded-full border border-accent/10"
+                style={{
+                  top: '8%', left: '8%', right: '8%', bottom: '8%',
+                  animation: 'spin 60s linear infinite reverse',
+                }}
+              />
+
+              {/* Center orb */}
+              <div
+                className="absolute"
+                style={{
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                }}
               >
-                {/* Orbit ring */}
                 <div
-                  className="absolute inset-0 rounded-full border-2 border-accent/20"
-                  style={{ animation: 'spin 40s linear infinite' }}
-                />
-                {/* Inner ring */}
-                <div
-                  className="absolute rounded-full border border-accent/10"
-                  style={{
-                    top: '8%', left: '8%', right: '8%', bottom: '8%',
-                    animation: 'spin 60s linear infinite reverse',
-                  }}
-                />
-
-                {/* Center orb */}
-                <div
-                  className="absolute"
-                  style={{
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                  }}
+                  className="w-44 h-44 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center shadow-2xl"
+                  style={{ animation: 'glow 2s ease-in-out infinite alternate' }}
                 >
-                  <div
-                    className="w-44 h-44 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center shadow-2xl"
-                    style={{ animation: 'glow 2s ease-in-out infinite alternate' }}
-                  >
-                    <span className="text-white font-display font-bold text-xl text-center leading-tight px-4">
-                      {t('features.loopCenter')}
-                    </span>
-                  </div>
+                  <span className="text-white font-display font-bold text-xl text-center leading-tight px-4">
+                    {t('features.loopCenter')}
+                  </span>
                 </div>
+              </div>
 
-                {/* Cards A–H */}
-                {loopCards.map((card, index) => (
-                  <div
-                    key={card.id}
-                    className="absolute"
-                    style={{ ...positions[index], width: '148px' }}
-                  >
-                    <div
-                      className="bg-white rounded-2xl border-2 border-gray-100 hover:border-accent hover:shadow-xl transition-all duration-300 p-4 cursor-default"
-                      style={{ animation: `fadeIn 0.6s ease-out ${index * 0.1}s both` }}
-                    >
-                      <div className="flex items-center gap-2 mb-2 flex-wrap">
-                        <span className="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-                          {card.id}
-                        </span>
-                        {card.tag && (
-                          <span className="text-xs font-semibold text-accent/80 uppercase tracking-wide">
-                            {card.tag}
-                          </span>
-                        )}
-                      </div>
-                      <div className="space-y-1">
-                        {(t(`features.${card.key}Lines`, { returnObjects: true }) as string[]).map(
-                          (line: string, i: number) => (
-                            <p
-                              key={i}
-                              className={
-                                i === 0
-                                  ? 'text-xs font-display font-bold text-primary leading-snug'
-                                  : 'text-xs text-gray-500 leading-relaxed'
-                              }
-                            >
-                              {line}
-                            </p>
-                          )
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-
-              </div>{/* end 760×760 */}
-            </div>{/* end outer wrapper */}
-          </div>{/* end desktop */}
-
-          {/* ── MOBILE / TABLET GRID (< lg) ── */}
-          <div className="lg:hidden">
-            <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              {loopCards.map((card) => (
+              {/* Cards A–H */}
+              {loopCards.map((card, index) => (
                 <div
                   key={card.id}
-                  className="bg-white rounded-2xl border-2 border-gray-100 hover:border-accent hover:shadow-lg transition-all duration-300 p-6"
+                  className="absolute"
+                  style={{ ...positions[index], width: `${CARD_W}px` }}
                 >
-                  <div className="flex items-center space-x-3 mb-3">
-                    <span className="w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
-                      {card.id}
-                    </span>
-                    {card.tag && (
-                      <span className="text-xs font-semibold text-accent uppercase tracking-wide">
-                        {card.tag}
+                  <div
+                    className="bg-white rounded-2xl border-2 border-gray-100 hover:border-accent hover:shadow-xl transition-all duration-300 p-4 cursor-default"
+                    style={{ animation: `fadeIn 0.6s ease-out ${index * 0.1}s both` }}
+                  >
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                      <span className="w-7 h-7 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                        {card.id}
                       </span>
-                    )}
-                  </div>
-                  <div className="space-y-1">
-                    {(t(`features.${card.key}Lines`, { returnObjects: true }) as string[]).map(
-                      (line: string, i: number) => (
-                        <p
-                          key={i}
-                          className={
-                            i === 0
-                              ? 'text-sm font-display font-bold text-primary leading-snug'
-                              : 'text-sm text-gray-500 leading-relaxed'
-                          }
-                        >
-                          {line}
-                        </p>
-                      )
-                    )}
+                      {card.tag && (
+                        <span className="text-xs font-semibold text-accent/80 uppercase tracking-wide">
+                          {card.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="space-y-1">
+                      {(t(`features.${card.key}Lines`, { returnObjects: true }) as string[]).map(
+                        (line: string, i: number) => (
+                          <p
+                            key={i}
+                            className={
+                              i === 0
+                                ? 'text-xs font-display font-bold text-primary leading-snug'
+                                : 'text-xs text-gray-500 leading-relaxed'
+                            }
+                          >
+                            {line}
+                          </p>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
-            </div>
 
-            <div className="mt-10 text-center">
-              <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-gradient-to-br from-accent to-accent-dark shadow-2xl">
-                <span className="text-white font-display font-bold text-lg text-center leading-tight px-3">
-                  {t('features.loopCenter')}
-                </span>
+            </div>{/* end 720×720 */}
+          </div>{/* end outer wrapper */}
+        </div>{/* end desktop */}
+
+        {/* ── MOBILE / TABLET GRID (< lg) ── */}
+        <div className="lg:hidden px-4 pb-20">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mt-12">
+            {loopCards.map((card) => (
+              <div
+                key={card.id}
+                className="bg-white rounded-2xl border-2 border-gray-100 hover:border-accent hover:shadow-lg transition-all duration-300 p-6"
+              >
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
+                    {card.id}
+                  </span>
+                  {card.tag && (
+                    <span className="text-xs font-semibold text-accent uppercase tracking-wide">
+                      {card.tag}
+                    </span>
+                  )}
+                </div>
+                <div className="space-y-1">
+                  {(t(`features.${card.key}Lines`, { returnObjects: true }) as string[]).map(
+                    (line: string, i: number) => (
+                      <p
+                        key={i}
+                        className={
+                          i === 0
+                            ? 'text-sm font-display font-bold text-primary leading-snug'
+                            : 'text-sm text-gray-500 leading-relaxed'
+                        }
+                      >
+                        {line}
+                      </p>
+                    )
+                  )}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
+          <div className="mt-10 text-center">
+            <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-gradient-to-br from-accent to-accent-dark shadow-2xl">
+              <span className="text-white font-display font-bold text-lg text-center leading-tight px-3">
+                {t('features.loopCenter')}
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+
+      </div>{/* end bg-surface */}
 
     </div>
   )
