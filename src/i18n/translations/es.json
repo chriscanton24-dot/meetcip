@@ -10,8 +10,8 @@
   },
   "hero": {
     "badge": "CRM + IA — La Contestadora Más Inteligente",
-    "title": "La IA que Contesta Llamadas Y Administra Tu CRM",
-    "subtitle": "MeetCIP contesta cada llamada, reconoce a tus clientes, actualiza tu CRM automáticamente y se vuelve más inteligente con cada conversación — desde $59/mes.",
+    "title": "Las llamadas que perdiste\nconstruyeron el negocio de otro.",
+    "subtitle": "¿Cuánto vale un trabajo para ti?",
     "benefit1": "Respuesta Instantánea",
     "benefit2": "CRM Integrado",
     "benefit3": "Registros y Transcripciones",
@@ -23,6 +23,7 @@
   "features": {
     "title": "Todo lo que Necesitas para Nunca Perder una Llamada",
     "subtitle": "Contestadora telefónica con IA profesional con todas las funciones que tu negocio necesita",
+
     "feature1Title": "Contestadora con IA",
     "feature1Desc": "Conversaciones naturales que suenan humanas, disponibles instantáneamente 24/7/365",
     "feature2Title": "Soporte Bilingüe",
@@ -68,9 +69,149 @@
     "crmCard5Desc": "Cada llamada agrega al registro del cliente. Cuanto más habla MeetCIP con tus clientes, mejor los atiende",
     "crmCard6Title": "Ningún Competidor Tiene Esto",
     "crmCard6Desc": "Las contestadoras independientes solo entregan mensajes. MeetCIP es el único servicio donde la IA responde Y administra tu CRM",
-    "crmDifferentiatorBadge": "CRM + IA — Solo en MeetCIP"
+    "crmDifferentiatorBadge": "CRM + IA — Solo en MeetCIP",
+
+    "painHeadline": "Ya has estado aquí antes.",
+    "painLine1": "El trabajo que casi conseguiste.",
+    "painLine2": "El cliente al que pensabas llamar de vuelta.",
+    "painLine3": "Sabías que algo se escapó.",
+    "painLine4": "Solo no sabías cuánto te costó.",
+    "painLine5": "Hasta ahora.",
+
+    "card1Lines": [
+      "Las llamadas que perdiste construyeron el negocio de otro.",
+      "¿Cuánto vale un trabajo para ti?",
+      "No sabes lo que no sabes.",
+      "Hasta ahora."
+    ],
+    "card2Label": "Responde",
+    "card2Lines": [
+      "Cada llamada importa.",
+      "Te enteras al instante.",
+      "Tú decides.",
+      "Devuelve la llamada. Da seguimiento. Agenda."
+    ],
+    "card3Label": "Captura",
+    "card3Lines": [
+      "No llamas a ciegas.",
+      "Llamas preparado.",
+      "Solo la conversación que cierra el trato."
+    ],
+    "card4Label": "Reconoce",
+    "card4Lines": [
+      "Volvieron a llamar.",
+      "Ves exactamente quiénes son para tu negocio.",
+      "Eso ya no es un prospecto.",
+      "Eso es un cliente leal."
+    ],
+    "card5Label": "Nunca Olvida",
+    "card5Lines": [
+      "Cada cliente.",
+      "Cada trabajo.",
+      "Cada etapa.",
+      "Justo donde lo dejaste.",
+      "Cada vez que lo buscas."
+    ],
+    "card6Label": "Crece",
+    "card6Lines": [
+      "Empezó con una llamada.",
+      "Luego otra.",
+      "Luego otra.",
+      "Algo cambió.",
+      "Estás dirigiendo tu negocio."
+    ],
+
+    "loopHeadline": "Esto es lo que hacemos al respecto.",
+    "loopCenter": "Ahora lo sabes.",
+
+    "loopA_tag": "IA",
+    "cardALines": [
+      "Ese pensamiento constante — ¿y si nadie contesta?",
+      "Cada vez que suena tu teléfono y no puedes atender.",
+      "Se contesta. Siempre.",
+      "En su idioma. Con todo ya en su lugar.",
+      "¿Ese pensamiento? Ya no existe."
+    ],
+
+    "loopB_tag": "IA + CRM",
+    "cardBLines": [
+      "Regresaron.",
+      "Por tu trabajo. Tu servicio. Lo que construiste.",
+      "Cuando llaman — escuchan su nombre.",
+      "Tu reputación los trajo de vuelta.",
+      "Nos aseguramos de que lo sientan cada vez."
+    ],
+
+    "loopC_tag": "IA",
+    "cardCLines": [
+      "Antes — llamaron una vez. Sin respuesta. Se fueron para siempre.",
+      "Ahora — esa misma llamada se contesta.",
+      "Quiénes son. Por qué llamaron. Qué necesitan.",
+      "Todo capturado.",
+      "¿Ese desconocido? Es tu próximo cliente."
+    ],
+
+    "loopD_tag": "IA + CRM",
+    "cardDLines": [
+      "Preguntaron por una cita.",
+      "Antes — alguien les devolvería la llamada. Tal vez.",
+      "Ahora — se revisa el calendario.",
+      "Se agenda la cita. Se envía la confirmación.",
+      "Todo. En esa única llamada."
+    ],
+
+    "loopE_tag": "IA",
+    "cardELines": [
+      "La llamada terminó. Te enteras al instante.",
+      "Quién llamó. Por qué llamó. Qué necesita.",
+      "Ahora decides — ahora mismo, en una hora, mañana.",
+      "Ya no estás reaccionando.",
+      "Estás decidiendo."
+    ],
+
+    "loopF_tag": "CRM",
+    "cardFLines": [
+      "Cada llamada registrada. Cada palabra transcrita.",
+      "Cada conversación reproducible.",
+      "Ahí mismo en tu panel de control.",
+      "Sin descargas. Sin búsquedas.",
+      "El panorama completo. Siempre disponible."
+    ],
+
+    "loopG_tag": "TÚ",
+    "cardGLines": [
+      "Abres el panel de control.",
+      "Cada llamada. Cada cliente. Cada trabajo. Cada etapa.",
+      "Sin adivinar. Sin correr. Sin ponerte al día.",
+      "Solo tú — con total control de todo lo que construiste."
+    ],
+
+    "loopH_tag": "RESULTADO",
+    "cardHLines": [
+      "Llamadas contestadas. Clientes capturados.",
+      "Relaciones honradas. Nada olvidado.",
+      "Ingresos creciendo.",
+      "No porque trabajaste más.",
+      "Porque dejaste de perder.",
+      "¿Ahora? Estás dirigiendo tu negocio.",
+      "Y comienza de nuevo."
+    ]
+  },
+  "stats": {
+    "headline": "Los números no mienten.",
+    "stat1Desc": "Ingresos promedio que las pequeñas empresas pierden cada año por llamadas perdidas.",
+    "stat2Desc": "De los llamantes que no te encuentran nunca vuelven a llamar. Llaman a tu competencia.",
+    "stat3Desc": "Aumento de ingresos que ven los negocios cuando combinan CRM con sus operaciones.",
+    "closing": "Ahora sabes lo que te está costando."
+  },
+  "testimonials": {
+    "headline": "¿Te suena familiar?",
+    "subheadline": "Ellos también lo sintieron.",
+    "pendingNote": "Testimonios reales próximamente."
   },
   "pricing": {
+    "homePreviewTitle": "Menos de lo que ya estás perdiendo.",
+    "homePreviewSubtitle": "Elige tu plan.",
     "previewTitle": "Precios Simples y Transparentes",
     "previewSubtitle": "Precios simples y transparentes para negocios de todos los tamaños",
     "heroTitle": "Planes Diseñados para Cada Negocio",

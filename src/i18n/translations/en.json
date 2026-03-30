@@ -10,8 +10,8 @@
   },
   "hero": {
     "badge": "CRM + AI — The Smarter Answering Service",
-    "title": "The AI That Answers Calls AND Runs Your CRM",
-    "subtitle": "MeetCIP answers every call, recognizes your customers, updates your CRM automatically, and gets smarter with every conversation — starting at $59/month.",
+    "title": "The calls you missed built\nsomeone else's business.",
+    "subtitle": "What's one job worth to you?",
     "benefit1": "Instant Response",
     "benefit2": "Built-in CRM",
     "benefit3": "Call Logs & Transcripts",
@@ -23,6 +23,7 @@
   "features": {
     "title": "Everything You Need to Never Miss a Call",
     "subtitle": "Professional AI phone answering with all the features your business needs",
+
     "feature1Title": "AI-Powered Answering",
     "feature1Desc": "Natural conversations that sound human, available instantly 24/7/365",
     "feature2Title": "Bilingual Support",
@@ -68,9 +69,149 @@
     "crmCard5Desc": "Every call adds to the customer record. The more MeetCIP talks to your customers, the better it serves them",
     "crmCard6Title": "No Competitor Has This",
     "crmCard6Desc": "Standalone answering services just hand off messages. MeetCIP is the only service where the AI answers AND runs your CRM",
-    "crmDifferentiatorBadge": "CRM + AI — Only at MeetCIP"
+    "crmDifferentiatorBadge": "CRM + AI — Only at MeetCIP",
+
+    "painHeadline": "You've been here before.",
+    "painLine1": "The job you almost got.",
+    "painLine2": "The customer you meant to call back.",
+    "painLine3": "You knew something slipped.",
+    "painLine4": "You just didn't know what it cost you.",
+    "painLine5": "Until now.",
+
+    "card1Lines": [
+      "The calls you missed built someone else's business.",
+      "What's one job worth to you?",
+      "You don't know what you don't know.",
+      "Until now."
+    ],
+    "card2Label": "Answers",
+    "card2Lines": [
+      "Every call matters.",
+      "You find out instantly.",
+      "You decide.",
+      "Call back. Follow up. Schedule."
+    ],
+    "card3Label": "Captures",
+    "card3Lines": [
+      "You're not calling blind.",
+      "You're calling prepared.",
+      "Just the conversation that gets it done."
+    ],
+    "card4Label": "Recognizes",
+    "card4Lines": [
+      "They called back.",
+      "You see exactly who they are to your business.",
+      "That's not a lead anymore.",
+      "That's a loyal customer."
+    ],
+    "card5Label": "Never Forgets",
+    "card5Lines": [
+      "Every customer.",
+      "Every job.",
+      "Every stage.",
+      "Right where you left it.",
+      "Every time you look."
+    ],
+    "card6Label": "Grows",
+    "card6Lines": [
+      "It started with one call.",
+      "Then another.",
+      "Then another.",
+      "Something shifted.",
+      "You're running your business."
+    ],
+
+    "loopHeadline": "This is what we do about it.",
+    "loopCenter": "Now you know.",
+
+    "loopA_tag": "AI",
+    "cardALines": [
+      "That constant thought — what if nobody answers?",
+      "Every time your phone rings and you can't get to it.",
+      "It gets answered. Every time.",
+      "In their language. With everything already in place.",
+      "That thought? It doesn't exist anymore."
+    ],
+
+    "loopB_tag": "AI + CRM",
+    "cardBLines": [
+      "They came back.",
+      "Because of your work. Your service. What you built.",
+      "When they call — they hear their name.",
+      "Your reputation brought them back.",
+      "We make sure they feel it every single time."
+    ],
+
+    "loopC_tag": "AI",
+    "cardCLines": [
+      "Before — they called once. No answer. Gone forever.",
+      "Now — that same call gets answered.",
+      "Who they are. Why they called. What they need.",
+      "All of it captured.",
+      "That stranger? They're your next customer."
+    ],
+
+    "loopD_tag": "AI + CRM",
+    "cardDLines": [
+      "They asked about an appointment.",
+      "Before — someone would call them back. Maybe.",
+      "Now — the calendar gets checked.",
+      "The appointment gets booked. Confirmation sent.",
+      "All of it. On that one call."
+    ],
+
+    "loopE_tag": "AI",
+    "cardELines": [
+      "The call is done. You find out instantly.",
+      "Who called. Why they called. What they need.",
+      "Now you decide — right now, an hour from now, tomorrow.",
+      "You're not reacting anymore.",
+      "You're deciding."
+    ],
+
+    "loopF_tag": "CRM",
+    "cardFLines": [
+      "Every call logged. Every word transcribed.",
+      "Every conversation playable.",
+      "Right there in your dashboard.",
+      "No downloading. No searching.",
+      "The full picture. Always there."
+    ],
+
+    "loopG_tag": "YOU",
+    "cardGLines": [
+      "You open the dashboard.",
+      "Every call. Every customer. Every job. Every stage.",
+      "No guessing. No scrambling. No catching up.",
+      "Just you — completely in control of everything you built."
+    ],
+
+    "loopH_tag": "RESULT",
+    "cardHLines": [
+      "Calls answered. Customers captured.",
+      "Relationships honored. Nothing forgotten.",
+      "Revenue growing.",
+      "Not because you worked more.",
+      "Because you stopped losing.",
+      "Now? You're running your business.",
+      "And it starts again."
+    ]
+  },
+  "stats": {
+    "headline": "The numbers don't lie.",
+    "stat1Desc": "Average revenue small businesses lose every year to missed calls.",
+    "stat2Desc": "Of callers who don't reach you never call back. They call your competitor.",
+    "stat3Desc": "Revenue increase businesses see when they combine CRM with their operations.",
+    "closing": "Now you know what it's costing you."
+  },
+  "testimonials": {
+    "headline": "Sound familiar?",
+    "subheadline": "They felt it too.",
+    "pendingNote": "Real testimonials coming soon."
   },
   "pricing": {
+    "homePreviewTitle": "Less than what you're already losing.",
+    "homePreviewSubtitle": "Pick your plan.",
     "previewTitle": "Simple, Transparent Pricing",
     "previewSubtitle": "Simple, transparent pricing for businesses of all sizes",
     "heroTitle": "Plans Built for Every Business",

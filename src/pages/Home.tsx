@@ -1,4 +1,3 @@
-
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
@@ -16,6 +15,7 @@ const HOME_PRICING_FALLBACK = {
   business:     { monthlyPrice: 269, calls: 500 },
 }
 
+// MKT-WEBSITE-HOME-0001: Updated homepage per Director directive
 export default function Home() {
   const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -46,48 +46,88 @@ export default function Home() {
   }, [])
 
   const faqs = [
-    {
-      q: t('faq.q1'),
-      a: t('faq.a1')
-    },
-    {
-      q: t('faq.q2'),
-      a: t('faq.a2')
-    },
-    {
-      q: t('faq.q3'),
-      a: t('faq.a3')
-    },
-    {
-      q: t('faq.q4'),
-      a: t('faq.a4')
-    },
-    {
-      q: t('faq.q5'),
-      a: t('faq.a5')
-    },
-    {
-      q: t('faq.q6'),
-      a: t('faq.a6')
-    }
+    { q: t('faq.q1'), a: t('faq.a1') },
+    { q: t('faq.q2'), a: t('faq.a2') },
+    { q: t('faq.q3'), a: t('faq.a3') },
+    { q: t('faq.q4'), a: t('faq.a4') },
+    { q: t('faq.q5'), a: t('faq.a5') },
+    { q: t('faq.q6'), a: t('faq.a6') },
   ]
 
   return (
     <>
+      {/* SECTION 1 — Hero */}
       <Hero />
+
+      {/* SECTION 2 + 3 — Pain narrative, 6 cards, circular loop A–H */}
       <Features />
+
+      {/* SECTION 4 — TEAL STATS BANNER */}
+      {/* MKT-WEBSITE-HOME-0001: New stats banner per Director directive */}
+      <div className="bg-accent">
+        <div className="section-container text-center">
+
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-16">
+            {t('stats.headline')}
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+
+            {/* Stat 1 — $126,000 */}
+            <div className="flex flex-col items-center">
+              <span className="text-6xl sm:text-7xl font-display font-bold text-white mb-4">
+                $126,000
+              </span>
+              <p className="text-white/90 text-lg leading-relaxed max-w-xs">
+                {t('stats.stat1Desc')}
+              </p>
+            </div>
+
+            {/* Stat 2 — 85% */}
+            <div className="flex flex-col items-center">
+              <span className="text-6xl sm:text-7xl font-display font-bold text-white mb-4">
+                85%
+              </span>
+              <p className="text-white/90 text-lg leading-relaxed max-w-xs">
+                {t('stats.stat2Desc')}
+              </p>
+            </div>
+
+            {/* Stat 3 — 245% */}
+            <div className="flex flex-col items-center">
+              <span className="text-6xl sm:text-7xl font-display font-bold text-white mb-4">
+                245%
+              </span>
+              <p className="text-white/90 text-lg leading-relaxed max-w-xs">
+                {t('stats.stat3Desc')}
+              </p>
+            </div>
+
+          </div>
+
+          <p className="mt-16 text-white font-display font-bold text-2xl sm:text-3xl">
+            {t('stats.closing')}
+          </p>
+
+        </div>
+      </div>
+
+      {/* SECTION 5 — TESTIMONIALS */}
       <Testimonials />
-      
-      {/* Updated Pricing Preview Section */}
+
+      {/* SECTION 6 — PRICING PREVIEW */}
+      {/* MKT-WEBSITE-HOME-0001: Updated heading copy per Director directive */}
+      {/* BUILD-WEB-PRICING-SSOT-0001: Prices read from DB — logic fully preserved */}
       <div className="bg-surface">
         <div className="section-container text-center">
-          <h2 className="heading-md text-primary mb-4">{t('pricing.previewTitle')}</h2>
+          <h2 className="heading-md text-primary mb-4">{t('pricing.homePreviewTitle')}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-            {t('pricing.previewSubtitle')}
+            {t('pricing.homePreviewSubtitle')}
           </p>
-          
-          {/* Quick Pricing Cards Preview */}
+
+          {/* Pricing Cards */}
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+
             {/* Starter */}
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.starter.name')}</h3>
@@ -100,7 +140,7 @@ export default function Home() {
                 {t('pricing.getStarted')}
               </Link>
             </div>
-            
+
             {/* Professional */}
             <div className="bg-gradient-to-br from-accent to-accent-dark text-white rounded-2xl p-8 transform scale-105 shadow-2xl">
               <div className="text-center mb-4">
@@ -118,7 +158,7 @@ export default function Home() {
                 {t('pricing.getStarted')}
               </Link>
             </div>
-            
+
             {/* Business */}
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-accent transition-all">
               <h3 className="text-2xl font-display font-bold text-primary mb-2">{t('pricing.tiers.business.name')}</h3>
@@ -131,8 +171,9 @@ export default function Home() {
                 {t('pricing.getStarted')}
               </Link>
             </div>
+
           </div>
-          
+
           {/* Money-Back Guarantee */}
           <div className="flex items-center justify-center space-x-2 text-lg">
             <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
@@ -140,10 +181,18 @@ export default function Home() {
             </svg>
             <span className="font-semibold text-primary">{t('pricing.moneyBackGuarantee')}</span>
           </div>
+
+          {/* View all pricing link */}
+          <div className="mt-8">
+            <Link to="/pricing" className="text-accent font-semibold hover:text-accent-dark transition-colors text-lg">
+              {t('pricing.viewAllPricing')} →
+            </Link>
+          </div>
+
         </div>
       </div>
-      
-      {/* Industry-Specific FAQ */}
+
+      {/* FAQ */}
       <div className="bg-white">
         <div className="section-container">
           <div className="text-center mb-12">
@@ -152,7 +201,7 @@ export default function Home() {
               {t('faq.subtitle')}
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-accent transition-colors">
