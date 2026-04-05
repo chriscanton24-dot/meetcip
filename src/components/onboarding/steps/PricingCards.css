@@ -242,3 +242,224 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ============================================================
+   BILLING TOGGLE — BUILD+FIN-STRIPE-0003
+   Monthly / Annual pill toggle above plan cards
+   ============================================================ */
+
+.billing-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  background: #f3f4f6;
+  border-radius: 50px;
+  padding: 4px;
+  gap: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.toggle-btn.active {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+.toggle-btn:hover:not(.active) {
+  color: #1f2937;
+  background: #e5e7eb;
+  border-radius: 50px;
+}
+
+.save-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: 1px solid #fbbf24;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   ANNUAL SAVINGS CALLOUT — per-card dynamic text
+   ============================================================ */
+
+.annual-savings-callout {
+  font-size: 0.8rem;
+  color: #059669;
+  font-weight: 600;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* ============================================================
+   ENTERPRISE CARD — Contact Us only, never selectable
+   Appears centered below the 3 purchasable plan cards
+   ============================================================ */
+
+.enterprise-card {
+  grid-column: 1 / -1;
+  max-width: 380px;
+  margin: 0 auto;
+  cursor: default;
+  border-color: #d1d5db;
+}
+
+/* No hover lift — enterprise is not a selection target */
+.enterprise-card:hover {
+  transform: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+  background: white;
+}
+
+/* Suppress any decorative checkmarks from site-level or WizardSteps CSS */
+.enterprise-card::before,
+.enterprise-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+.enterprise-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.enterprise-custom-label {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.contact-us-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #f3f4f6;
+  border: 2px solid #d1d5db;
+  color: #374151;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.contact-us-btn:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+/* ============================================================
+   LOADING AND ERROR STATES
+   ============================================================ */
+
+.plans-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #10b981;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.plans-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.plans-error .error-text {
+  color: #dc2626;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ============================================================
+   INLINE VALIDATION HINT — replaces alert()
+   ============================================================ */
+
+.plan-required-hint {
+  color: #dc2626;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+/* ============================================================
+   MOBILE — billing toggle and enterprise card
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .billing-toggle-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .enterprise-card {
+    grid-column: unset;
+    max-width: 100%;
+  }
+
+  .enterprise-custom-label {
+    font-size: 1.5rem;
+  }
+}

@@ -358,7 +358,8 @@ const PaymentForm: React.FC<Step3Props> = ({ onNext, onBack, initialData = {} })
             <span className="badge-text">SSL Encrypted</span>
           </div>
           <div className="badge">
-            <img src="/stripe-badge.png" alt="Powered by Stripe" className="stripe-badge" />
+            <span className="badge-icon">⚡</span>
+            <span className="badge-text">Powered by Stripe</span>
           </div>
           <div className="badge">
             <span className="badge-icon">✓</span>
