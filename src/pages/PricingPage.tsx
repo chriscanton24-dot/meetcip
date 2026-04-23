@@ -8,10 +8,12 @@ const BACKEND_URL = 'https://ai-answering-service-cloud.onrender.com'
 
 // BUILD-WEB-PRICING-SSOT-0001: Fallback values — used ONLY if /api/pricing is unreachable.
 // These must match pricing_config DB values exactly. Update DB first — this is last resort only.
+// MKT-WEBSITE-PRICING-0002: Updated professional annualPrice 1430→2000, business annualPrice 2588→3600
+// per Director Directive April 21, 2026 (P&L v10 — Option 3 locked).
 const PRICING_FALLBACK: Record<string, { monthlyPrice: number | null; annualPrice: number | null; calls: number | null; overage: number | null }> = {
   starter:      { monthlyPrice: 59,  annualPrice: 565,  calls: 100, overage: 0.50 },
-  professional: { monthlyPrice: 149, annualPrice: 1430, calls: 300, overage: 0.40 },
-  business:     { monthlyPrice: 269, annualPrice: 2588, calls: 500, overage: 0.35 },
+  professional: { monthlyPrice: 149, annualPrice: 2000, calls: 300, overage: 0.40 },
+  business:     { monthlyPrice: 269, annualPrice: 3600, calls: 500, overage: 0.35 },
   enterprise:   { monthlyPrice: null, annualPrice: null, calls: null, overage: null },
 }
 
